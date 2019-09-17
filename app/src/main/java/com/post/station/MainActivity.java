@@ -6,6 +6,7 @@ import androidx.fragment.app.FragmentTransaction;
 
 import android.app.Activity;
 import android.app.AlertDialog;
+import android.content.Context;
 import android.content.Intent;
 import android.content.pm.ApplicationInfo;
 import android.net.Uri;
@@ -27,6 +28,7 @@ import com.post.station.frgment.PersonalCenterFragment;
 import com.post.station.model.HomeModel;
 import com.post.station.response.VersionBean;
 import com.post.station.service.DownloadIntentService;
+import com.post.station.ui.LoginActivity;
 import com.post.station.utils.AppUtils;
 import com.post.station.utils.PermissionsUtils;
 import com.post.station.utils.TimeUtils;
@@ -62,6 +64,10 @@ public class MainActivity extends BaseActivity {
     @BindView(R.id.tv_mine)
     TextView tv_mine;
     private HomeModel homeModel = new HomeModel();
+
+    public static void start(Context context) {
+        context.startActivity(new Intent(context, MainActivity.class));
+    }
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -149,7 +155,7 @@ public class MainActivity extends BaseActivity {
                     if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.KITKAT) {
                         if (!PermissionsUtils.isNotificationEnabled(this)) {
                             toast("请设置通知栏权限");
-                            gotoNotificationSetting(this);
+                            PermissionsUtils.gotoNotificationSetting(this, REQUEST_SETTING_NOTIFICATION);
                         } else {
                             startServices();
                         }
@@ -176,7 +182,7 @@ public class MainActivity extends BaseActivity {
             if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.KITKAT) {
                 if (!PermissionsUtils.isNotificationEnabled(this)) {
                     toast("请设置通知栏权限");
-                    gotoNotificationSetting(this);
+                    PermissionsUtils.gotoNotificationSetting(this, REQUEST_SETTING_NOTIFICATION);
                 } else {
                     startServices();
                 }
@@ -214,36 +220,6 @@ public class MainActivity extends BaseActivity {
         startService(intent);
     }
 
-    public void gotoNotificationSetting(Activity activity) {
-        ApplicationInfo appInfo = activity.getApplicationInfo();
-        String pkg = activity.getApplicationContext().getPackageName();
-        int uid = appInfo.uid;
-        try {
-            if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.LOLLIPOP) {
-                Intent intent = new Intent();
-                intent.setAction(Settings.ACTION_APP_NOTIFICATION_SETTINGS);
-                //这种方案适用于 API 26, 即8.0（含8.0）以上可以用
-                intent.putExtra(Settings.EXTRA_APP_PACKAGE, pkg);
-                intent.putExtra(Settings.EXTRA_CHANNEL_ID, uid);
-                //这种方案适用于 API21——25，即 5.0——7.1 之间的版本可以使用
-                intent.putExtra("app_package", pkg);
-                intent.putExtra("app_uid", uid);
-                activity.startActivityForResult(intent, REQUEST_SETTING_NOTIFICATION);
-            } else if (Build.VERSION.SDK_INT == Build.VERSION_CODES.KITKAT) {
-                Intent intent = new Intent();
-                intent.setAction(Settings.ACTION_APPLICATION_DETAILS_SETTINGS);
-                intent.addCategory(Intent.CATEGORY_DEFAULT);
-                intent.setData(Uri.parse("package:" + PostStationApplication.getInstance().getPackageName()));
-                activity.startActivityForResult(intent, REQUEST_SETTING_NOTIFICATION);
-            } else {
-                Intent intent = new Intent(Settings.ACTION_SETTINGS);
-                activity.startActivityForResult(intent, REQUEST_SETTING_NOTIFICATION);
-            }
-        } catch (Exception e) {
-            Intent intent = new Intent(Settings.ACTION_SETTINGS);
-            activity.startActivityForResult(intent, REQUEST_SETTING_NOTIFICATION);
-        }
-    }
 
     private long exitTime = 0;
 
