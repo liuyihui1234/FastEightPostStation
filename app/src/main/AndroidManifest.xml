@@ -30,6 +30,9 @@
                 android:name="android.support.FILE_PROVIDER_PATHS"
                 android:resource="@xml/file_paths" />
         </provider>
+
+        <activity android:name=".ui.LoginActivity"></activity>
+        <activity android:name=".zxing.CaptureActivity"></activity>
     </application>
 
 </manifest>
