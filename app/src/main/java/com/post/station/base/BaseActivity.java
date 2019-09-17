@@ -100,7 +100,7 @@ public abstract class BaseActivity extends AppCompatActivity implements NetBroad
             getWindow().getDecorView().setSystemUiVisibility(View.SYSTEM_UI_FLAG_LAYOUT_FULLSCREEN | View.SYSTEM_UI_FLAG_LIGHT_STATUS_BAR);
             //根据上面设置是否对状态栏单独设置颜色
             if (useThemestatusBarColor) {
-                getWindow().setStatusBarColor(getResources().getColor(R.color.white));//设置状态栏背景色
+                getWindow().setStatusBarColor(getResources().getColor(R.color.light_red));//设置状态栏背景色
             } else {
                 getWindow().setStatusBarColor(Color.TRANSPARENT);//透明
             }
