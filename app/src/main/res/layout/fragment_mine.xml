@@ -3,6 +3,8 @@
     android:orientation="vertical"
     android:layout_width="match_parent"
     android:layout_height="match_parent">
+
+
     <LinearLayout
         android:id="@+id/ll_theme"
         android:layout_width="match_parent"
@@ -52,8 +54,8 @@
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:background="@drawable/white_rectangle"
-                        android:text="已实名"
                         android:padding="5dp"
+                        android:text="已实名"
                         android:textColor="#FB5957"
                         android:textSize="13dp" />
 
@@ -62,8 +64,8 @@
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:layout_marginLeft="10dp"
-                        android:padding="5dp"
                         android:background="@drawable/white_rectangle"
+                        android:padding="5dp"
                         android:text="15838338565"
                         android:textColor="#FB5957"
                         android:textSize="13dp" />

@@ -4,15 +4,11 @@ import androidx.annotation.Nullable;
 import androidx.fragment.app.Fragment;
 import androidx.fragment.app.FragmentTransaction;
 
-import android.app.Activity;
 import android.app.AlertDialog;
 import android.content.Context;
 import android.content.Intent;
-import android.content.pm.ApplicationInfo;
-import android.net.Uri;
 import android.os.Build;
 import android.os.Bundle;
-import android.provider.Settings;
 import android.util.Log;
 import android.view.KeyEvent;
 import android.view.View;
@@ -22,13 +18,12 @@ import android.widget.Toast;
 
 import com.post.station.base.BaseActivity;
 import com.post.station.frgment.HomeFragment;
-import com.post.station.frgment.InVentoryControlFragment;
+import com.post.station.frgment.InventoryControlFragment;
 import com.post.station.frgment.NoticationRecordFragment;
 import com.post.station.frgment.PersonalCenterFragment;
 import com.post.station.model.HomeModel;
 import com.post.station.response.VersionBean;
 import com.post.station.service.DownloadIntentService;
-import com.post.station.ui.LoginActivity;
 import com.post.station.utils.AppUtils;
 import com.post.station.utils.PermissionsUtils;
 import com.post.station.utils.TimeUtils;
@@ -98,7 +93,7 @@ public class MainActivity extends BaseActivity {
                 break;
             case R.id.ll_order:
                 setButtonStatue(false, true, false, false);
-                addFragment(new InVentoryControlFragment());
+                addFragment(new InventoryControlFragment());
                 break;
             case R.id.ll_shop:
                 setButtonStatue(false, false, true, false);

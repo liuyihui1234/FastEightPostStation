@@ -1,31 +1,13 @@
-package com.post.station.ui;
+package com.post.station.ui.login;
 
-import android.app.Activity;
 import android.content.Context;
 import android.content.Intent;
-import android.graphics.Color;
-import android.os.Build;
 import android.os.Bundle;
-import android.text.TextUtils;
-import android.util.Log;
-import android.view.View;
-import android.view.ViewGroup;
-import android.widget.EditText;
-import android.widget.ImageView;
-import android.widget.LinearLayout;
-import android.widget.RelativeLayout;
-import android.widget.TextView;
-import android.widget.Toast;
 
-import com.post.station.MainActivity;
 import com.post.station.R;
 import com.post.station.base.BaseActivity;
-import com.post.station.model.LoginModel;
-import com.post.station.utils.AppUtils;
 
-import butterknife.BindView;
 import butterknife.ButterKnife;
-import butterknife.OnClick;
 import butterknife.Unbinder;
 
 public class LoginActivity extends BaseActivity {
@@ -40,6 +22,8 @@ public class LoginActivity extends BaseActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         addContentView(R.layout.activity_login);
+        setContentTitle("驿站登录");
+        showBackButton(false);
         unbinder = ButterKnife.bind(this);
     }
 
