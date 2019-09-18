@@ -24,7 +24,7 @@
                 android:id="@+id/iv_portrait"
                 android:layout_width="80dp"
                 android:layout_height="80dp"
-                android:src="@mipmap/default_avatar" />
+                android:src="@drawable/default_avatar" />
 
             <LinearLayout
                 android:id="@+id/ll_my_dispatch"
@@ -84,7 +84,7 @@
                 <ImageView
                     android:layout_width="35dp"
                     android:layout_height="30dp"
-                    android:background="@mipmap/QR_code" />
+                    android:background="@drawable/qr_code" />
             </LinearLayout>
         </LinearLayout>
     </LinearLayout>
@@ -141,7 +141,7 @@
             <ImageView
                 android:layout_width="20dp"
                 android:layout_height="20dp"
-                android:src="@drawable/BrandManagement" />
+                android:src="@drawable/brandmanagement" />
 
             <TextView
                 android:layout_width="0dp"
@@ -176,7 +176,7 @@
             <ImageView
                 android:layout_width="20dp"
                 android:layout_height="20dp"
-                android:src="@drawable/TeamManagement" />
+                android:src="@drawable/teammanagement" />
 
             <TextView
                 android:layout_width="0dp"
@@ -211,7 +211,7 @@
             <ImageView
                 android:layout_width="20dp"
                 android:layout_height="20dp"
-                android:src="@drawable/Cooperative_Express" />
+                android:src="@drawable/cooperative_express" />
 
             <TextView
                 android:layout_width="0dp"
@@ -246,7 +246,7 @@
             <ImageView
                 android:layout_width="20dp"
                 android:layout_height="20dp"
-                android:src="@drawable/customerManagement" />
+                android:src="@drawable/customermanagement" />
 
             <TextView
                 android:layout_width="0dp"
@@ -281,7 +281,7 @@
             <ImageView
                 android:layout_width="20dp"
                 android:layout_height="20dp"
-                android:src="@drawable/Statistics" />
+                android:src="@drawable/statistics" />
 
             <TextView
                 android:layout_width="0dp"
@@ -316,7 +316,7 @@
             <ImageView
                 android:layout_width="20dp"
                 android:layout_height="20dp"
-                android:src="@drawable/Post_station" />
+                android:src="@drawable/post_station" />
 
             <TextView
                 android:layout_width="0dp"
