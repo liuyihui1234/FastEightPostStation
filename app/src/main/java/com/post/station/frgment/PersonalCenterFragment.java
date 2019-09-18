@@ -22,6 +22,7 @@ import com.post.station.R;
 import com.post.station.model.HomeModel;
 import com.post.station.response.VersionBean;
 import com.post.station.service.DownloadIntentService;
+import com.post.station.ui.mine.MyWalletActivity;
 import com.post.station.utils.AppUtils;
 import com.post.station.utils.PermissionsUtils;
 import com.post.station.utils.TimeUtils;
@@ -55,6 +56,15 @@ public class PersonalCenterFragment extends Fragment {
                     toast("通知栏权限未申请");
                 }
             }
+        }
+    }
+
+    @OnClick({R.id.ll_wallet})
+    public void onViewClicked(View view) {
+        switch (view.getId()) {
+            case R.id.ll_wallet:
+                MyWalletActivity.start(getContext());
+                break;
         }
     }
 
@@ -98,7 +108,7 @@ public class PersonalCenterFragment extends Fragment {
                     if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.KITKAT) {
                         if (!PermissionsUtils.isNotificationEnabled(getActivity())) {
                             toast("请设置通知栏权限");
-                            PermissionsUtils.gotoNotificationSetting(getActivity(),REQUEST_SETTING_NOTIFICATION);
+                            PermissionsUtils.gotoNotificationSetting(getActivity(), REQUEST_SETTING_NOTIFICATION);
                         } else {
                             startServices();
                         }
@@ -156,6 +166,7 @@ public class PersonalCenterFragment extends Fragment {
         }
         mDialog.show();
     }
+
 
     protected void hideProgressDialog() {
         if (mDialog == null) return;

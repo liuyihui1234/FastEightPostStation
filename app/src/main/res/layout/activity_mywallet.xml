@@ -5,7 +5,7 @@
     android:layout_height="match_parent"
     android:background="#F0F0F0"
     android:orientation="vertical"
-    tools:context=".Mywallet">
+    tools:context=".ui.mine.MyWalletActivity">
 
     <RelativeLayout
         android:id="@+id/rl_appBar"

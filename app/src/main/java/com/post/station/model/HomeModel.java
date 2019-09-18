@@ -6,6 +6,7 @@ import com.post.station.base.BaseModel;
 import com.post.station.request.HttpResult;
 import com.post.station.request.RetrofitUtil;
 import com.post.station.response.VersionBean;
+import com.post.station.response.WaitCheckOutBean;
 
 import java.util.List;
 import java.util.Map;
@@ -56,8 +57,23 @@ public class HomeModel extends BaseModel {
         @POST("app/appoinment/alterStatus2AddOrder")
         @FormUrlEncoded
         Observable<HttpResult<Object>> pickUp(@Field("id") @NonNull String id);
-    }
 
+
+        @POST("app/order/hadFinishPackage")
+        @FormUrlEncoded
+        Observable<HttpResult<List<WaitCheckOutBean>>> getWaitCheckOutList(@Field("incNum") @NonNull String incNum,
+                                                                        @Field("pageSize") @NonNull String pageSize,
+                                                                        @Field("pageNum") @NonNull String pageNum);
+
+
+    }
+    //获取已完成的订单，pageSize一页条多少数据，pageNum多少页
+    public void getWaitCheckOutList(
+            @NonNull String incNum,
+            @NonNull String pageSize,
+            @NonNull String pageNum, @NonNull Action1<Throwable> onError, @NonNull Action1<HttpResult<List<WaitCheckOutBean>>> onResult) {
+        register(service.getWaitCheckOutList(incNum, pageSize, pageNum), onError, onResult);
+    }
     //根据订单id点击收件 并在order中添加该订单
     public void pickUp(
             @NonNull String id, @NonNull Action1<Throwable> onError, @NonNull Action1<HttpResult<Object>> onResult) {
