@@ -3,6 +3,7 @@
     <string name="app_name">驿站端</string>
     <string name="login">登录</string>
     <string name="please_input_username">请输入用户名</string>
+    <string name="please_input_mobile">请输入手机号</string>
     <string name="please_input_password">请输入密码</string>
     <string name="choose_province">选择省级</string>
     <string name="choose_prefecture_level_citys">选择地级市</string>

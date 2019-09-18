@@ -40,6 +40,8 @@ public class LoginActivity extends BaseActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         addContentView(R.layout.activity_login);
+        setContentTitle("驿站登录");
+        showBackButton(false);
         unbinder = ButterKnife.bind(this);
     }
 
