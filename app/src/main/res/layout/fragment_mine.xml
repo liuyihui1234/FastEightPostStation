@@ -22,7 +22,7 @@
                 android:id="@+id/iv_portrait"
                 android:layout_width="80dp"
                 android:layout_height="80dp"
-                android:src="@mipmap/default_avatar" />
+                android:src="@drawable/default_avatar" />
 
             <LinearLayout
                 android:id="@+id/ll_my_dispatch"
@@ -82,7 +82,7 @@
                 <ImageView
                     android:layout_width="35dp"
                     android:layout_height="30dp"
-                    android:background="@mipmap/QR_code" />
+                    android:background="@drawable/qr_code" />
             </LinearLayout>
         </LinearLayout>
     </LinearLayout>
@@ -139,7 +139,7 @@
             <ImageView
                 android:layout_width="20dp"
                 android:layout_height="20dp"
-                android:src="@drawable/BrandManagement" />
+                android:src="@drawable/brandmanagement" />
 
             <TextView
                 android:layout_width="0dp"
@@ -174,7 +174,7 @@
             <ImageView
                 android:layout_width="20dp"
                 android:layout_height="20dp"
-                android:src="@drawable/TeamManagement" />
+                android:src="@drawable/teammanagement" />
 
             <TextView
                 android:layout_width="0dp"
@@ -209,7 +209,7 @@
             <ImageView
                 android:layout_width="20dp"
                 android:layout_height="20dp"
-                android:src="@drawable/Cooperative_Express" />
+                android:src="@drawable/cooperative_express" />
 
             <TextView
                 android:layout_width="0dp"
@@ -244,7 +244,7 @@
             <ImageView
                 android:layout_width="20dp"
                 android:layout_height="20dp"
-                android:src="@drawable/customerManagement" />
+                android:src="@drawable/customermanagement" />
 
             <TextView
                 android:layout_width="0dp"
@@ -279,7 +279,7 @@
             <ImageView
                 android:layout_width="20dp"
                 android:layout_height="20dp"
-                android:src="@drawable/Statistics" />
+                android:src="@drawable/statistics" />
 
             <TextView
                 android:layout_width="0dp"
@@ -314,7 +314,7 @@
             <ImageView
                 android:layout_width="20dp"
                 android:layout_height="20dp"
-                android:src="@drawable/Post_station" />
+                android:src="@drawable/post_station" />
 
             <TextView
                 android:layout_width="0dp"
@@ -434,117 +434,6 @@
             android:layout_height="35dp"
             android:padding="8dp"
             android:src="@drawable/open" />
-    </LinearLayout>
-
-    <LinearLayout
-        android:layout_width="match_parent"
-        android:layout_height="70dp"
-        android:layout_alignParentBottom="true"
-        android:background="@color/white"
-        android:gravity="center_vertical"
-        android:orientation="horizontal"
-        android:paddingTop="2dp"
-        android:paddingBottom="2dp">
-
-        <LinearLayout
-            android:id="@+id/ll_homepage"
-            android:layout_width="0dp"
-            android:layout_height="match_parent"
-            android:layout_weight="1"
-            android:gravity="center"
-            android:orientation="vertical">
-
-            <ImageView
-                android:id="@+id/iv_homepage"
-                android:layout_width="26dp"
-                android:layout_height="30dp"
-                android:src="@drawable/homepage_click" />
-
-            <TextView
-                android:id="@+id/tv_homepage"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_marginTop="8dp"
-                android:text="快8驿站"
-                android:textColor="@color/green_base"
-                android:textSize="15sp" />
-        </LinearLayout>
-
-        <LinearLayout
-            android:id="@+id/ll_order"
-            android:layout_width="0dp"
-            android:layout_height="match_parent"
-            android:layout_centerHorizontal="true"
-            android:layout_weight="1"
-            android:gravity="center"
-            android:orientation="vertical">
-
-            <ImageView
-                android:id="@+id/iv_order"
-                android:layout_width="26dp"
-                android:layout_height="30dp"
-                android:src="@drawable/homepage_check" />
-
-            <TextView
-                android:id="@+id/tv_order"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_marginTop="8dp"
-                android:text="库存管理"
-                android:textColor="@color/black1"
-                android:textSize="15sp" />
-        </LinearLayout>
-
-        <LinearLayout
-            android:id="@+id/ll_shop"
-            android:layout_width="0dp"
-            android:layout_height="match_parent"
-            android:layout_centerHorizontal="true"
-            android:layout_weight="1"
-            android:gravity="center"
-            android:orientation="vertical">
-
-            <ImageView
-                android:id="@+id/iv_shop"
-                android:layout_width="26dp"
-                android:layout_height="30dp"
-                android:src="@drawable/homepage_shop" />
-
-            <TextView
-                android:id="@+id/tv_shop"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_marginTop="8dp"
-                android:text="通知记录"
-                android:textColor="@color/black1"
-                android:textSize="15sp" />
-        </LinearLayout>
-
-        <LinearLayout
-            android:id="@+id/ll_mine"
-            android:layout_width="0dp"
-            android:layout_height="match_parent"
-            android:layout_alignParentRight="true"
-            android:layout_centerHorizontal="true"
-            android:layout_weight="1"
-            android:gravity="center"
-            android:orientation="vertical">
-
-            <ImageView
-                android:id="@+id/iv_mine"
-                android:layout_width="26dp"
-                android:layout_height="30dp"
-                android:src="@drawable/homepage_my" />
-
-            <TextView
-                android:id="@+id/tv_mine"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_marginTop="8dp"
-                android:text="个人中心"
-                android:textColor="@color/black1"
-                android:textSize="15sp" />
-        </LinearLayout>
     </LinearLayout>
 
 </LinearLayout>
