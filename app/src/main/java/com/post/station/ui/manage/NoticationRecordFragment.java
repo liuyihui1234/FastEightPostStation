@@ -1,4 +1,4 @@
-package com.post.station.frgment;
+package com.post.station.ui.manage;
 
 import android.os.Bundle;
 import android.view.LayoutInflater;

@@ -1,4 +1,4 @@
-package com.post.station.frgment;
+package com.post.station.ui.notication_record;
 
 import android.os.Bundle;
 import android.text.TextUtils;
@@ -25,9 +25,9 @@ import java.util.List;
 import butterknife.BindView;
 import butterknife.ButterKnife;
 
-//订单管理-已完成界面
+//第三方模版
 
-public class WaitCheckOutFragment extends BaseFragment {
+public class ThirdPartyFragment extends BaseFragment {
 
     @BindView(R.id.mRecycleView)
     HeadRecycleView mRecycleView;

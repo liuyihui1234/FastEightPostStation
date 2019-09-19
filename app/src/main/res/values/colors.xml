@@ -7,6 +7,7 @@
     <color name="white">#ffffff</color>
     <color name="white1">#50ffffff</color>
     <color name="green_base">#B92024</color>
+    <color name="orange">#ff8b23</color>
     <color name="black">#000000</color>
     <color name="black1">#333333</color>
     <color name="black2">#999999</color>
@@ -21,7 +22,7 @@
     <color name="grey_2">#f0f0f0</color>
     <color name="color_white">#FDF7F7</color>
     <color name="transparent">#00000000</color>
-    <color name="main_button">#cb3b13</color>
+    <color name="main_button">#8ced0019</color>
     <color name="font_white_one">#FFFFFF</color>
     <color name="gray_normal">#666667</color>
     <color name="blue">#0383EE</color>
