@@ -22,6 +22,7 @@ import com.post.station.R;
 import com.post.station.model.HomeModel;
 import com.post.station.response.VersionBean;
 import com.post.station.service.DownloadIntentService;
+import com.post.station.ui.mine.BrandManagementaActivity;
 import com.post.station.ui.mine.MyWalletActivity;
 import com.post.station.utils.AppUtils;
 import com.post.station.utils.PermissionsUtils;
@@ -43,7 +44,6 @@ public class PersonalCenterFragment extends Fragment {
         ButterKnife.bind(this, view);
         return view;
     }
-
     //call back by scan bluetooth printer
     @Override
     public void onActivityResult(int requestCode, int resultCode, final Intent data) {
@@ -59,11 +59,14 @@ public class PersonalCenterFragment extends Fragment {
         }
     }
 
-    @OnClick({R.id.ll_wallet})
+    @OnClick({R.id.ll_wallet,R.id.ll_BrandManagement})
     public void onViewClicked(View view) {
         switch (view.getId()) {
             case R.id.ll_wallet:
                 MyWalletActivity.start(getContext());
+                break;
+            case R.id.ll_BrandManagement:
+                BrandManagementaActivity.start(getContext());
                 break;
         }
     }

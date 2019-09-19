@@ -2,6 +2,7 @@ package com.post.station.ui.mine;
 
 import androidx.appcompat.app.AppCompatActivity;
 
+import android.content.Context;
 import android.content.Intent;
 import android.os.Bundle;
 import android.view.View;
@@ -24,5 +25,8 @@ Button button;
 
             }
         });
+    }
+    public static void start(Context context) {
+        context.startActivity(new Intent(context, BrandManagementaActivity.class));
     }
 }
