@@ -5,6 +5,7 @@ import android.os.Bundle;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
+import android.widget.AdapterView;
 import android.widget.GridView;
 import android.widget.ImageView;
 import android.widget.SimpleAdapter;
@@ -14,6 +15,8 @@ import androidx.fragment.app.Fragment;
 
 import com.post.station.R;
 import com.post.station.model.HomeModel;
+import com.post.station.ui.homepage.InformActivity;
+import com.post.station.ui.homepage.OrderActivity;
 
 import org.greenrobot.eventbus.EventBus;
 
@@ -27,7 +30,7 @@ import butterknife.ButterKnife;
 import butterknife.OnClick;
 
 public class HomeFragment extends Fragment {
-    private GridView gview,gview1;
+    private GridView gview, gview1;
     private List<Map<String, Object>> data_list;
     private List<Map<String, Object>> data_list1;
     private SimpleAdapter sim_adapter;
@@ -37,7 +40,7 @@ public class HomeFragment extends Fragment {
             R.drawable.ic_launcher_background, R.drawable.ic_launcher_background};
     private String[] iconName = {"出库", "订单", "通知", "入库"};
     private int[] icon1 = {R.drawable.ic_launcher_background, R.drawable.ic_launcher_background,
-            R.drawable.ic_launcher_background, R.drawable.ic_launcher_background,R.drawable.ic_launcher_background,
+            R.drawable.ic_launcher_background, R.drawable.ic_launcher_background, R.drawable.ic_launcher_background,
             R.drawable.ic_launcher_background, R.drawable.ic_launcher_background};
     private String[] iconName1 = {"批量入库", "拍照入库", "批量出库", "拍照出库", "单号入库", "快件退回", "我要收款"};
 
@@ -73,10 +76,28 @@ public class HomeFragment extends Fragment {
         sim_adapter1 = new SimpleAdapter(getActivity(), data_list1, R.layout.item_home_center, from, to);
         //配置适配器
         gview1.setAdapter(sim_adapter1);
+        gview.setOnItemClickListener(new AdapterView.OnItemClickListener() {
+            @Override
+            public void onItemClick(AdapterView<?> adapterView, View view, int i, long l) {
+
+                switch (i) {
+                    case 0:
+
+                        break;
+                    case 1:
+                        startActivity(new Intent(getActivity(), OrderActivity.class));
+                        break;
+                    case 2:
+                        startActivity(new Intent(getActivity(), InformActivity.class));
+                        break;
+                }
+            }
+        });
     }
-    public List<Map<String, Object>> getData(){
+
+    public List<Map<String, Object>> getData() {
         //cion和iconName的长度是相同的，这里任选其一都可以
-        for(int i=0;i<icon.length;i++){
+        for (int i = 0; i < icon.length; i++) {
             Map<String, Object> map = new HashMap<String, Object>();
             map.put("image", icon[i]);
             map.put("text", iconName[i]);
@@ -85,9 +106,10 @@ public class HomeFragment extends Fragment {
 
         return data_list;
     }
-    public List<Map<String, Object>> getData1(){
+
+    public List<Map<String, Object>> getData1() {
         //cion和iconName的长度是相同的，这里任选其一都可以
-        for(int i=0;i<icon1.length;i++){
+        for (int i = 0; i < icon1.length; i++) {
             Map<String, Object> map = new HashMap<String, Object>();
             map.put("image", icon1[i]);
             map.put("text", iconName1[i]);
@@ -96,6 +118,7 @@ public class HomeFragment extends Fragment {
 
         return data_list1;
     }
+
     @Override
     public void onDestroyView() {
         super.onDestroyView();
