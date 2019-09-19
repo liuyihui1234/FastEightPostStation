@@ -16,6 +16,7 @@ import androidx.fragment.app.Fragment;
 import com.post.station.R;
 import com.post.station.model.HomeModel;
 import com.post.station.ui.homepage.InformActivity;
+import com.post.station.ui.homepage.LinechartActivity;
 import com.post.station.ui.homepage.OrderActivity;
 
 import org.greenrobot.eventbus.EventBus;
@@ -51,7 +52,15 @@ public class HomeFragment extends Fragment {
                              Bundle savedInstanceState) {
         View view = inflater.inflate(R.layout.fragment_home, container, false);
         ButterKnife.bind(this, view);
+
         initView(view);
+        view.findViewById(R.id.ll_line).setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+
+                startActivity(new Intent(getActivity(), LinechartActivity.class));
+            }
+        });
         return view;
     }
 
