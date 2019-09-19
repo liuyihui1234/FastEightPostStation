@@ -82,7 +82,6 @@ public class HomeFragment extends Fragment {
 
                 switch (i) {
                     case 0:
-
                         break;
                     case 1:
                         startActivity(new Intent(getActivity(), OrderActivity.class));

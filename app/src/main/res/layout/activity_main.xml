@@ -43,7 +43,7 @@
                 android:layout_height="wrap_content"
                 android:layout_marginTop="8dp"
                 android:text="快8驿站"
-                android:textColor="@color/green_base"
+                android:textColor="@color/base_color"
                 android:textSize="15sp" />
         </LinearLayout>
 

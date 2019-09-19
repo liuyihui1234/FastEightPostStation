@@ -48,11 +48,11 @@ public class HavePassedFragment extends BaseFragment {
     }
 
     @Override
-    public void onViewCreated(@NonNull View view, @Nullable Bundle savedInstanceState) {
+    public void onActivityCreated(@Nullable Bundle savedInstanceState) {
+        super.onActivityCreated(savedInstanceState);
         initRecycleView();
         loadData();
     }
-
     private void loadData() {
         if (TextUtils.isEmpty(SpUtils.getIncNumber())) {
             hasMore = false;

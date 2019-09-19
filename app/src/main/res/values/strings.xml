@@ -68,4 +68,6 @@
     <string name="have_passed">已通过</string>
     <string name="not_passed">未通过</string>
     <string name="audit">待审核</string>
+    <string name="already_printed">已打印</string>
+    <string name="whole_course">全程</string>
 </resources>

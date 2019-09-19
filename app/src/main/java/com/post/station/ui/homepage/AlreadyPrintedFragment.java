@@ -1,7 +1,6 @@
-package com.post.station.ui.manage;
+package com.post.station.ui.homepage;
 
 import android.os.Bundle;
-import android.text.TextUtils;
 import android.util.Log;
 import android.view.LayoutInflater;
 import android.view.View;
@@ -16,7 +15,6 @@ import com.post.station.adapter.WaitCheckOutAdapter;
 import com.post.station.base.BaseFragment;
 import com.post.station.model.HomeModel;
 import com.post.station.response.WaitCheckOutBean;
-import com.post.station.utils.SpUtils;
 import com.post.station.view.EmptyViewLayout;
 import com.post.station.view.HeadRecycleView;
 
@@ -28,7 +26,7 @@ import butterknife.ButterKnife;
 
 //库存管理-待出库
 
-public class WaitCheckOutFragment extends BaseFragment {
+public class AlreadyPrintedFragment extends BaseFragment {
 
     @BindView(R.id.mRecycleView)
     HeadRecycleView mRecycleView;

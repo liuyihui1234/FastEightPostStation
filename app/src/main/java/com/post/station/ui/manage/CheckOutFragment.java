@@ -1,4 +1,4 @@
-package com.post.station.frgment;
+package com.post.station.ui.manage;
 
 import android.os.Bundle;
 import android.text.TextUtils;
@@ -48,7 +48,8 @@ public class CheckOutFragment extends BaseFragment {
     }
 
     @Override
-    public void onViewCreated(@NonNull View view, @Nullable Bundle savedInstanceState) {
+    public void onActivityCreated(@Nullable Bundle savedInstanceState) {
+        super.onActivityCreated(savedInstanceState);
         initRecycleView();
         loadData();
     }

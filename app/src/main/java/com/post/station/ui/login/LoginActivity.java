@@ -5,9 +5,8 @@ import android.content.Intent;
 import android.os.Bundle;
 import android.view.View;
 import android.widget.ImageView;
-import android.widget.RelativeLayout;
 
-import com.post.station.MainActivity;
+import com.post.station.ui.MainActivity;
 import com.post.station.R;
 import com.post.station.base.BaseActivity;
 
@@ -37,7 +36,7 @@ public class LoginActivity extends BaseActivity {
 
     private boolean isChecked = false;
 
-    @OnClick({R.id.rl_login, R.id.tvForgetPwd, R.id.rl_login, R.id.iv_login_weixin,
+    @OnClick({R.id.rl_login, R.id.tvForgetPwd, R.id.iv_login_weixin,
             R.id.tv_new_user, R.id.iv_agree})
     public void onViewClicked(View view) {
         switch (view.getId()) {

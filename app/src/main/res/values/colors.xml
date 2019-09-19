@@ -6,7 +6,6 @@
     <color name="main_bg">#f0f0f0</color>
     <color name="white">#ffffff</color>
     <color name="white1">#50ffffff</color>
-    <color name="green_base">#B92024</color>
     <color name="orange">#ff8b23</color>
     <color name="black">#000000</color>
     <color name="black1">#333333</color>
@@ -28,7 +27,8 @@
     <color name="blue">#0383EE</color>
     <color name="calendar_title">#F6F6F6</color>
 
-    <color name="light_red">#cb252a</color>
+    <color name="base_color">#cb252a</color>
+    <color name="red_light">#FA445B</color>
     <color name="grey400">#898989</color>
     <color name="green">#23C528</color>
     <color name="my_dispath_text">#666666</color>
