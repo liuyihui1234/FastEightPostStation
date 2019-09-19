@@ -37,7 +37,7 @@ public class LoginActivity extends BaseActivity {
 
     private boolean isChecked = false;
 
-    @OnClick({R.id.rl_login, R.id.tvForgetPwd,R.id.iv_login_weixin,
+    @OnClick({R.id.rl_login, R.id.tvForgetPwd, R.id.iv_login_weixin,
             R.id.tv_new_user, R.id.iv_agree})
     public void onViewClicked(View view) {
         switch (view.getId()) {
