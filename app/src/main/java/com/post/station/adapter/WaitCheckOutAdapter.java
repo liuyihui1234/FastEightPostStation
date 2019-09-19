@@ -15,7 +15,6 @@ import com.post.station.response.WaitCheckOutBean;
 
 import butterknife.BindView;
 import butterknife.ButterKnife;
-import rx.functions.Action1;
 
 public class WaitCheckOutAdapter extends CommonItemAdapter<WaitCheckOutBean,
 

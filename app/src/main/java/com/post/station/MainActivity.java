@@ -19,7 +19,7 @@ import android.widget.Toast;
 import com.post.station.base.BaseActivity;
 import com.post.station.frgment.HomeFragment;
 import com.post.station.frgment.InventoryControlFragment;
-import com.post.station.frgment.NoticationRecordFragment;
+import com.post.station.ui.manage.NoticationRecordFragment;
 import com.post.station.frgment.PersonalCenterFragment;
 import com.post.station.model.HomeModel;
 import com.post.station.response.VersionBean;

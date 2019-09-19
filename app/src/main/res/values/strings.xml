@@ -62,4 +62,10 @@
     <string name="setting">设置</string>
     <string name="help_center_detail">常见问题</string>
     <string name="wait_checkout">待出库</string>
+    <string name="checkout">已出库</string>
+    <string name="returned_piece">退回件</string>
+    <string name="third_party">第三方模板</string>
+    <string name="have_passed">已通过</string>
+    <string name="not_passed">未通过</string>
+    <string name="audit">待审核</string>
 </resources>

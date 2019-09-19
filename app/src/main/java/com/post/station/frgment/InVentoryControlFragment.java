@@ -13,7 +13,8 @@ import androidx.viewpager.widget.ViewPager;
 import com.google.android.material.tabs.TabLayout;
 import com.post.station.R;
 import com.post.station.adapter.TabDetectionAdapter;
-import com.post.station.model.HomeModel;
+import com.post.station.ui.manage.ReturnedPieceFragment;
+import com.post.station.ui.manage.WaitCheckOutFragment;
 
 import butterknife.BindView;
 import butterknife.ButterKnife;
@@ -25,8 +26,10 @@ public class InventoryControlFragment extends Fragment {
     @BindView(R.id.mViewPager)
     ViewPager mViewPager;
 
-    private HomeModel model = new HomeModel();
     private WaitCheckOutFragment waitCheckOutFragment;
+    private CheckOutFragment checkOutFragment;
+    private ReturnedPieceFragment pieceFragment;
+
     @Override
     public View onCreateView(LayoutInflater inflater, ViewGroup container,
                              Bundle savedInstanceState) {
@@ -41,8 +44,12 @@ public class InventoryControlFragment extends Fragment {
 
         TabDetectionAdapter adapter = new TabDetectionAdapter(getChildFragmentManager());
         waitCheckOutFragment = new WaitCheckOutFragment();
+        checkOutFragment = new CheckOutFragment();
+        pieceFragment = new ReturnedPieceFragment();
 
         adapter.addFragment(getString(R.string.wait_checkout), waitCheckOutFragment);
+        adapter.addFragment(getString(R.string.checkout), checkOutFragment);
+        adapter.addFragment(getString(R.string.returned_piece), pieceFragment);
 
         mViewPager.setAdapter(adapter);
         mTabLayout.setupWithViewPager(mViewPager);
