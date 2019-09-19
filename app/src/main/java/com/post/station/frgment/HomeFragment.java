@@ -58,7 +58,7 @@ public class HomeFragment extends Fragment {
             @Override
             public void onClick(View v) {
 
-                startActivity(new Intent(getActivity(), LinechartActivity.class).putExtra("",));
+                startActivity(new Intent(getActivity(), LinechartActivity.class));
             }
         });
         return view;

@@ -13,7 +13,11 @@
         android:supportsRtl="true"
         android:theme="@style/AppTheme">
         <activity android:name=".ui.homepage.LinechartActivity"></activity>
-        <activity android:name=".ui.login.LoginActivity">
+        <activity android:name=".ui.login.LoginActivity"/>
+        <activity android:name=".AddCustomerActivity"></activity>
+        <activity android:name=".CreateOrderActivity" />
+        <activity android:name=".ui.mine.BrandManagementaActivity" />
+        <activity android:name=".ui.mine.AddExpressBrandActivity">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
 
