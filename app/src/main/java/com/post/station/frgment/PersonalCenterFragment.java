@@ -67,7 +67,7 @@ public class PersonalCenterFragment extends Fragment {
         }
     }
 
-    @OnClick({R.id.ll_wallet,R.id.ll_BrandManagement})
+    @OnClick({R.id.ll_wallet, R.id.ll_BrandManagement})
     public void onViewClicked(View view) {
         switch (view.getId()) {
             case R.id.ll_wallet:

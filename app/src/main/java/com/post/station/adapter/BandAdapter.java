@@ -72,7 +72,7 @@ public class BandAdapter extends BaseAdapter {
         BandBean bean = mInfo.get(position);
         diyHolder.name.setText(bean.getName());
         if (poins == position) {
-            diyHolder.ll_brand.setBackgroundColor(mContext.getResources().getColor(R.color.green_base));
+            diyHolder.ll_brand.setBackgroundColor(mContext.getResources().getColor(R.color.base_color));
         }
         return convertView;
     }
