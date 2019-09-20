@@ -1,0 +1,86 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:orientation="vertical"
+    android:layout_height="match_parent"
+    android:background="@color/background_color"
+    tools:context=".NewSignatureActivity">
+    <RelativeLayout
+        android:id="@+id/rl_appBar"
+        android:layout_width="match_parent"
+        android:layout_height="43dp"
+        android:background="@color/base_color">
+
+        <TextView
+            android:id="@+id/mTitle"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerHorizontal="true"
+            android:layout_centerVertical="true"
+            android:gravity="center"
+            android:text="新建签名"
+            android:textColor="@color/white"
+            android:textSize="20sp" />
+
+        <ImageView
+            android:id="@+id/mBackImageBtn"
+            android:layout_width="25dp"
+            android:layout_height="35dp"
+            android:layout_centerVertical="true"
+            android:layout_marginStart="10dp"
+            android:layout_marginLeft="10dp"
+            android:padding="5dp"
+            android:scaleType="fitCenter"
+            android:src="@drawable/arrow_left_white" />
+
+    </RelativeLayout>
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="45dp"
+        android:layout_marginTop="@dimen/dp_20"
+        android:background="@color/white"
+        android:gravity="center_vertical">
+        <EditText
+            android:id="@+id/et_pwd"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_vertical"
+            android:layout_marginLeft="15dp"
+            android:background="@null"
+            android:hint="请输入短信签名，不超过8个字"
+            android:textSize="17sp" />
+
+    </LinearLayout>
+    <Button
+        android:layout_marginTop="@dimen/dp_20"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="@dimen/dp_10"
+        android:layout_marginRight="@dimen/dp_10"
+        android:textColor="@color/white"
+        android:text="提交审核"/>
+    <TextView
+        android:layout_marginLeft="@dimen/dp_10"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:textSize="@dimen/dp_12"
+        android:padding="@dimen/dp_5"
+        android:text="温馨提示："/>
+    <TextView
+        android:layout_marginLeft="@dimen/dp_10"
+        android:layout_width="match_parent"
+        android:padding="@dimen/dp_5"
+        android:layout_height="wrap_content"
+        android:textSize="@dimen/dp_10"
+        android:text="1.自定义的短信签名尽量使用客户易懂的词语，例：虹桥快8二部，\n学校代收点；"/>
+    <TextView
+        android:layout_marginLeft="@dimen/dp_10"
+        android:layout_width="match_parent"
+        android:padding="@dimen/dp_5"
+        android:layout_height="wrap_content"
+        android:textSize="@dimen/dp_10"
+        android:text="2.每提交一个自定义的签名扣费2元；无论是否通过审核，都一概\n不退还，请不要提交与快递不相关的签名。"/>
+
+</LinearLayout>

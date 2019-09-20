@@ -12,11 +12,16 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/AppTheme">
-        <activity android:name=".OrderSettingActivity"></activity>
-        <activity android:name=".AddCustomerActivity" />
-
-        <activity android:name=".ui.homepage.LinechartActivity"></activity>
-        <activity android:name=".ui.mine.AddExpressBrandActivity"/>
+        <activity android:name=".HelpActivity"></activity>
+        <activity android:name=".CapitalDetailsActivity" />
+        <activity android:name=".NewSignatureActivity" />
+        <activity android:name=".BatchOrderActivity" />
+        <activity android:name=".QuotationActivity" />
+        <activity android:name=".AssistanceActivity" />
+        <activity android:name=".OrderSettingActivity" />
+        <activity android:name=".ui.mine.AddCustomerActivity" />
+        <activity android:name=".ui.homepage.LinechartActivity" />
+        <activity android:name=".ui.mine.AddExpressBrandActivity" />
         <activity android:name=".CreateOrderActivity" />
         <activity android:name=".ui.mine.BrandManagementaActivity" />
         <activity android:name=".ui.login.LoginActivity">
@@ -37,16 +42,16 @@
                 android:resource="@xml/file_paths" />
         </provider>
 
-        <activity android:name=".ui.MainActivity"></activity>
-        <activity android:name=".zxing.CaptureActivity"></activity>
-        <activity android:name=".ui.login.RegisterActivity"></activity>
-        <activity android:name=".ui.mine.MyWalletActivity"></activity>
-        <activity android:name=".ui.login.FoundPasswordActivity"></activity>
-        <activity android:name=".ui.homepage.SmsTemplateActivity"></activity>
-        <activity android:name=".ui.homepage.InformActivity"></activity>
-        <activity android:name=".ui.homepage.OrderActivity"></activity>
-        <activity android:name=".ui.homepage.SmsRecordActivity"></activity>
-        <activity android:name=".ui.homepage.MyOrderActivity"></activity>
+        <activity android:name=".ui.MainActivity" />
+        <activity android:name=".zxing.CaptureActivity" />
+        <activity android:name=".ui.login.RegisterActivity" />
+        <activity android:name=".ui.mine.MyWalletActivity" />
+        <activity android:name=".ui.login.FoundPasswordActivity" />
+        <activity android:name=".ui.homepage.SmsTemplateActivity" />
+        <activity android:name=".ui.homepage.InformActivity" />
+        <activity android:name=".ui.homepage.OrderActivity" />
+        <activity android:name=".ui.homepage.SmsRecordActivity" />
+        <activity android:name=".ui.homepage.MyOrderActivity" />
     </application>
 
 </manifest>

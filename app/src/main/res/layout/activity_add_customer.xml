@@ -6,7 +6,7 @@
     android:layout_height="match_parent"
     android:background="@color/background_color"
     android:orientation="vertical"
-    tools:context=".AddCustomerActivity">
+    tools:context=".ui.mine.AddCustomerActivity">
 
     <RelativeLayout
         android:id="@+id/rl_appBar"
@@ -37,12 +37,14 @@
             android:src="@drawable/arrow_left_white" />
 
         <TextView
+            android:id="@+id/tv_submission"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_alignParentRight="true"
             android:layout_centerHorizontal="true"
             android:layout_centerVertical="true"
             android:layout_marginRight="@dimen/dp_10"
+            android:textColor="@color/white"
             android:text="提交"/>
     </RelativeLayout>
 

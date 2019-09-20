@@ -1,8 +1,10 @@
-package com.post.station;
+package com.post.station.ui.mine;
 
 import androidx.appcompat.app.AppCompatActivity;
 
 import android.os.Bundle;
+
+import com.post.station.R;
 
 public class AddCustomerActivity extends AppCompatActivity {
 
