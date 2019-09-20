@@ -21,10 +21,10 @@ public class OrderActivity extends BaseActivity {
     private GridView gview;
     private List<Map<String, Object>> data_list;
     private SimpleAdapter sim_adapter;
-    private int[] icon = {R.drawable.ic_launcher_background, R.drawable.ic_launcher_background,
-            R.drawable.ic_launcher_background, R.drawable.ic_launcher_background, R.drawable.ic_launcher_background,
-            R.drawable.ic_launcher_background, R.drawable.ic_launcher_background, R.drawable.ic_launcher_background};
-    private String[] iconName = {"我的订单", "单号源设置", "订单设置", "收款记录", "实名记录", "优惠券", "报价", "快宝商城"};
+    private int[] icon = {R.mipmap.myorder_ic, R.mipmap.orderset_ic,
+            R.mipmap.moneyrecord_ic, R.mipmap.realname_ic, R.mipmap.discountcoupon_ic,
+            R.mipmap.pricebill_ic};
+    private String[] iconName = {"我的订单",  "订单设置", "收款记录", "实名记录", "优惠券", "报价单"};
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {

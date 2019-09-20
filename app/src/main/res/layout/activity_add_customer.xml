@@ -6,7 +6,7 @@
     android:layout_height="match_parent"
     android:background="@color/background_color"
     android:orientation="vertical"
-    tools:context=".AddCustomerActivity">
+    tools:context=".ui.mine.AddCustomerActivity">
 
     <RelativeLayout
         android:id="@+id/rl_appBar"
@@ -37,14 +37,15 @@
             android:src="@drawable/arrow_left_white" />
 
         <TextView
+            android:id="@+id/tv_submission"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_alignParentRight="true"
             android:layout_centerHorizontal="true"
             android:layout_centerVertical="true"
             android:layout_marginRight="@dimen/dp_10"
-            android:text="确定"
-            android:textColor="@color/white" />
+            android:textColor="@color/white"
+            android:text="提交"/>
     </RelativeLayout>
 
     <LinearLayout
@@ -86,8 +87,8 @@
                 android:layout_width="match_parent"
                 android:layout_height="match_parent"
                 android:layout_gravity="center_vertical"
-                android:layout_marginLeft="10dp"
                 android:background="@null"
+                android:layout_marginLeft="50dp"
                 android:hint="请输入客户姓名,不超过5个字"
                 android:textColorHint="@color/textcolor"
                 android:textSize="14dp" />
@@ -110,12 +111,12 @@
                 android:textSize="14dp" />
 
             <EditText
-                android:id="@+id/et_mobile"
+                android:id="@+id/et_phone"
                 android:layout_width="match_parent"
                 android:layout_height="match_parent"
                 android:layout_gravity="center_vertical"
-                android:layout_marginLeft="10dp"
                 android:background="@null"
+                android:layout_marginLeft="50dp"
                 android:hint="请输入客户手机号"
                 android:textColorHint="@color/textcolor"
                 android:textSize="14dp" />
@@ -134,20 +135,20 @@
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_gravity="center_vertical"
+                android:text="省市区"
                 android:layout_marginLeft="@dimen/dp_10"
-                android:text=""
                 android:textColor="@color/black1"
                 android:textSize="14dp" />
 
             <EditText
-                android:id="@+id/ed_verticition"
+                android:id="@+id/et_province"
                 android:layout_width="0dp"
+                android:layout_weight="1"
+                android:layout_marginLeft="36dp"
                 android:layout_height="match_parent"
                 android:layout_gravity="center_vertical"
-                android:layout_marginLeft="10dp"
-                android:layout_weight="1"
                 android:background="@null"
-                android:hint="请输入验证码"
+                android:hint="请选择省市区"
                 android:textColorHint="@color/textcolor"
                 android:textSize="14dp" />
 
@@ -156,43 +157,34 @@
                 android:layout_height="match_parent"
                 android:layout_marginTop="@dimen/dp_5"
                 android:layout_marginBottom="5dp"
-                android:background="@color/color_line" />
-
-            <TextView
-                android:id="@+id/tv_get_vertication"
-                android:layout_width="@dimen/dp_85"
-                android:layout_height="match_parent"
-                android:gravity="center"
-                android:padding="5dp"
-                android:text=""
-                android:textColor="@color/black1"
-                android:textSize="14dp" />
-
+                android:background="@color/color_line"/>
         </LinearLayout>
-
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="1dp"
+            android:background="#eaeaea"></View>
         <LinearLayout
             android:layout_width="match_parent"
             android:layout_height="@dimen/dp_45"
             android:layout_centerHorizontal="true"
             android:background="@color/white">
-
             <TextView
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_gravity="center_vertical"
+                android:text="详细地址"
                 android:layout_marginLeft="@dimen/dp_10"
-                android:text=""
                 android:textColor="@color/black1"
                 android:textSize="14dp" />
 
             <EditText
-                android:id="@+id/et_real_name"
+                android:id="@+id/et_detailedAddress"
                 android:layout_width="match_parent"
                 android:layout_height="match_parent"
                 android:layout_gravity="center_vertical"
-                android:layout_marginLeft="@dimen/dp_10"
                 android:background="@null"
-                android:hint="请输入真实姓名"
+                android:layout_marginLeft="@dimen/dp_20"
+                android:hint="请输入详细地址"
                 android:textColorHint="@color/textcolor"
                 android:textSize="14dp" />
 
@@ -213,22 +205,81 @@
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_gravity="center_vertical"
+                android:text="备注"
                 android:layout_marginLeft="@dimen/dp_10"
-                android:text=""
                 android:textColor="@color/black1"
                 android:textSize="14dp" />
 
             <EditText
-                android:id="@+id/et_ID"
+                android:id="@+id/et_remarks"
                 android:layout_width="match_parent"
                 android:layout_height="match_parent"
                 android:layout_gravity="center_vertical"
-                android:layout_marginLeft="@dimen/dp_10"
                 android:background="@null"
-                android:hint="请输入身份证号"
+                android:layout_marginLeft="@dimen/dp_45"
+                android:hint="非必填项,请输入备注,不超过20个字"
                 android:textColorHint="@color/textcolor"
                 android:textSize="14dp" />
         </LinearLayout>
+    </LinearLayout>
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/dp_45"
+        android:layout_centerHorizontal="true"
+        android:background="@color/white">
+        <TextView
+            android:layout_marginLeft="@dimen/dp_10"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_vertical"
+            android:text="标签"
+            android:textColor="@color/black1"
+            android:textSize="14dp" />
+        <TextView
+            android:layout_marginLeft="@dimen/dp_50"
+            android:layout_width="48dp"
+            android:layout_height="wrap_content"
+            android:gravity="center"
+            android:layout_gravity="center_vertical"
+            android:text="无"
+            android:background="#eeeeee"
+            android:padding="@dimen/dp_5"
+            android:textColor="@color/black1"
+            android:textSize="14dp" />
+        <TextView
+            android:layout_marginLeft="@dimen/dp_15"
+            android:layout_width="@dimen/dp_48"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_vertical"
+            android:gravity="center"
+            android:text="棕红"
+            android:background="#eeeeee"
+            android:textColor="@color/black1"
+            android:padding="@dimen/dp_5"
+            android:textSize="14dp" />
+        <TextView
+            android:layout_marginLeft="@dimen/dp_15"
+            android:layout_width="48dp"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_vertical"
+            android:gravity="center"
+            android:text="标黄"
+            android:padding="@dimen/dp_5"
+            android:background="#eeeeee"
+            android:textColor="@color/black1"
+            android:textSize="14dp" />
+        <TextView
+            android:layout_marginLeft="@dimen/dp_15"
+            android:layout_width="48dp"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_vertical"
+            android:gravity="center"
+            android:text="拉黑"
+            android:padding="@dimen/dp_5"
+            android:background="#eeeeee"
+            android:textColor="@color/black1"
+            android:textSize="14dp" />
+
     </LinearLayout>
 
 

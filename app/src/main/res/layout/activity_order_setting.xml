@@ -1,0 +1,249 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/background_color"
+    android:orientation="vertical"
+    tools:context=".OrderSettingActivity">
+    <RelativeLayout
+        android:id="@+id/rl_appBar"
+        android:layout_width="match_parent"
+        android:layout_height="43dp"
+        android:background="@color/base_color">
+
+        <TextView
+            android:id="@+id/mTitle"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerHorizontal="true"
+            android:layout_centerVertical="true"
+            android:gravity="center"
+            android:text="订单设置"
+            android:textColor="@color/white"
+            android:textSize="20sp" />
+
+        <ImageView
+            android:id="@+id/mBackImageBtn"
+            android:layout_width="25dp"
+            android:layout_height="35dp"
+            android:layout_centerVertical="true"
+            android:layout_marginStart="10dp"
+            android:layout_marginLeft="10dp"
+            android:padding="5dp"
+            android:scaleType="fitCenter"
+            android:src="@drawable/arrow_left_white" />
+    </RelativeLayout>
+        <LinearLayout
+            android:id="@+id/ll_wallet"
+            android:layout_width="match_parent"
+            android:layout_height="43dp"
+            android:layout_below="@id/ll_theme"
+            android:background="@color/white"
+            android:gravity="center_vertical"
+            android:orientation="horizontal">
+            <TextView
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="10dp"
+                android:layout_weight="1"
+                android:text="打印电子面单是自动短信通知"
+                android:textColor="#333333"
+                android:textSize="15sp" />
+
+            <ImageView
+                android:layout_width="25dp"
+                android:layout_height="35dp"
+                android:padding="8dp"
+                android:src="@drawable/open" />
+        </LinearLayout>
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="1dp"
+        android:background="#e7e7e7" />
+            <LinearLayout
+                android:id="@+id/ll_BrandManagement"
+                android:layout_width="match_parent"
+                android:layout_height="43dp"
+                android:gravity="center_vertical"
+                android:background="@color/white"
+                android:orientation="horizontal">
+
+                <TextView
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="10dp"
+                    android:layout_weight="1"
+                    android:text="使用印刷有快递品牌标识的打印纸打印"
+                    android:textColor="#333333"
+                    android:textSize="15dp" />
+
+                <ImageView
+                    android:id="@+id/iv_close"
+                    android:layout_width="@dimen/dp_60"
+                    android:layout_height="@dimen/dp_35"
+                    android:padding="8dp"
+                    android:src="@drawable/ordersetting" />
+            </LinearLayout>
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="1dp"
+                android:background="#e7e7e7" />
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:padding="@dimen/dp_10"
+                android:text="关闭该选项后,将采用无快递品牌标识的打印纸打印"/>
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="1dp"
+        android:background="#e7e7e7" />
+            <LinearLayout
+                android:id="@+id/ll_TeamManagement"
+                android:layout_width="match_parent"
+                android:layout_height="43dp"
+                android:background="@color/white"
+                android:gravity="center_vertical"
+                android:orientation="horizontal">
+                <TextView
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="10dp"
+                    android:layout_weight="1"
+                    android:text="便携式打印面单,打印机反向出纸"
+                    android:textColor="#333333"
+                    android:textSize="15sp" />
+                <ImageView
+                    android:id="@+id/iv_open"
+                    android:layout_width="@dimen/dp_60"
+                    android:layout_height="@dimen/dp_35"
+                    android:padding="8dp"
+                    android:src="@drawable/ordersetting1" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_marginTop="@dimen/dp_10"
+                android:id="@+id/ll_Cooperative_Express"
+                android:layout_width="match_parent"
+                android:layout_height="43dp"
+                android:background="@color/white"
+                android:gravity="center_vertical"
+                android:orientation="horizontal">
+
+                <TextView
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="10dp"
+                    android:layout_weight="1"
+                    android:text="有新订单时语音播报提醒"
+                    android:textColor="#333333"
+                    android:textSize="15sp" />
+
+                <ImageView
+                    android:layout_width="@dimen/dp_60"
+                    android:layout_height="@dimen/dp_35"
+                    android:padding="8dp"
+                    android:src="@drawable/ordersetting" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_marginTop="@dimen/dp_10"
+                android:id="@+id/ll_customerManagement"
+                android:layout_width="match_parent"
+                android:layout_height="43dp"
+                android:gravity="center_vertical"
+                android:background="@color/white"
+                android:orientation="horizontal">
+
+                <TextView
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="10dp"
+                    android:layout_weight="1"
+                    android:text="云打印模板设置"
+                    android:textColor="#333333"
+                    android:textSize="15sp" />
+
+            </LinearLayout>
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="1dp"
+        android:background="#e7e7e7" />
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:padding="@dimen/dp_10"
+        android:text="根据快递员品牌选择云打印模板或三联模板" />
+            <LinearLayout
+                android:id="@+id/ll_Statistics"
+                android:layout_width="match_parent"
+                android:layout_height="43dp"
+                android:gravity="center_vertical"
+                android:background="@color/white"
+                android:orientation="horizontal">
+
+                <TextView
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="10dp"
+                    android:layout_weight="1"
+                    android:text="订单实名制设置"
+                    android:textColor="#333333"
+                    android:textSize="15sp" />
+
+            </LinearLayout>
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="1dp"
+        android:background="#e7e7e7" />
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:padding="@dimen/dp_10"
+        android:text="根据揽件快递员的巴枪工号进行设置，才能进行订单实\n名制流程" />
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="1dp"
+        android:background="#e7e7e7" />
+            <LinearLayout
+                android:id="@+id/ll_Post_station"
+                android:layout_width="match_parent"
+                android:layout_height="43dp"
+                android:gravity="center_vertical"
+                android:background="@color/white"
+                android:orientation="horizontal">
+
+                <TextView
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="10dp"
+                    android:layout_weight="1"
+                    android:text="客户下单自助打印"
+                    android:textColor="#333333"
+                    android:textSize="15sp" />
+
+                <ImageView
+                    android:layout_width="@dimen/dp_60"
+                    android:layout_height="@dimen/dp_35"
+                    android:padding="8dp"
+                    android:src="@drawable/ordersetting1" />
+            </LinearLayout>
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="1dp"
+                android:background="#e7e7e7" />
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:padding="@dimen/dp_10"
+        android:text="设置驿站APP的单号源及云打印机，客户下单后，可自\n助打印订单" />
+
+
+
+
+
+</LinearLayout>

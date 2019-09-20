@@ -8,7 +8,6 @@
 
     android:orientation="vertical"
     tools:context=".ui.mine.AddExpressBrandActivity">
-
     <RelativeLayout
         android:id="@+id/rl_appBar"
         android:layout_width="match_parent"
@@ -36,94 +35,81 @@
             android:padding="5dp"
             android:scaleType="fitCenter"
             android:src="@drawable/arrow_left_white" />
-
         <TextView
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
             android:layout_alignParentRight="true"
             android:layout_centerHorizontal="true"
             android:layout_centerVertical="true"
+            android:textColor="@color/white"
             android:layout_marginRight="@dimen/dp_10"
-            android:text="确定(0)"
-            android:textColor="@color/white" />
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="确定(0)"/>
     </RelativeLayout>
-
     <RelativeLayout
+        android:background="#fff7d6"
         android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:background="#FFEB3B">
-
+        android:layout_height="wrap_content">
         <TextView
             android:id="@+id/textView"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
             android:layout_marginLeft="@dimen/dp_10"
             android:layout_marginRight="@dimen/dp_10"
-            android:text="使用入库功能前，请您先选择驿站代理的所有"
-            android:textSize="@dimen/dp_10" />
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:textSize="@dimen/dp_10"
+            android:text="使用入库功能前，请您先选择驿站代理的所有" />
     </RelativeLayout>
-
     <ScrollView
         android:layout_width="match_parent"
         android:layout_height="match_parent"
         android:visibility="gone">
-
         <LinearLayout
             android:layout_width="match_parent"
             android:layout_height="match_parent"
             android:orientation="vertical">
-
             <LinearLayout
+                android:orientation="horizontal"
                 android:layout_width="match_parent"
-                android:layout_height="wrap_content"
                 android:layout_marginTop="@dimen/dp_10"
-                android:orientation="horizontal">
-
+                android:layout_height="wrap_content">
                 <LinearLayout
+                    android:orientation="horizontal"
                     android:layout_width="0dp"
+                    android:layout_weight="1"
                     android:layout_height="@dimen/dp_50"
                     android:layout_marginLeft="@dimen/dp_10"
-                    android:layout_weight="1"
-                    android:background="@drawable/corner_5_white_drawable"
                     android:gravity="center"
-                    android:orientation="horizontal">
-
+                    android:background="@drawable/corner_5_white_drawable">
                     <ImageView
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
-                        android:src="@drawable/sto" />
-
+                        android:src="@drawable/sto"/>
                     <TextView
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
-                        android:text="申通" />
+                        android:text="申通"/>
                 </LinearLayout>
-
                 <LinearLayout
+                    android:orientation="horizontal"
                     android:layout_width="0dp"
+                    android:layout_weight="1"
                     android:layout_height="@dimen/dp_50"
                     android:layout_marginLeft="@dimen/dp_20"
                     android:layout_marginRight="@dimen/dp_10"
-                    android:layout_weight="1"
-                    android:background="@drawable/corner_5_white_drawable"
                     android:gravity="center"
-                    android:orientation="horizontal">
-
+                    android:background="@drawable/corner_5_white_drawable">
                     <ImageView
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
-                        android:src="@drawable/sto" />
-
+                        android:src="@drawable/sto"/>
                     <TextView
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
-                        android:text="中通" />
+                        android:text="中通"/>
                 </LinearLayout>
             </LinearLayout>
 
         </LinearLayout>
     </ScrollView>
-
     <GridView
         android:id="@+id/gridview"
         android:layout_width="match_parent"
