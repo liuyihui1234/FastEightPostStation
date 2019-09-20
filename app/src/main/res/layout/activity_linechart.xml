@@ -7,7 +7,10 @@
     android:orientation="vertical"
     android:background="@color/main_bg"
     tools:context=".ui.homepage.LinechartActivity">
-
+<View
+    android:layout_width="match_parent"
+    android:layout_height="@dimen/dp_23"
+    android:background="@color/base_color"/>
     <RelativeLayout
         android:id="@+id/rl_appBar"
         android:layout_width="match_parent"
@@ -26,13 +29,13 @@
             android:textSize="18dp" />
         <ImageView
             android:id="@+id/mBackImageBtn"
-            android:layout_width="25dp"
+            android:layout_width="35dp"
             android:layout_height="35dp"
             android:layout_centerVertical="true"
             android:layout_marginStart="10dp"
             android:layout_marginLeft="10dp"
             android:onClick="onBack"
-            android:padding="5dp"
+            android:padding="10dp"
             android:scaleType="fitCenter"
             android:src="@drawable/arrow_left_white"
             tools:ignore="OnClick" />
@@ -60,6 +63,20 @@
             android:text="今日成交额(元)"
             android:textSize="@dimen/dp_14"
             android:textColor="@color/text_black"/>
+
+        <com.post.station.utils.ChartView
+            android:id="@+id/chartview"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_centerInParent="true"
+            app:bgcolor="#ffffff"
+            app:interval="50dp"
+            app:isScroll="false"
+            app:linecolor="#02bbb7"
+            app:xylinecolor="#e2e2e2"
+            app:xylinewidth="1dp"
+            app:xytextcolor="#7e7e7e"
+            app:xytextsize="12sp" />
     </LinearLayout>
     <LinearLayout
         android:layout_width="match_parent"
@@ -83,5 +100,18 @@
             android:text="今日成交额(元)"
             android:textSize="@dimen/dp_14"
             android:textColor="@color/text_black"/>
+        <com.post.station.utils.ChartView
+            android:id="@+id/chartview1"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_centerInParent="true"
+            app:bgcolor="#ffffff"
+            app:interval="50dp"
+            app:isScroll="false"
+            app:linecolor="#02bbb7"
+            app:xylinecolor="#e2e2e2"
+            app:xylinewidth="1dp"
+            app:xytextcolor="#7e7e7e"
+            app:xytextsize="12sp" />
     </LinearLayout>
 </LinearLayout>
