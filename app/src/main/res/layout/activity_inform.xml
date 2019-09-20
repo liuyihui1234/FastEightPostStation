@@ -10,7 +10,7 @@
 
     <LinearLayout
         android:layout_width="match_parent"
-        android:layout_height="300dp"
+        android:layout_height="230dp"
         android:background="@color/base_color"
         android:gravity="center_horizontal"
         android:orientation="vertical">
@@ -29,12 +29,27 @@
                 android:src="@drawable/arrow_left_white"
                 tools:ignore="OnClick" />
 
-            <androidx.appcompat.widget.SearchView
+            <LinearLayout
                 android:layout_width="wrap_content"
                 android:layout_height="match_parent"
                 android:layout_weight="1"
-                android:background="@drawable/bg_white1"
-                app:queryHint="请输入姓名或身份证号" />
+                android:background="@drawable/corner_5_white_drawable"
+                android:gravity="center">
+
+                <ImageView
+                    android:layout_width="15dp"
+                    android:layout_height="15dp"
+                    android:src="@drawable/search_my_order" />
+
+                <EditText
+                    android:id="@+id/tv_feedback"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="10dp"
+                    android:background="@null"
+                    android:hint="请输入手机号\单号\揽件码搜索"
+                    android:textSize="14sp" />
+            </LinearLayout>
 
             <ImageView
                 android:layout_width="45dp"
@@ -43,160 +58,168 @@
 
         <LinearLayout
             android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:layout_margin="15dp"
-            android:orientation="horizontal"
-            android:padding="@dimen/dp_10">
-
-            <RelativeLayout
-                android:layout_width="0dp"
-                android:layout_height="wrap_content"
-                android:layout_weight="1.5">
-
-                <TextView
-                    android:id="@+id/tv_money"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:text="0.00"
-                    android:textColor="@color/white"
-                    android:textSize="@dimen/dp_14"
-                    android:textStyle="bold" />
-
-                <TextView
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:layout_below="@id/tv_money"
-                    android:layout_marginTop="@dimen/dp_5"
-                    android:text="可消费余额"
-                    android:textColor="@color/color_white"
-                    android:textSize="@dimen/dp_14" />
-
-                <TextView
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:layout_toRightOf="@id/tv_money"
-                    android:text="元"
-                    android:textColor="@color/color_white"
-                    android:textSize="@dimen/dp_14" />
-            </RelativeLayout>
-
-            <View
-                android:layout_width="1dp"
-                android:layout_height="match_parent"
-                android:background="@color/white" />
-
-            <RelativeLayout
-                android:layout_width="0dp"
-                android:layout_height="wrap_content"
-                android:layout_weight="1">
-
-                <TextView
-                    android:id="@+id/tv_num"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:layout_centerHorizontal="true"
-                    android:text="100"
-                    android:textColor="@color/white"
-                    android:textSize="@dimen/dp_14"
-                    android:textStyle="bold" />
-
-                <TextView
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:layout_toRightOf="@id/tv_num"
-                    android:text="条"
-                    android:textColor="@color/color_white"
-                    android:textSize="@dimen/dp_14" />
-
-                <TextView
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:layout_below="@id/tv_num"
-                    android:layout_centerHorizontal="true"
-                    android:layout_marginTop="@dimen/dp_5"
-                    android:text="免费短信"
-                    android:textColor="@color/color_white"
-                    android:textSize="@dimen/dp_14" />
-            </RelativeLayout>
-
-            <RelativeLayout
-                android:layout_width="0dp"
-                android:layout_height="wrap_content"
-                android:layout_weight="1">
-
-                <TextView
-                    android:id="@+id/tv_dan"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:layout_alignParentRight="true"
-                    android:text="条"
-                    android:textColor="@color/color_white"
-                    android:textSize="@dimen/dp_14" />
-
-                <TextView
-                    android:id="@+id/tv_printing"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:layout_toLeftOf="@id/tv_dan"
-                    android:text="10"
-                    android:textColor="@color/white"
-                    android:textSize="@dimen/dp_14"
-                    android:textStyle="bold" />
-
-                <TextView
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:layout_below="@id/tv_printing"
-                    android:layout_alignParentRight="true"
-                    android:layout_marginTop="@dimen/dp_5"
-                    android:text="免费云呼"
-                    android:textColor="@color/color_white"
-                    android:textSize="@dimen/dp_14" />
-            </RelativeLayout>
-
-
-        </LinearLayout>
-
-        <LinearLayout
-            android:layout_width="match_parent"
             android:layout_height="match_parent"
             android:gravity="center"
-            android:orientation="horizontal">
+            android:orientation="horizontal"
+            android:paddingLeft="25dp"
+            android:paddingRight="25dp">
 
             <LinearLayout
-                android:layout_width="0dp"
-                android:layout_height="match_parent"
-                android:layout_marginLeft="20dp"
-                android:layout_marginTop="@dimen/dp_10"
-                android:layout_marginRight="@dimen/dp_10"
-                android:layout_marginBottom="@dimen/dp_20"
+                android:id="@+id/ll_send_sms"
+                android:layout_width="wrap_content"
+                android:layout_height="70dp"
                 android:layout_weight="1"
-                android:background="@drawable/bg_white"
-                android:orientation="vertical">
+                android:background="@drawable/sms_drawable"
+                android:gravity="center"
+                android:orientation="horizontal">
+
+                <ImageView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:src="@drawable/send_sms" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="8dp"
+                    android:text="发短信"
+                    android:textColor="@color/base_color"
+                    android:textSize="14sp" />
 
             </LinearLayout>
 
             <LinearLayout
-                android:layout_width="0dp"
-                android:layout_height="match_parent"
-                android:layout_marginLeft="10dp"
-                android:layout_marginTop="@dimen/dp_10"
-                android:layout_marginRight="@dimen/dp_20"
-                android:layout_marginBottom="@dimen/dp_20"
-                android:layout_weight="1"
-                android:background="@drawable/bg_white"
-                android:orientation="vertical">
+                android:layout_width="20dp"
+                android:layout_height="wrap_content"></LinearLayout>
 
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="70dp"
+                android:layout_weight="1"
+                android:background="@drawable/sms_drawable"
+                android:gravity="center"
+                android:orientation="horizontal">
+
+                <ImageView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:src="@drawable/sms_recharge" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="8dp"
+                    android:text="短信充值"
+                    android:textColor="@color/base_color"
+                    android:textSize="14sp" />
             </LinearLayout>
 
         </LinearLayout>
     </LinearLayout>
 
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="70dp"
+        android:layout_marginLeft="10dp"
+        android:layout_marginTop="15dp"
+        android:layout_marginRight="10dp"
+        android:layout_marginBottom="15dp"
+        android:background="@drawable/corner_5_white_drawable">
+
+        <LinearLayout
+            android:id="@+id/ll_my_dispatch"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerVertical="true"
+            android:layout_marginLeft="@dimen/dp_42"
+            android:orientation="vertical">
+
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="0.00"
+                    android:textColor="@color/black1"
+                    android:textSize="16sp"
+                    android:textStyle="bold" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="2dp"
+                    android:text="元"
+                    android:textColor="@color/black3"
+                    android:textSize="11sp" />
+            </LinearLayout>
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:gravity="center"
+                android:text="可消费余额"
+                android:textColor="#333333"
+                android:textSize="15sp" />
+        </LinearLayout>
+
+        <View
+            android:layout_width="1dp"
+            android:layout_height="match_parent"
+            android:layout_centerInParent="true"
+            android:layout_margin="8dp"
+            android:background="#ededed"></View>
+
+        <LinearLayout
+            android:id="@+id/ll_my_receipt"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentRight="true"
+            android:layout_centerVertical="true"
+            android:layout_marginRight="@dimen/dp_42"
+            android:orientation="vertical">
+
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="1000"
+                    android:textColor="@color/black1"
+                    android:textSize="16sp"
+                    android:textStyle="bold" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="2dp"
+                    android:text="条"
+                    android:textColor="@color/black3"
+                    android:textSize="11sp" />
+            </LinearLayout>
+
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:gravity="center"
+                android:text="短信剩余"
+                android:textColor="#333333"
+                android:textSize="15sp" />
+        </LinearLayout>
+    </RelativeLayout>
+
     <GridView
         android:id="@+id/gridview1"
         android:layout_width="match_parent"
-        android:layout_height="wrap_content"
+        android:layout_height="match_parent"
         android:layout_marginTop="@dimen/dp_10"
+        android:background="@color/white"
         android:gravity="center_horizontal"
         android:horizontalSpacing="@dimen/dp_1"
         android:numColumns="3"

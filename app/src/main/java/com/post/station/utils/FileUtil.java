@@ -260,7 +260,7 @@ public class FileUtil {
 //    public static void saveUser(Context context, UserInfo user) {
 //        if (user instanceof Serializable) {
 //            SharedPreferences sharedPreferences = context.getSharedPreferences("userInfor", context.MODE_PRIVATE);
-//            SharedPreferences.Editor editor = sharedPreferences.edit();
+//            SharedPreferences.Editor editor = sharedPreferences.edit_white();
 //            ByteArrayOutputStream baos = new ByteArrayOutputStream();
 //            try {
 //                ObjectOutputStream oos = new ObjectOutputStream(baos);

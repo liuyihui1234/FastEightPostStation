@@ -26,7 +26,6 @@ import butterknife.Unbinder;
 
 public class SmsRecordActivity extends BaseActivity {
 
-    Unbinder unbinder;
     @BindView(R.id.flContent)
     FrameLayout flContent;
 
@@ -39,7 +38,7 @@ public class SmsRecordActivity extends BaseActivity {
         super.onCreate(savedInstanceState);
         addContentView(R.layout.activity_sms_record);
         showAppBar(false);
-        unbinder = ButterKnife.bind(this);
+        ButterKnife.bind(this);
         addFragment(NoticationRecordFragment.newInstance("1"));
     }
 

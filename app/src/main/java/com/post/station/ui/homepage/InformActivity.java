@@ -4,7 +4,10 @@ import android.os.Bundle;
 import android.view.View;
 import android.widget.AdapterView;
 import android.widget.GridView;
+import android.widget.LinearLayout;
 import android.widget.SimpleAdapter;
+
+import androidx.appcompat.widget.SearchView;
 
 import com.post.station.R;
 import com.post.station.base.BaseActivity;
@@ -19,15 +22,16 @@ public class InformActivity extends BaseActivity {
     private GridView gview;
     private List<Map<String, Object>> data_list;
     private SimpleAdapter sim_adapter;
-    private int[] icon = {R.drawable.ic_launcher_background, R.drawable.ic_launcher_background,
-            R.drawable.ic_launcher_background, R.drawable.ic_launcher_background, R.drawable.ic_launcher_background,
-            R.drawable.ic_launcher_background, R.drawable.ic_launcher_background, R.drawable.ic_launcher_background};
-    private String[] iconName = {"短信记录", "云呼记录", "草稿箱", "模板", "统计", "短信VIP", "通用设置", "常用问题"};
+    private int[] icon = {R.drawable.sms_record, R.drawable.sms_template,
+            R.drawable.draft_box, R.drawable.statistics, R.drawable.common_problem,
+    };
+    private String[] iconName = {"短信记录", "短信模板", "草稿箱", "统计", "常用问题"};
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_inform);
+        gview = (GridView) findViewById(R.id.gridview1);
         gview = (GridView) findViewById(R.id.gridview1);
         //新建List
         data_list = new ArrayList<Map<String, Object>>();
@@ -43,21 +47,25 @@ public class InformActivity extends BaseActivity {
         gview.setOnItemClickListener(new AdapterView.OnItemClickListener() {
             @Override
             public void onItemClick(AdapterView<?> adapterView, View view, int i, long l) {
-
                 switch (i) {
                     case 0:
                         SmsRecordActivity.start(InformActivity.this);
                         break;
                     case 1:
+                        SmsTemplateActivity.start(InformActivity.this);
                         break;
                     case 2:
                         break;
                     case 3:
-                        SmsTemplateActivity.start(InformActivity.this);
+                        SmsStatisticsActivity.start(InformActivity.this);
+                        break;
+                    case 4:
                         break;
                 }
             }
         });
+        LinearLayout ll_send_sms = findViewById(R.id.ll_send_sms);
+        ll_send_sms.setOnClickListener(v -> SendSmsActivity.start(InformActivity.this));
     }
 
     public List<Map<String, Object>> getData() {
