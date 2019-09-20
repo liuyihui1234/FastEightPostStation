@@ -5,9 +5,8 @@ import android.content.Intent;
 import android.os.Bundle;
 import android.view.View;
 import android.widget.ImageView;
-import android.widget.RelativeLayout;
 
-import com.post.station.MainActivity;
+import com.post.station.ui.MainActivity;
 import com.post.station.R;
 import com.post.station.base.BaseActivity;
 

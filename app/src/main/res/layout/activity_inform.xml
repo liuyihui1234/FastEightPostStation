@@ -4,34 +4,38 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:orientation="vertical"
     android:background="@color/main_bg"
+    android:orientation="vertical"
     tools:context=".ui.homepage.InformActivity">
 
     <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="300dp"
-        android:orientation="vertical"
+        android:background="@color/base_color"
         android:gravity="center_horizontal"
-        android:background="@color/light_red">
+        android:orientation="vertical">
+
         <LinearLayout
             android:layout_width="match_parent"
             android:layout_height="45dp"
             android:layout_marginTop="@dimen/dp_23"
             android:orientation="horizontal">
+
             <ImageView
                 android:layout_width="45dp"
                 android:layout_height="match_parent"
-                android:padding="12dp"
                 android:onClick="onBack"
+                android:padding="12dp"
                 android:src="@drawable/arrow_left_white"
                 tools:ignore="OnClick" />
+
             <androidx.appcompat.widget.SearchView
                 android:layout_width="wrap_content"
                 android:layout_height="match_parent"
-                app:queryHint="请输入姓名或身份证号"
                 android:layout_weight="1"
-                android:background="@drawable/bg_white1" />
+                android:background="@drawable/bg_white1"
+                app:queryHint="请输入姓名或身份证号" />
+
             <ImageView
                 android:layout_width="45dp"
                 android:layout_height="match_parent" />
@@ -43,145 +47,159 @@
             android:layout_margin="15dp"
             android:orientation="horizontal"
             android:padding="@dimen/dp_10">
+
             <RelativeLayout
                 android:layout_width="0dp"
-                android:layout_weight="1.5"
-                android:layout_height="wrap_content">
+                android:layout_height="wrap_content"
+                android:layout_weight="1.5">
+
                 <TextView
                     android:id="@+id/tv_money"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
+                    android:text="0.00"
                     android:textColor="@color/white"
                     android:textSize="@dimen/dp_14"
-                    android:textStyle="bold"
-                    android:text="0.00"/>
+                    android:textStyle="bold" />
+
                 <TextView
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:textColor="@color/color_white"
                     android:layout_below="@id/tv_money"
                     android:layout_marginTop="@dimen/dp_5"
-                    android:textSize="@dimen/dp_14"
-                    android:text="可消费余额"/>
+                    android:text="可消费余额"
+                    android:textColor="@color/color_white"
+                    android:textSize="@dimen/dp_14" />
+
                 <TextView
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:textColor="@color/color_white"
                     android:layout_toRightOf="@id/tv_money"
-                    android:textSize="@dimen/dp_14"
-                    android:text="元"/>
+                    android:text="元"
+                    android:textColor="@color/color_white"
+                    android:textSize="@dimen/dp_14" />
             </RelativeLayout>
-<View
-    android:layout_width="1dp"
-    android:layout_height="match_parent"
-    android:background="@color/white"/>
+
+            <View
+                android:layout_width="1dp"
+                android:layout_height="match_parent"
+                android:background="@color/white" />
 
             <RelativeLayout
                 android:layout_width="0dp"
-                android:layout_weight="1"
-                android:layout_height="wrap_content">
+                android:layout_height="wrap_content"
+                android:layout_weight="1">
+
                 <TextView
                     android:id="@+id/tv_num"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
+                    android:layout_centerHorizontal="true"
+                    android:text="100"
                     android:textColor="@color/white"
                     android:textSize="@dimen/dp_14"
-                    android:textStyle="bold"
-                    android:layout_centerHorizontal="true"
-                    android:text="100"/>
+                    android:textStyle="bold" />
+
                 <TextView
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:textColor="@color/color_white"
                     android:layout_toRightOf="@id/tv_num"
-                    android:textSize="@dimen/dp_14"
-                    android:text="条"/>
+                    android:text="条"
+                    android:textColor="@color/color_white"
+                    android:textSize="@dimen/dp_14" />
+
                 <TextView
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:textColor="@color/color_white"
                     android:layout_below="@id/tv_num"
-                    android:layout_marginTop="@dimen/dp_5"
                     android:layout_centerHorizontal="true"
-                    android:textSize="@dimen/dp_14"
-                    android:text="免费短信"/>
+                    android:layout_marginTop="@dimen/dp_5"
+                    android:text="免费短信"
+                    android:textColor="@color/color_white"
+                    android:textSize="@dimen/dp_14" />
             </RelativeLayout>
+
             <RelativeLayout
                 android:layout_width="0dp"
-                android:layout_weight="1"
-                android:layout_height="wrap_content">
+                android:layout_height="wrap_content"
+                android:layout_weight="1">
 
                 <TextView
                     android:id="@+id/tv_dan"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:textColor="@color/color_white"
                     android:layout_alignParentRight="true"
-                    android:textSize="@dimen/dp_14"
-                    android:text="条"/>
+                    android:text="条"
+                    android:textColor="@color/color_white"
+                    android:textSize="@dimen/dp_14" />
+
                 <TextView
                     android:id="@+id/tv_printing"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
+                    android:layout_toLeftOf="@id/tv_dan"
+                    android:text="10"
                     android:textColor="@color/white"
                     android:textSize="@dimen/dp_14"
-                    android:textStyle="bold"
-                    android:layout_toLeftOf="@id/tv_dan"
-                    android:text="10"/>
+                    android:textStyle="bold" />
+
                 <TextView
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:textColor="@color/color_white"
                     android:layout_below="@id/tv_printing"
-                    android:layout_marginTop="@dimen/dp_5"
                     android:layout_alignParentRight="true"
-                    android:textSize="@dimen/dp_14"
-                    android:text="免费云呼"/>
+                    android:layout_marginTop="@dimen/dp_5"
+                    android:text="免费云呼"
+                    android:textColor="@color/color_white"
+                    android:textSize="@dimen/dp_14" />
             </RelativeLayout>
 
 
         </LinearLayout>
+
         <LinearLayout
             android:layout_width="match_parent"
             android:layout_height="match_parent"
-            android:orientation="horizontal"
-            android:gravity="center">
-            <LinearLayout
-                android:layout_width="0dp"
-                android:layout_height="match_parent"
-                android:layout_marginBottom="@dimen/dp_20"
-                android:layout_marginTop="@dimen/dp_10"
-                android:layout_weight="1"
-                android:orientation="vertical"
-                android:layout_marginLeft="20dp"
-                android:layout_marginRight="@dimen/dp_10"
-                android:background="@drawable/bg_white">
+            android:gravity="center"
+            android:orientation="horizontal">
 
-            </LinearLayout>
             <LinearLayout
                 android:layout_width="0dp"
                 android:layout_height="match_parent"
-                android:layout_marginBottom="@dimen/dp_20"
+                android:layout_marginLeft="20dp"
                 android:layout_marginTop="@dimen/dp_10"
+                android:layout_marginRight="@dimen/dp_10"
+                android:layout_marginBottom="@dimen/dp_20"
                 android:layout_weight="1"
                 android:background="@drawable/bg_white"
-                android:orientation="vertical"
+                android:orientation="vertical">
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
                 android:layout_marginLeft="10dp"
-                android:layout_marginRight="@dimen/dp_20">
+                android:layout_marginTop="@dimen/dp_10"
+                android:layout_marginRight="@dimen/dp_20"
+                android:layout_marginBottom="@dimen/dp_20"
+                android:layout_weight="1"
+                android:background="@drawable/bg_white"
+                android:orientation="vertical">
 
             </LinearLayout>
 
         </LinearLayout>
     </LinearLayout>
 
-
     <GridView
         android:id="@+id/gridview1"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:horizontalSpacing="@dimen/dp_1"
-        android:verticalSpacing="@dimen/dp_1"
         android:layout_marginTop="@dimen/dp_10"
         android:gravity="center_horizontal"
-        android:numColumns="3"/>
+        android:horizontalSpacing="@dimen/dp_1"
+        android:numColumns="3"
+        android:verticalSpacing="@dimen/dp_1" />
+
 </LinearLayout>

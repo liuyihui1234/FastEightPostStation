@@ -22,7 +22,7 @@ import androidx.core.app.NotificationCompat;
 import androidx.core.content.FileProvider;
 
 import com.post.station.BuildConfig;
-import com.post.station.MainActivity;
+import com.post.station.ui.MainActivity;
 import com.post.station.R;
 import com.post.station.utils.FileManager;
 

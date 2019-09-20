@@ -9,6 +9,7 @@ import android.content.res.Resources;
 import android.graphics.Color;
 import android.os.Build;
 import android.os.Bundle;
+import android.text.TextUtils;
 import android.view.KeyEvent;
 import android.view.MotionEvent;
 import android.view.View;
@@ -56,6 +57,7 @@ public abstract class BaseActivity extends AppCompatActivity implements NetBroad
     //@BindView(R.id.mBackImageBtn)
     ImageView mBackImageBtn, mCloseBtn, mSearchView, mShareView;
     RelativeLayout rlAppBar;
+    LinearLayout ll_bar;
     FrameLayout contentView;
 
     @Override
@@ -100,7 +102,7 @@ public abstract class BaseActivity extends AppCompatActivity implements NetBroad
             getWindow().getDecorView().setSystemUiVisibility(View.SYSTEM_UI_FLAG_LAYOUT_FULLSCREEN | View.SYSTEM_UI_FLAG_LIGHT_STATUS_BAR);
             //根据上面设置是否对状态栏单独设置颜色
             if (useThemestatusBarColor) {
-                getWindow().setStatusBarColor(getResources().getColor(R.color.light_red));//设置状态栏背景色
+                getWindow().setStatusBarColor(getResources().getColor(statusBarColor));//设置状态栏背景色
             } else {
                 getWindow().setStatusBarColor(Color.TRANSPARENT);//透明
             }
@@ -115,6 +117,13 @@ public abstract class BaseActivity extends AppCompatActivity implements NetBroad
         }
         setParams();
     }
+
+    private  int statusBarColor = R.color.base_color;
+
+    protected void setBaseStatusBarColor(int color){
+        statusBarColor = color;
+    }
+
 
     private void setParams() {
         LinearLayout ll_bar = findViewById(R.id.ll_bar);
@@ -158,6 +167,15 @@ public abstract class BaseActivity extends AppCompatActivity implements NetBroad
             mBackImageBtn.setVisibility(show ? View.VISIBLE : View.GONE);
     }
 
+    public void showRightText(boolean show, String content) {
+        if (tvRightText != null)
+            tvRightText.setVisibility(show ? View.VISIBLE : View.GONE);
+        if (!TextUtils.isEmpty(content)) {
+            tvRightText.setText(content);
+        }
+    }
+
+
     public void showSearchButton(boolean show) {
         if (mSearchView != null)
             mSearchView.setVisibility(show ? View.VISIBLE : View.GONE);
@@ -183,6 +201,12 @@ public abstract class BaseActivity extends AppCompatActivity implements NetBroad
             rlAppBar.setVisibility(show ? View.VISIBLE : View.GONE);
     }
 
+    public void showll_bar(boolean show) {
+        if (ll_bar != null)
+            ll_bar.setVisibility(show ? View.VISIBLE : View.GONE);
+    }
+
+
     public void showTittle(boolean show) {
         if (mTitle != null)
             mTitle.setVisibility(show ? View.VISIBLE : View.GONE);
@@ -195,6 +219,7 @@ public abstract class BaseActivity extends AppCompatActivity implements NetBroad
         mBackImageBtn = findViewById(R.id.mBackImageBtn);
         mCloseBtn = findViewById(R.id.mCloseBtn);
         rlAppBar = findViewById(R.id.rl_appBar);
+        ll_bar = findViewById(R.id.ll_bar);
         mSearchView = findViewById(R.id.mSearchView);
         mShareView = findViewById(R.id.mShareView);
     }

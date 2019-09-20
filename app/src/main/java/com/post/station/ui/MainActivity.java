@@ -1,7 +1,8 @@
-package com.post.station;
+package com.post.station.ui;
 
 import androidx.annotation.Nullable;
 import androidx.fragment.app.Fragment;
+import androidx.fragment.app.FragmentManager;
 import androidx.fragment.app.FragmentTransaction;
 
 import android.app.AlertDialog;
@@ -16,10 +17,11 @@ import android.widget.ImageView;
 import android.widget.TextView;
 import android.widget.Toast;
 
+import com.post.station.R;
 import com.post.station.base.BaseActivity;
 import com.post.station.frgment.HomeFragment;
 import com.post.station.frgment.InventoryControlFragment;
-import com.post.station.ui.manage.NoticationRecordFragment;
+import com.post.station.frgment.NoticationRecordFragment;
 import com.post.station.frgment.PersonalCenterFragment;
 import com.post.station.model.HomeModel;
 import com.post.station.response.VersionBean;
@@ -78,7 +80,7 @@ public class MainActivity extends BaseActivity {
     }
 
     private void addFragment(Fragment fragment) {
-        androidx.fragment.app.FragmentManager manager = getSupportFragmentManager();
+        FragmentManager manager = getSupportFragmentManager();
         FragmentTransaction transaction = manager.beginTransaction();
         transaction.replace(R.id.contenLayout, fragment);
         transaction.commit();
@@ -88,18 +90,22 @@ public class MainActivity extends BaseActivity {
     public void onViewClicked(View view) {
         switch (view.getId()) {
             case R.id.ll_homepage:
+                showll_bar(true);
                 setButtonStatue(true, false, false, false);
                 addFragment(new HomeFragment());
                 break;
             case R.id.ll_order:
+                showll_bar(true);
                 setButtonStatue(false, true, false, false);
                 addFragment(new InventoryControlFragment());
                 break;
             case R.id.ll_shop:
+                showll_bar(true);
                 setButtonStatue(false, false, true, false);
                 addFragment(new NoticationRecordFragment());
                 break;
             case R.id.ll_mine:
+                showll_bar(false);
                 setButtonStatue(false, false, false, true);
                 addFragment(new PersonalCenterFragment());
                 break;
@@ -108,13 +114,13 @@ public class MainActivity extends BaseActivity {
 
     public void setButtonStatue(boolean homepage, boolean order, boolean shop, boolean mine) {
         iv_homepage.setImageResource(homepage ? R.drawable.homepage_click : R.drawable.homepage);
-        tv_homepage.setTextColor(homepage ? getResources().getColor(R.color.green_base) : getResources().getColor(R.color.black1));
+        tv_homepage.setTextColor(homepage ? getResources().getColor(R.color.base_color) : getResources().getColor(R.color.black1));
         iv_order.setImageResource(order ? R.drawable.homepage_check_click : R.drawable.homepage_check);
-        tv_order.setTextColor(order ? getResources().getColor(R.color.green_base) : getResources().getColor(R.color.black1));
+        tv_order.setTextColor(order ? getResources().getColor(R.color.base_color) : getResources().getColor(R.color.black1));
         iv_shop.setImageResource(shop ? R.drawable.homepage_shop_click : R.drawable.homepage_shop);
-        tv_shop.setTextColor(shop ? getResources().getColor(R.color.green_base) : getResources().getColor(R.color.black1));
+        tv_shop.setTextColor(shop ? getResources().getColor(R.color.base_color) : getResources().getColor(R.color.black1));
         iv_mine.setImageResource(mine ? R.drawable.homepage_my_click : R.drawable.homepage_my);
-        tv_mine.setTextColor(mine ? getResources().getColor(R.color.green_base) : getResources().getColor(R.color.black1));
+        tv_mine.setTextColor(mine ? getResources().getColor(R.color.base_color) : getResources().getColor(R.color.black1));
     }
 
     private void loadVersion() {
@@ -214,7 +220,6 @@ public class MainActivity extends BaseActivity {
         intent.putExtra(DownloadIntentService.INTENT_DOWNLOAD_URL, downloadurl);
         startService(intent);
     }
-
 
     private long exitTime = 0;
 

@@ -12,7 +12,7 @@
         android:id="@+id/rl_appBar"
         android:layout_width="match_parent"
         android:layout_height="43dp"
-        android:background="@color/green_base">
+        android:background="@color/base_color">
 
         <TextView
             android:id="@+id/mTitle"
@@ -60,7 +60,8 @@
     </RelativeLayout>
     <ScrollView
         android:layout_width="match_parent"
-        android:layout_height="match_parent">
+        android:layout_height="match_parent"
+        android:visibility="gone">
         <LinearLayout
             android:layout_width="match_parent"
             android:layout_height="match_parent"
@@ -109,4 +110,11 @@
 
         </LinearLayout>
     </ScrollView>
+    <GridView
+        android:id="@+id/gridview"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/dp_10"
+        android:numColumns="2"
+        android:verticalSpacing="@dimen/dp_10"></GridView>
 </LinearLayout>

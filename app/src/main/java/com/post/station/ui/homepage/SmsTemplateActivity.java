@@ -1,4 +1,4 @@
-package com.post.station.ui;
+package com.post.station.ui.homepage;
 
 import android.content.Context;
 import android.content.Intent;
@@ -41,7 +41,7 @@ public class SmsTemplateActivity extends BaseActivity {
         super.onCreate(savedInstanceState);
         addContentView(R.layout.activity_sms_template);
         setContentTitle("短信模板");
-        showBackButton(false);
+        showBackButton(true);
         unbinder = ButterKnife.bind(this);
 
         TabDetectionAdapter adapter = new TabDetectionAdapter(getSupportFragmentManager());

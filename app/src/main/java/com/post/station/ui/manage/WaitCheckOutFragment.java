@@ -20,6 +20,7 @@ import com.post.station.utils.SpUtils;
 import com.post.station.view.EmptyViewLayout;
 import com.post.station.view.HeadRecycleView;
 
+import java.util.ArrayList;
 import java.util.List;
 
 import butterknife.BindView;
@@ -46,49 +47,60 @@ public class WaitCheckOutFragment extends BaseFragment {
         ButterKnife.bind(this, view);
         return view;
     }
-
     @Override
-    public void onViewCreated(@NonNull View view, @Nullable Bundle savedInstanceState) {
+    public void onActivityCreated(@Nullable Bundle savedInstanceState) {
+        super.onActivityCreated(savedInstanceState);
         initRecycleView();
         loadData();
     }
 
     private void loadData() {
-        if (TextUtils.isEmpty(SpUtils.getIncNumber())) {
-            hasMore = false;
-            hideRefresh();
-            return;
+//        if (TextUtils.isEmpty(SpUtils.getIncNumber())) {
+//            hasMore = false;
+//            hideRefresh();
+//            return;
+//        }
+        List<WaitCheckOutBean> orderBeans = new ArrayList<>();
+        emptyView.setVisibility(View.GONE);
+        for (int i = 0; i < 10; i++) {
+            WaitCheckOutBean waitCheckOutBean = new WaitCheckOutBean();
+            waitCheckOutBean.mobile = "" + i;
+            waitCheckOutBean.numbe = "" + i;
+            waitCheckOutBean.time = "" + i;
+            waitCheckOutBean.type = "" + i;
+            orderBeans.add(waitCheckOutBean);
         }
-        model.getWaitCheckOutList(SpUtils.getIncNumber(), pageSize, pageNum + "", e -> {
-                    e.printStackTrace();
-                    hideRefresh();
-                    Log.e("", e.getMessage());
-                    emptyView.setVisibility(View.VISIBLE);
-                    hasMore = false;
-                },
-                result -> {
-                    hideRefresh();
-                    if (result.getData() != null && !result.getData().isEmpty()) {
-                        List<WaitCheckOutBean> orderBeans = result.getData();
-                        if (orderBeans.size() < 10) {
-                            hasMore = false;
-                            mRecycleView.noMoreData();
-                        } else {
-                            hasMore = true;
-                            mRecycleView.hasMoreData();
-                        }
-                        if (pageNum == 1) {
-                            mAdapter.setItems(orderBeans);
-                        } else {
-                            mAdapter.addItems(orderBeans);
-                        }
-                        emptyView.setVisibility(View.GONE);
-                    } else {
-                        hasMore = false;
-                        mRecycleView.noMoreData();
-                        if (pageNum == 1) emptyView.setVisibility(View.VISIBLE);
-                    }
-                });
+        mAdapter.setItems(orderBeans);
+//        model.getWaitCheckOutList(SpUtils.getIncNumber(), pageSize, pageNum + "", e -> {
+//                    e.printStackTrace();
+//                    hideRefresh();
+//                    Log.e("", e.getMessage());
+//                    emptyView.setVisibility(View.VISIBLE);
+//                    hasMore = false;
+//                },
+//                result -> {
+//                    hideRefresh();
+//                    if (result.getData() != null && !result.getData().isEmpty()) {
+//                        List<WaitCheckOutBean> orderBeans = result.getData();
+//                        if (orderBeans.size() < 10) {
+//                            hasMore = false;
+//                            mRecycleView.noMoreData();
+//                        } else {
+//                            hasMore = true;
+//                            mRecycleView.hasMoreData();
+//                        }
+//                        if (pageNum == 1) {
+//                            mAdapter.setItems(orderBeans);
+//                        } else {
+//                            mAdapter.addItems(orderBeans);
+//                        }
+//                        emptyView.setVisibility(View.GONE);
+//                    } else {
+//                        hasMore = false;
+//                        mRecycleView.noMoreData();
+//                        if (pageNum == 1) emptyView.setVisibility(View.VISIBLE);
+//                    }
+//                });
     }
 
     private WaitCheckOutAdapter mAdapter = new WaitCheckOutAdapter();

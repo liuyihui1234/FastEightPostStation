@@ -13,6 +13,7 @@ import androidx.viewpager.widget.ViewPager;
 import com.google.android.material.tabs.TabLayout;
 import com.post.station.R;
 import com.post.station.adapter.TabDetectionAdapter;
+import com.post.station.ui.manage.CheckOutFragment;
 import com.post.station.ui.manage.ReturnedPieceFragment;
 import com.post.station.ui.manage.WaitCheckOutFragment;
 
