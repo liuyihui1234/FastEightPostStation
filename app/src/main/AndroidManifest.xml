@@ -1,7 +1,8 @@
 <?xml version="1.0" encoding="utf-8"?>
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
     package="com.post.station">
-<uses-permission android:name="android.permission.INTERNET"/>
+
+    <uses-permission android:name="android.permission.INTERNET" />
     <uses-permission android:name="android.permission.VIBRATE" />
 
     <application
@@ -10,14 +11,17 @@
         android:icon="@mipmap/ic_launcher"
         android:label="@string/app_name"
         android:roundIcon="@mipmap/ic_launcher_round"
-        android:usesCleartextTraffic="true"
         android:supportsRtl="true"
-        android:theme="@style/AppTheme">
-        <activity android:name=".ui.homepage.SmsStatisticsActivity"></activity>
+        android:theme="@style/AppTheme"
+        android:usesCleartextTraffic="true">
+        <activity android:name=".NewlybuildActivity"></activity>
+        <activity android:name=".TimeLimitationAgreementActivity" />
+        <activity android:name=".MakeCollectionsActivity" />
+        <activity android:name=".ui.homepage.SmsStatisticsActivity" />
         <activity android:name=".ui.homepage.LinechartActivity" />
         <activity android:name=".ui.mine.AddExpressBrandActivity" />
         <activity android:name=".ui.mine.AddCustomerActivity" />
-        <activity android:name=".HelpActivity"></activity>
+        <activity android:name=".HelpActivity" />
         <activity android:name=".CapitalDetailsActivity" />
         <activity android:name=".NewSignatureActivity" />
         <activity android:name=".BatchOrderActivity" />

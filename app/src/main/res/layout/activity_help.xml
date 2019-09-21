@@ -36,6 +36,13 @@
             android:src="@drawable/arrow_left_white" />
 
     </RelativeLayout>
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+        <LinearLayout
+            android:orientation="vertical"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
     <Button
         android:layout_marginTop="@dimen/dp_10"
         android:layout_width="match_parent"
@@ -45,5 +52,401 @@
         android:layout_marginLeft="@dimen/dp_20"
         android:layout_marginRight="@dimen/dp_20"
         android:background="@drawable/corner_10_white_drawable"/>
+    <TextView
+        android:layout_marginTop="@dimen/dp_10"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="短信资费相关问题"
+        android:layout_marginLeft="@dimen/dp_10"
+        android:textColor="@color/black1"
+        android:background="@color/white"
+        android:layout_marginRight="@dimen/dp_10"
+        android:padding="@dimen/dp_10"/>
+    <View
+        android:layout_marginLeft="@dimen/dp_10"
+        android:layout_marginRight="@dimen/dp_10"
+        android:layout_width="match_parent"
+        android:layout_height="1dp"
+        android:background="#e7e7e7" />
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="43dp"
+        android:background="@color/white"
+        android:gravity="center_vertical"
+        android:layout_marginLeft="10dp"
+        android:layout_marginRight="@dimen/dp_10"
+        android:orientation="horizontal">
+
+        <TextView
+            android:padding="@dimen/dp_10"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:text="发短信是如何资费的"
+            android:textColor="#b6b6b6" />
+        <ImageView
+            android:layout_width="25dp"
+            android:layout_height="35dp"
+            android:padding="8dp"
+            android:src="@drawable/open" />
+    </LinearLayout>
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="43dp"
+        android:background="@color/white"
+        android:gravity="center_vertical"
+        android:layout_marginLeft="10dp"
+        android:layout_marginRight="@dimen/dp_10"
+        android:orientation="horizontal">
+
+        <TextView
+            android:padding="@dimen/dp_10"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:text="短信发送失败扣费吗？"
+            android:textColor="#b6b6b6" />
+        <ImageView
+            android:layout_width="25dp"
+            android:layout_height="35dp"
+            android:padding="8dp"
+            android:src="@drawable/open" />
+    </LinearLayout>
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="43dp"
+        android:background="@color/white"
+        android:gravity="center_vertical"
+        android:layout_marginLeft="10dp"
+        android:layout_marginRight="@dimen/dp_10"
+        android:orientation="horizontal">
+
+        <TextView
+            android:padding="@dimen/dp_10"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:text="发短信优惠吗？"
+            android:textColor="#b6b6b6" />
+        <ImageView
+            android:layout_width="25dp"
+            android:layout_height="35dp"
+            android:padding="8dp"
+            android:src="@drawable/open" />
+    </LinearLayout>
+    <TextView
+        android:layout_marginTop="@dimen/dp_10"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="短信模板相关问题"
+        android:layout_marginLeft="@dimen/dp_10"
+        android:textColor="@color/black1"
+        android:background="@color/white"
+        android:layout_marginRight="@dimen/dp_10"
+        android:padding="@dimen/dp_10"/>
+    <View
+        android:layout_marginLeft="@dimen/dp_10"
+        android:layout_marginRight="@dimen/dp_10"
+        android:layout_width="match_parent"
+        android:layout_height="1dp"
+        android:background="#e7e7e7" />
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="43dp"
+        android:background="@color/white"
+        android:gravity="center_vertical"
+        android:layout_marginLeft="10dp"
+        android:layout_marginRight="@dimen/dp_10"
+        android:orientation="horizontal">
+
+        <TextView
+            android:padding="@dimen/dp_10"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:text="什么是短信模板？"
+            android:textColor="#b6b6b6" />
+        <ImageView
+            android:layout_width="25dp"
+            android:layout_height="35dp"
+            android:padding="8dp"
+            android:src="@drawable/open" />
+    </LinearLayout>
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="43dp"
+        android:background="@color/white"
+        android:gravity="center_vertical"
+        android:layout_marginLeft="10dp"
+        android:layout_marginRight="@dimen/dp_10"
+        android:orientation="horizontal">
+
+        <TextView
+            android:padding="@dimen/dp_10"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:text="短信模板一般多久可以通过审核？"
+            android:textColor="#b6b6b6" />
+        <ImageView
+            android:layout_width="25dp"
+            android:layout_height="35dp"
+            android:padding="8dp"
+            android:src="@drawable/open" />
+    </LinearLayout>
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="43dp"
+        android:background="@color/white"
+        android:gravity="center_vertical"
+        android:layout_marginLeft="10dp"
+        android:layout_marginRight="@dimen/dp_10"
+        android:orientation="horizontal">
+
+        <TextView
+            android:padding="@dimen/dp_10"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:text="为什么短信模板被拒绝？"
+            android:textColor="#b6b6b6" />
+        <ImageView
+            android:layout_width="25dp"
+            android:layout_height="35dp"
+            android:padding="8dp"
+            android:src="@drawable/open" />
+    </LinearLayout>
+    <TextView
+        android:layout_marginTop="@dimen/dp_10"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="发短信功能使用小技巧"
+        android:layout_marginLeft="@dimen/dp_10"
+        android:textColor="@color/black1"
+        android:background="@color/white"
+        android:layout_marginRight="@dimen/dp_10"
+        android:padding="@dimen/dp_10"/>
+    <View
+        android:layout_marginLeft="@dimen/dp_10"
+        android:layout_marginRight="@dimen/dp_10"
+        android:layout_width="match_parent"
+        android:layout_height="1dp"
+        android:background="#e7e7e7" />
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="43dp"
+        android:background="@color/white"
+        android:gravity="center_vertical"
+        android:layout_marginLeft="10dp"
+        android:layout_marginRight="@dimen/dp_10"
+        android:orientation="horizontal">
+
+        <TextView
+            android:padding="@dimen/dp_10"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:text="如何输入电话号码？"
+            android:textColor="#b6b6b6" />
+        <ImageView
+            android:layout_width="25dp"
+            android:layout_height="35dp"
+            android:padding="8dp"
+            android:src="@drawable/open" />
+    </LinearLayout>
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="43dp"
+        android:background="@color/white"
+        android:gravity="center_vertical"
+        android:layout_marginLeft="10dp"
+        android:layout_marginRight="@dimen/dp_10"
+        android:orientation="horizontal">
+
+        <TextView
+            android:padding="@dimen/dp_10"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:text="短信发送失败扣费吗？"
+            android:textColor="#b6b6b6" />
+        <ImageView
+            android:layout_width="25dp"
+            android:layout_height="35dp"
+            android:padding="8dp"
+            android:src="@drawable/open" />
+    </LinearLayout>
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="43dp"
+        android:background="@color/white"
+        android:gravity="center_vertical"
+        android:layout_marginLeft="10dp"
+        android:layout_marginRight="@dimen/dp_10"
+        android:orientation="horizontal">
+
+        <TextView
+            android:padding="@dimen/dp_10"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:text="如何在短信中插入包裹编号？"
+            android:textColor="#b6b6b6" />
+        <ImageView
+            android:layout_width="25dp"
+            android:layout_height="35dp"
+            android:padding="8dp"
+            android:src="@drawable/open" />
+    </LinearLayout>
+    <TextView
+        android:layout_marginTop="@dimen/dp_10"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="其他问题"
+        android:layout_marginLeft="@dimen/dp_10"
+        android:textColor="@color/black1"
+        android:background="@color/white"
+        android:layout_marginRight="@dimen/dp_10"
+        android:padding="@dimen/dp_10"/>
+    <View
+        android:layout_marginLeft="@dimen/dp_10"
+        android:layout_marginRight="@dimen/dp_10"
+        android:layout_width="match_parent"
+        android:layout_height="1dp"
+        android:background="#e7e7e7" />
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="43dp"
+        android:background="@color/white"
+        android:gravity="center_vertical"
+        android:layout_marginLeft="10dp"
+        android:layout_marginRight="@dimen/dp_10"
+        android:orientation="horizontal">
+
+        <TextView
+            android:padding="@dimen/dp_10"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:text="发短信功能有电脑版吗？"
+            android:textColor="#b6b6b6" />
+        <ImageView
+            android:layout_width="25dp"
+            android:layout_height="35dp"
+            android:padding="8dp"
+            android:src="@drawable/open" />
+    </LinearLayout>
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="43dp"
+        android:background="@color/white"
+        android:gravity="center_vertical"
+        android:layout_marginLeft="10dp"
+        android:layout_marginRight="@dimen/dp_10"
+        android:orientation="horizontal">
+
+        <TextView
+            android:padding="@dimen/dp_10"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:text="每条短信最多能写多少字？"
+            android:textColor="#b6b6b6" />
+        <ImageView
+            android:layout_width="25dp"
+            android:layout_height="35dp"
+            android:padding="8dp"
+            android:src="@drawable/open" />
+    </LinearLayout>
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="43dp"
+        android:background="@color/white"
+        android:gravity="center_vertical"
+        android:layout_marginLeft="10dp"
+        android:layout_marginRight="@dimen/dp_10"
+        android:orientation="horizontal">
+
+        <TextView
+            android:padding="@dimen/dp_10"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:text="客户收不到短信，怎么办？"
+            android:textColor="#b6b6b6" />
+        <ImageView
+            android:layout_width="25dp"
+            android:layout_height="35dp"
+            android:padding="8dp"
+            android:src="@drawable/open" />
+    </LinearLayout>
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="43dp"
+                android:background="@color/white"
+                android:gravity="center_vertical"
+                android:layout_marginLeft="10dp"
+                android:layout_marginRight="@dimen/dp_10"
+                android:orientation="horizontal">
+
+                <TextView
+                    android:padding="@dimen/dp_10"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:text="什么是万能模板，如何使用？"
+                    android:textColor="#b6b6b6" />
+                <ImageView
+                    android:layout_width="25dp"
+                    android:layout_height="35dp"
+                    android:padding="8dp"
+                    android:src="@drawable/open" />
+            </LinearLayout>
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="43dp"
+                android:background="@color/white"
+                android:gravity="center_vertical"
+                android:layout_marginLeft="10dp"
+                android:layout_marginRight="@dimen/dp_10"
+                android:orientation="horizontal">
+
+                <TextView
+                    android:padding="@dimen/dp_10"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:text="发短信需要开启流量吗？"
+                    android:textColor="#b6b6b6" />
+                <ImageView
+                    android:layout_width="25dp"
+                    android:layout_height="35dp"
+                    android:padding="8dp"
+                    android:src="@drawable/open" />
+            </LinearLayout>
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="43dp"
+                android:background="@color/white"
+                android:gravity="center_vertical"
+                android:layout_marginLeft="10dp"
+                android:layout_marginRight="@dimen/dp_10"
+                android:orientation="horizontal">
+
+                <TextView
+                    android:padding="@dimen/dp_10"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:text="什么是签收短信？"
+                    android:textColor="#b6b6b6" />
+                <ImageView
+                    android:layout_width="25dp"
+                    android:layout_height="35dp"
+                    android:padding="8dp"
+                    android:src="@drawable/open" />
+            </LinearLayout>
+        </LinearLayout>
+    </ScrollView>
 
 </LinearLayout>
