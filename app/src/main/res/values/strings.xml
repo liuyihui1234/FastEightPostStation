@@ -70,4 +70,5 @@
     <string name="audit">待审核</string>
     <string name="already_printed">已打印</string>
     <string name="whole_course">全程</string>
+    <string name="string_announcements_forbidding_the_sending_of_irregular_short_messages"><![CDATA[<<严禁发送违规短信内容的公告>>]]></string>
 </resources>
