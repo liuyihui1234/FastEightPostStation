@@ -25,7 +25,7 @@ import java.util.List;
 import butterknife.BindView;
 import butterknife.ButterKnife;
 
-//库存管理-退回件
+//inventory_management-退回件
 
 public class ReturnedPieceFragment extends BaseFragment {
 

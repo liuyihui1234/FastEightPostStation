@@ -12,6 +12,7 @@ import com.post.station.R;
 import com.post.station.base.BaseActivity;
 
 public class BrandManagementaActivity extends BaseActivity {
+
     Button button;
 
     @Override

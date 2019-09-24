@@ -74,6 +74,7 @@
         android:padding="@dimen/dp_5"
         android:layout_height="wrap_content"
         android:textSize="@dimen/dp_10"
+        android:textColor="#b6b6b6"
         android:text="1.自定义的短信签名尽量使用客户易懂的词语，例：虹桥快8二部，\n学校代收点；"/>
     <TextView
         android:layout_marginLeft="@dimen/dp_10"
@@ -81,6 +82,7 @@
         android:padding="@dimen/dp_5"
         android:layout_height="wrap_content"
         android:textSize="@dimen/dp_10"
+        android:textColor="#b6b6b6"
         android:text="2.每提交一个自定义的签名扣费2元；无论是否通过审核，都一概\n不退还，请不要提交与快递不相关的签名。"/>
 
 </LinearLayout>

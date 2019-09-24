@@ -24,7 +24,7 @@ import java.util.List;
 import butterknife.BindView;
 import butterknife.ButterKnife;
 
-//库存管理-待出库
+//inventory_management-待出库
 
 public class CompleteFragment extends BaseFragment {
 

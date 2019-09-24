@@ -19,6 +19,7 @@ import com.post.station.frgment.HomeFragment;
 import com.post.station.frgment.InventoryControlFragment;
 import com.post.station.frgment.NoticationRecordFragment;
 import com.post.station.frgment.PersonalCenterFragment;
+import com.post.station.widget.SmsSettingPopupWindow;
 
 import org.greenrobot.eventbus.Subscribe;
 
@@ -55,7 +56,21 @@ public class SendSmsActivity extends BaseActivity {
         }
     }
 
-    private void showSettingPopWindow() {
+    private SmsSettingPopupWindow popupWindow;
 
+    private void showSettingPopWindow() {
+        popupWindow = new SmsSettingPopupWindow(this);
+        popupWindow.show();
+    }
+
+    @Override
+    protected void onDestroy() {
+        super.onDestroy();
+        if (popupWindow != null) {
+            if (popupWindow.isShowing()) {
+                popupWindow.dismiss();
+            }
+            popupWindow = null;
+        }
     }
 }

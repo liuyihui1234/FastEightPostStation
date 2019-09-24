@@ -25,7 +25,7 @@ import java.util.List;
 import butterknife.BindView;
 import butterknife.ButterKnife;
 
-//库存管理-已出库
+//inventory_management-已出库
 
 public class CheckOutFragment extends BaseFragment {
 
