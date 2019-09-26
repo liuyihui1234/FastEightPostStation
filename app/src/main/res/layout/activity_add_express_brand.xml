@@ -8,10 +8,12 @@
 
     android:orientation="vertical"
     tools:context=".ui.mine.AddExpressBrandActivity">
-<View
-    android:layout_width="match_parent"
-    android:layout_height="@dimen/dp_23"
-    android:background="@color/base_color"/>
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/dp_23"
+        android:background="@color/base_color" />
+
     <RelativeLayout
         android:id="@+id/rl_appBar"
         android:layout_width="match_parent"

@@ -4,53 +4,40 @@ import android.content.Context;
 import android.content.Intent;
 import android.os.Bundle;
 import android.view.View;
-import android.widget.FrameLayout;
 import android.widget.LinearLayout;
 import android.widget.TextView;
 
-import androidx.fragment.app.Fragment;
-import androidx.fragment.app.FragmentManager;
-import androidx.fragment.app.FragmentTransaction;
-import androidx.viewpager.widget.ViewPager;
-
-import com.google.android.material.tabs.TabLayout;
 import com.post.station.R;
 import com.post.station.base.BaseActivity;
-import com.post.station.frgment.HomeFragment;
-import com.post.station.frgment.InventoryControlFragment;
-import com.post.station.frgment.NoticationRecordFragment;
-import com.post.station.frgment.PersonalCenterFragment;
 import com.post.station.widget.SmsSettingPopupWindow;
-
-import org.greenrobot.eventbus.Subscribe;
 
 import butterknife.BindView;
 import butterknife.ButterKnife;
 import butterknife.OnClick;
-import butterknife.Unbinder;
 
-public class SendSmsActivity extends BaseActivity {
+public class SmsRechargeActivity extends BaseActivity {
 
     public static void start(Context context) {
-        context.startActivity(new Intent(context, SendSmsActivity.class));
+        context.startActivity(new Intent(context, SmsRechargeActivity.class));
     }
 
     @BindView(R.id.tv_setting)
     TextView tv_setting;
-    @BindView(R.id.ll_start_template)
-    LinearLayout ll_start_template;
+    @BindView(R.id.ll_postStation)
+    LinearLayout ll_postStation;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         addContentView(R.layout.activity_send_sms);
         ButterKnife.bind(this);
-        setContentTitle("发短信");
+        setContentTitle("云呼");
         showRightText(true, "发送");
         showBackButton(true);
+        ll_postStation.setVisibility(View.GONE);
     }
 
-    @OnClick({R.id.tv_setting, R.id.ll_start_template, R.id.ll_postStation})
+    @OnClick({R.id.tv_setting, R.id.ll_start_template})
     public void onViewClicked(View view) {
         switch (view.getId()) {
             case R.id.tv_setting:
@@ -58,9 +45,6 @@ public class SendSmsActivity extends BaseActivity {
                 break;
             case R.id.ll_start_template:
                 SmsTemplateActivity.start(this, 1);
-                break;
-            case R.id.ll_postStation:
-                ExpressSignatureActivity.start(this);
                 break;
         }
     }

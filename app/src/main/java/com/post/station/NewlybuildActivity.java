@@ -1,14 +1,14 @@
 package com.post.station;
 
-import androidx.appcompat.app.AppCompatActivity;
-
 import android.os.Bundle;
+import com.post.station.base.BaseActivity;
 
-public class NewlybuildActivity extends AppCompatActivity {
+public class NewlybuildActivity extends BaseActivity {
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_newlybuild);
+        addContentView(R.layout.activity_newlybuild);
+        showAppBar(false);
     }
 }

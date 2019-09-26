@@ -1,15 +1,21 @@
 package com.post.station.ui.homepage;
 
-import android.content.Context;
-import android.content.Intent;
 import android.os.Bundle;
+import android.view.LayoutInflater;
+import android.view.View;
+import android.view.ViewGroup;
 
+import androidx.annotation.NonNull;
+import androidx.annotation.Nullable;
+import androidx.fragment.app.Fragment;
 import androidx.viewpager.widget.ViewPager;
 
 import com.google.android.material.tabs.TabLayout;
 import com.post.station.R;
 import com.post.station.adapter.TabDetectionAdapter;
-import com.post.station.base.BaseActivity;
+import com.post.station.ui.manage.CheckOutFragment;
+import com.post.station.ui.manage.ReturnedPieceFragment;
+import com.post.station.ui.manage.WaitCheckOutFragment;
 import com.post.station.ui.notication_record.AuditFragment;
 import com.post.station.ui.notication_record.HavePassedFragment;
 import com.post.station.ui.notication_record.NotPassedFragment;
@@ -17,47 +23,35 @@ import com.post.station.ui.notication_record.ThirdPartyFragment;
 
 import butterknife.BindView;
 import butterknife.ButterKnife;
-import butterknife.Unbinder;
 
-public class SmsTemplateActivity extends BaseActivity {
+public class CustomFragment extends Fragment {
 
     @BindView(R.id.mTabLayout)
     TabLayout mTabLayout;
     @BindView(R.id.mViewPager)
     ViewPager mViewPager;
-    Unbinder unbinder;
 
-    private ThirdPartyFragment partyFragment;
     private HavePassedFragment passedFragment;
     private NotPassedFragment notPassedFragment;
     private AuditFragment auditFragment;
-    private int type;
 
-    public static void start(Context context) {
-        context.startActivity(new Intent(context, SmsTemplateActivity.class));
-    }
-
-    public static void start(Context context, int type) {
-        Intent intent = new Intent(context, SmsTemplateActivity.class);
-        intent.putExtra("type", type);
-        context.startActivity(intent);
+    @Override
+    public View onCreateView(LayoutInflater inflater, ViewGroup container,
+                             Bundle savedInstanceState) {
+        View view = inflater.inflate(R.layout.fragment_inventory_control, container, false);
+        ButterKnife.bind(this, view);
+        return view;
     }
 
     @Override
-    protected void onCreate(Bundle savedInstanceState) {
-        super.onCreate(savedInstanceState);
-        addContentView(R.layout.activity_sms_template);
-        setContentTitle("短信模板");
-        showBackButton(true);
-        unbinder = ButterKnife.bind(this);
+    public void onViewCreated(@NonNull View view, @Nullable Bundle savedInstanceState) {
+        super.onViewCreated(view, savedInstanceState);
 
-        TabDetectionAdapter adapter = new TabDetectionAdapter(getSupportFragmentManager());
-        partyFragment = new ThirdPartyFragment();
+        TabDetectionAdapter adapter = new TabDetectionAdapter(getChildFragmentManager());
         passedFragment = new HavePassedFragment();
         notPassedFragment = new NotPassedFragment();
         auditFragment = new AuditFragment();
 
-        adapter.addFragment(getString(R.string.third_party), partyFragment);
         adapter.addFragment(getString(R.string.have_passed), passedFragment);
         adapter.addFragment(getString(R.string.not_passed), notPassedFragment);
         adapter.addFragment(getString(R.string.audit), auditFragment);
@@ -65,9 +59,12 @@ public class SmsTemplateActivity extends BaseActivity {
         mViewPager.setAdapter(adapter);
         mTabLayout.setupWithViewPager(mViewPager);
 
-        type = getIntent().getIntExtra("type", -1);
-        if (type == 1) {
-            mViewPager.setCurrentItem(1);
-        }
+        mViewPager.setAdapter(adapter);
+        mTabLayout.setupWithViewPager(mViewPager);
+    }
+
+    @Override
+    public void onDestroyView() {
+        super.onDestroyView();
     }
 }

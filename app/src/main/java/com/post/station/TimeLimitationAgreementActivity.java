@@ -14,6 +14,7 @@ import android.text.style.StyleSpan;
 import android.widget.TextView;
 
 public class TimeLimitationAgreementActivity extends AppCompatActivity {
+
 private TextView textView;
     @Override
     protected void onCreate(Bundle savedInstanceState) {

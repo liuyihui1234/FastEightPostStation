@@ -60,12 +60,15 @@ public class InformActivity extends BaseActivity {
                         SmsStatisticsActivity.start(InformActivity.this);
                         break;
                     case 4:
+                        SmsHelpActivity.start(InformActivity.this);
                         break;
                 }
             }
         });
         LinearLayout ll_send_sms = findViewById(R.id.ll_send_sms);
+        LinearLayout ll_sms_recharge = findViewById(R.id.ll_sms_recharge);
         ll_send_sms.setOnClickListener(v -> SendSmsActivity.start(InformActivity.this));
+        ll_sms_recharge.setOnClickListener(v -> SmsRechargeActivity.start(InformActivity.this));
     }
 
     public List<Map<String, Object>> getData() {

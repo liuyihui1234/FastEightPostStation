@@ -21,7 +21,7 @@
         <activity android:name=".ui.homepage.LinechartActivity" />
         <activity android:name=".ui.mine.AddExpressBrandActivity" />
         <activity android:name=".ui.mine.AddCustomerActivity" />
-        <activity android:name=".HelpActivity" />
+        <activity android:name=".ui.homepage.SmsHelpActivity" />
         <activity android:name=".CapitalDetailsActivity" />
         <activity android:name=".NewSignatureActivity" />
         <activity android:name=".BatchOrderActivity" />
@@ -54,9 +54,11 @@
         <activity android:name=".ui.mine.MyWalletActivity" />
         <activity android:name=".ui.login.FoundPasswordActivity" />
         <activity android:name=".ui.homepage.SmsTemplateActivity" />
+        <activity android:name=".ui.homepage.ExpressSignatureActivity" />
         <activity android:name=".ui.homepage.InformActivity" />
         <activity android:name=".ui.homepage.OrderActivity" />
         <activity android:name=".ui.homepage.SmsRecordActivity" />
+        <activity android:name=".ui.homepage.SmsRechargeActivity" />
         <activity android:name=".ui.homepage.MyOrderActivity" />
         <activity android:name=".ui.homepage.SendSmsActivity" />
     </application>

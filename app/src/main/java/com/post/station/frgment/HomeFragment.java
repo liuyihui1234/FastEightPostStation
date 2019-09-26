@@ -58,6 +58,7 @@ public class HomeFragment extends Fragment {
     private Banner banner;
     private ArrayList<String> list_path;
     private ArrayList<String> list_title;
+
     @Override
     public View onCreateView(LayoutInflater inflater, ViewGroup container,
                              Bundle savedInstanceState) {
@@ -114,7 +115,8 @@ public class HomeFragment extends Fragment {
             }
         });
     }
-    private void BannerView(View view){
+
+    private void BannerView(View view) {
 
         banner = (Banner) view.findViewById(R.id.banner);
         //放图片地址的集合
@@ -153,10 +155,11 @@ public class HomeFragment extends Fragment {
         banner.setOnBannerListener(new OnBannerListener() {
             @Override
             public void OnBannerClick(int position) {
-                Toast.makeText(getActivity(),""+position,Toast.LENGTH_SHORT).show();
+                Toast.makeText(getActivity(), "" + position, Toast.LENGTH_SHORT).show();
             }
         });
     }
+
     //自定义的图片加载器
     private class MyLoader extends ImageLoader {
         @Override
@@ -164,6 +167,7 @@ public class HomeFragment extends Fragment {
             Glide.with(context).load((String) path).error(R.mipmap.ic_launcher).into(imageView);
         }
     }
+
     public List<Map<String, Object>> getData() {
         //cion和iconName的长度是相同的，这里任选其一都可以
         for (int i = 0; i < icon.length; i++) {

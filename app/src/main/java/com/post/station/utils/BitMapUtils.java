@@ -162,7 +162,7 @@ public class BitMapUtils {
      */
     public static String imgToBase64(String imgPath, Bitmap bitmap) {
         if (imgPath != null && imgPath.length() > 0) {
-            bitmap = readBitmap(imgPath);
+            bitmap = BitmapFactory.decodeFile(imgPath);
         }
         if (bitmap == null) {
             //bitmap not found!!
@@ -188,15 +188,6 @@ public class BitMapUtils {
                 // TODO Auto-generated catch block
                 e.printStackTrace();
             }
-        }
-    }
-
-    public static Bitmap readBitmap(String imgPath) {
-        try {
-            return BitmapFactory.decodeFile(imgPath);
-        } catch (Exception e) {
-            // TODO Auto-generated catch block
-            return null;
         }
     }
 
