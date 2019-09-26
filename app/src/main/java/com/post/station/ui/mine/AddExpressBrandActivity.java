@@ -68,7 +68,9 @@ public class AddExpressBrandActivity extends BaseActivity {
         gridview.setOnItemClickListener(new AdapterView.OnItemClickListener() {
             @Override
             public void onItemClick(AdapterView<?> parent, View view, int position, long id) {
-                adapter.setonclick(position);
+                //adapter.setonclick(position);
+                //adapter.notifyDataSetChanged();
+                adapter.setSelectFlag(position);
                 adapter.notifyDataSetChanged();
             }
         });

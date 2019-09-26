@@ -1,6 +1,7 @@
 package com.post.station.adapter;
 
 import android.content.Context;
+import android.util.Log;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
@@ -17,6 +18,7 @@ import java.util.List;
 public class BandAdapter extends BaseAdapter {
     private Context mContext;
     private int poins;
+    private List<String> list = new ArrayList<>();
 
     private List<BandBean> mInfo = new ArrayList<>();
 
@@ -26,7 +28,17 @@ public class BandAdapter extends BaseAdapter {
 
     }
 
+    int a = -1;
+
+    public void setSelectFlag(int flag) {
+        if (flag == a) {
+            return;
+        }
+        a = flag;
+    }
+
     public void setonclick(int poin) {
+
         poins = poin;
 
     }
@@ -66,14 +78,42 @@ public class BandAdapter extends BaseAdapter {
             diyHolder.ll_brand = convertView.findViewById(R.id.ll_brand);
             convertView.setTag(diyHolder);
 
-        }else {
-            diyHolder = (DiyHolder)convertView.getTag();
+        } else {
+            diyHolder = (DiyHolder) convertView.getTag();
         }
         BandBean bean = mInfo.get(position);
         diyHolder.name.setText(bean.getName());
-        if (poins == position) {
-            diyHolder.ll_brand.setBackgroundColor(mContext.getResources().getColor(R.color.base_color));
+      /*  if (poins == position) {
+            if (diyHolder.ll_brand.getBackground().equals(R.mipmap.right_ic)){
+                diyHolder.ll_brand.setBackgroundColor(mContext.getResources().getColor(R.color.white));
+
+            }else {
+                diyHolder.ll_brand.setBackgroundResource(R.mipmap.right_ic);
+            }
+
+        }*/
+
+
+        if (a != -1 && position == a) {
+            if (list.size()==0){
+                diyHolder.ll_brand.setBackgroundResource(R.mipmap.right_ic);
+                list.add(""+a);
+            }else {
+                for (int n=0;n<list.size();n++){
+                    if (list.get(n) .equals("" + a) ) {
+                        Log.e("listview", list.get(n)+"getView: "+a );
+                        diyHolder.ll_brand.setBackgroundColor(mContext.getResources().getColor(R.color.white));
+                        list.remove(""+a);
+                    }else {
+                        Log.e("listview", "getView: " );
+                        diyHolder.ll_brand.setBackgroundResource(R.mipmap.right_ic);
+                        list.add(""+a);
+                    }
+                }
+
+            }
         }
+
         return convertView;
     }
 
