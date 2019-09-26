@@ -5,7 +5,6 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:background="@color/background_color"
-
     android:orientation="vertical"
     tools:context=".ui.mine.AddExpressBrandActivity">
 
@@ -70,6 +69,9 @@
             android:textSize="@dimen/dp_10" />
     </RelativeLayout>
 
+
+
+
     <ScrollView
         android:layout_width="match_parent"
         android:layout_height="match_parent"
@@ -131,6 +133,7 @@
         </LinearLayout>
     </ScrollView>
 
+>>>>>>> bb2fff83801e4e25615a3bd26ebfe8301da730e2
     <GridView
         android:id="@+id/gridview"
         android:layout_width="match_parent"
