@@ -5,7 +5,6 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:background="@color/background_color"
-
     android:orientation="vertical"
     tools:context=".ui.mine.AddExpressBrandActivity">
     <RelativeLayout
@@ -58,58 +57,7 @@
             android:textSize="@dimen/dp_10"
             android:text="使用入库功能前，请您先选择驿站代理的所有" />
     </RelativeLayout>
-    <ScrollView
-        android:layout_width="match_parent"
-        android:layout_height="match_parent"
-        android:visibility="gone">
-        <LinearLayout
-            android:layout_width="match_parent"
-            android:layout_height="match_parent"
-            android:orientation="vertical">
-            <LinearLayout
-                android:orientation="horizontal"
-                android:layout_width="match_parent"
-                android:layout_marginTop="@dimen/dp_10"
-                android:layout_height="wrap_content">
-                <LinearLayout
-                    android:orientation="horizontal"
-                    android:layout_width="0dp"
-                    android:layout_weight="1"
-                    android:layout_height="@dimen/dp_50"
-                    android:layout_marginLeft="@dimen/dp_10"
-                    android:gravity="center"
-                    android:background="@drawable/corner_5_white_drawable">
-                    <ImageView
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
-                        android:src="@drawable/sto"/>
-                    <TextView
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
-                        android:text="申通"/>
-                </LinearLayout>
-                <LinearLayout
-                    android:orientation="horizontal"
-                    android:layout_width="0dp"
-                    android:layout_weight="1"
-                    android:layout_height="@dimen/dp_50"
-                    android:layout_marginLeft="@dimen/dp_20"
-                    android:layout_marginRight="@dimen/dp_10"
-                    android:gravity="center"
-                    android:background="@drawable/corner_5_white_drawable">
-                    <ImageView
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
-                        android:src="@drawable/sto"/>
-                    <TextView
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
-                        android:text="中通"/>
-                </LinearLayout>
-            </LinearLayout>
 
-        </LinearLayout>
-    </ScrollView>
     <GridView
         android:id="@+id/gridview"
         android:layout_width="match_parent"

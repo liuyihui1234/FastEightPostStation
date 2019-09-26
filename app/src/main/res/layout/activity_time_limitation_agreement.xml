@@ -235,12 +235,12 @@
                 android:layout_height="wrap_content"
                 android:padding="@dimen/dp_5"
                 android:gravity="center"
-                android:text="1.入库前，"/>
+                android:text="1.入库前"/>
             <TextView
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:padding="@dimen/dp_5"
-                android:layout_gravity="center"
+                android:gravity="center"
                 android:text="2.入库后，七天内必须出库"/>
             </LinearLayout>
         </LinearLayout>
