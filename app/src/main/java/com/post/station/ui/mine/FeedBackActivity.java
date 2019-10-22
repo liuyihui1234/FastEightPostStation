@@ -24,6 +24,7 @@ import com.post.station.base.BaseActivity;
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         addContentView(R.layout.activity_feedback);
-        showAppBar(false);
+        setContentTitle("意见反馈");
+//        showAppBar(false);
     }
 }

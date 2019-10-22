@@ -4,10 +4,12 @@ import android.content.Context;
 import android.content.Intent;
 import android.os.Bundle;
 import android.os.CountDownTimer;
+import android.text.InputType;
 import android.text.TextUtils;
 import android.util.Log;
 import android.view.View;
 import android.widget.EditText;
+import android.widget.ImageView;
 import android.widget.RelativeLayout;
 import android.widget.TextView;
 
@@ -38,6 +40,9 @@ public class FoundPasswordActivity extends BaseActivity {
     EditText et_get_vertication;
     @BindView(R.id.et_new_pwd)
     EditText et_new_pwd;
+    @BindView(R.id.iv_eye)
+    ImageView iv_eye;
+
 
     public static void start(Context context) {
         context.startActivity(new Intent(context, FoundPasswordActivity.class));
@@ -50,8 +55,9 @@ public class FoundPasswordActivity extends BaseActivity {
         setContentTitle("找回密码");
         ButterKnife.bind(this);
     }
+    private boolean isChecked1 = false;
 
-    @OnClick({R.id.rl_login, R.id.tv_get_vertication})
+    @OnClick({R.id.rl_login, R.id.tv_get_vertication,R.id.iv_eye})
     public void onViewClicked(View view) {
         switch (view.getId()) {
             case R.id.rl_login:
@@ -59,6 +65,19 @@ public class FoundPasswordActivity extends BaseActivity {
                 break;
             case R.id.tv_get_vertication:
                 getVerification();
+                break;
+            case R.id.iv_eye:
+                iv_eye.setImageResource(isChecked1 ? R.drawable.grey_eye : R.drawable.order_eye);
+                if (!isChecked1) {
+                    isChecked1 = true;
+                    //如果选中，显示密码
+                    et_new_pwd.setInputType(InputType.TYPE_TEXT_VARIATION_VISIBLE_PASSWORD);
+                } else {
+                    isChecked1 = false;
+                    //否则隐藏密码
+                    et_new_pwd.setInputType(InputType.TYPE_CLASS_TEXT | InputType.TYPE_TEXT_VARIATION_PASSWORD);
+                }
+
                 break;
         }
     }
@@ -97,10 +116,7 @@ public class FoundPasswordActivity extends BaseActivity {
     }
 
     private void getVerification() {
-        String userId = SpUtils.getUserId();
-        if (TextUtils.isEmpty(userId)) {
-            return;
-        }
+
         String mobile = et_mobile.getText().toString().trim();
         if (TextUtils.isEmpty(mobile)) {
             toast("请填写手机号");

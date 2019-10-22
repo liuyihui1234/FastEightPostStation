@@ -41,6 +41,10 @@ import org.greenrobot.eventbus.EventBus;
 import org.greenrobot.eventbus.Subscribe;
 import org.jetbrains.annotations.Nullable;
 
+import butterknife.BindView;
+import butterknife.ButterKnife;
+import butterknife.OnClick;
+
 /**
  * BaseActivity是所有Activity的基类，把一些公共的方法放到里面，如基础样式设置，权限封装，网络状态监听等
  * <p>
@@ -54,8 +58,7 @@ public abstract class BaseActivity extends AppCompatActivity implements NetBroad
     protected String pageSize = "10";
     protected boolean hasMore = false;
     TextView mTitle, tvRightText;
-    //@BindView(R.id.mBackImageBtn)
-    ImageView mBackImageBtn, mCloseBtn, mSearchView, mShareView;
+    ImageView  mBackImageBtn,mCloseBtn, mSearchView, mShareView;
     RelativeLayout rlAppBar;
     LinearLayout ll_bar;
     FrameLayout contentView;
@@ -64,6 +67,8 @@ public abstract class BaseActivity extends AppCompatActivity implements NetBroad
     protected void onCreate(@Nullable Bundle savedInstanceState) {
         supportRequestWindowFeature(Window.FEATURE_NO_TITLE);
         super.onCreate(savedInstanceState);
+
+
         // 执行初始化方法
         // 隐藏标题栏
         if (getSupportActionBar() != null) {

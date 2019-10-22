@@ -76,7 +76,7 @@ public class MainActivity extends BaseActivity {
         setStatusBar();
         ButterKnife.bind(this);
         addFragment(new HomeFragment());
-        //loadVersion();
+        loadVersion();
     }
 
     private void addFragment(Fragment fragment) {

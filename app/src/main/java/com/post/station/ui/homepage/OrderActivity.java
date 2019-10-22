@@ -8,6 +8,7 @@ import android.widget.AdapterView;
 import android.widget.GridView;
 import android.widget.SimpleAdapter;
 
+import com.post.station.OrderSettingActivity;
 import com.post.station.R;
 import com.post.station.base.BaseActivity;
 
@@ -51,11 +52,17 @@ public class OrderActivity extends BaseActivity {
                         MyOrderActivity.start(OrderActivity.this);
                         break;
                     case 1:
+                        OrderSettingActivity.start(OrderActivity.this);
                         break;
                     case 2:
                         break;
                     case 3:
                         break;
+                    case 4:
+                        break;
+                    case 5:
+                        break;
+
                 }
             }
         });

@@ -6,7 +6,10 @@
     android:background="#F0F0F0"
     android:orientation="vertical"
     tools:context=".ui.mine.MyWalletActivity">
-
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/dp_20"
+        android:background="@color/base_color"/>
     <RelativeLayout
         android:id="@+id/rl_appBar"
         android:layout_width="match_parent"
@@ -43,6 +46,7 @@
             android:layout_marginStart="10dp"
             android:layout_marginLeft="10dp"
             android:padding="5dp"
+
             android:scaleType="fitCenter"
             android:src="@drawable/arrow_left_white" />
     </RelativeLayout>

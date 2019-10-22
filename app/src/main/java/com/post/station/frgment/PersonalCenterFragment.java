@@ -21,6 +21,7 @@ import com.post.station.SetUpActivity;
 import com.post.station.model.HomeModel;
 import com.post.station.response.VersionBean;
 import com.post.station.service.DownloadIntentService;
+import com.post.station.ui.mine.AddCustomerActivity;
 import com.post.station.ui.mine.BrandManagementaActivity;
 import com.post.station.ui.mine.FeedBackActivity;
 import com.post.station.ui.mine.MyWalletActivity;
@@ -68,7 +69,7 @@ public class PersonalCenterFragment extends Fragment {
             }
         }
     }
-    @OnClick({R.id.ll_wallet, R.id.ll_TeamManagement,R.id.ll_feedback,R.id.ll_install})
+    @OnClick({R.id.ll_wallet, R.id.ll_TeamManagement,R.id.ll_feedback,R.id.ll_install,R.id.ll_customerManagement})
     public void onViewClicked(View view) {
         switch (view.getId()) {
             case R.id.ll_wallet:
@@ -82,6 +83,9 @@ public class PersonalCenterFragment extends Fragment {
                 break;
             case R.id.ll_install:
                 SetUpActivity.start(getContext());
+                break;
+            case R.id.ll_customerManagement:
+                AddCustomerActivity.start(getContext());
                 break;
         }
     }

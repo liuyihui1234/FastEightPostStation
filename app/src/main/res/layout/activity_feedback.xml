@@ -9,34 +9,34 @@
         android:layout_width="match_parent"
         android:layout_height="@dimen/dp_20"
         android:background="@color/base_color"/>
-    <RelativeLayout
-        android:id="@+id/rl_appBar"
-        android:layout_width="match_parent"
-        android:layout_height="43dp"
-        android:background="@color/base_color">
+    <!--<RelativeLayout-->
+        <!--android:id="@+id/rl_appBar"-->
+        <!--android:layout_width="match_parent"-->
+        <!--android:layout_height="43dp"-->
+        <!--android:background="@color/base_color">-->
 
-        <TextView
-            android:id="@+id/mTitle"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_centerHorizontal="true"
-            android:layout_centerVertical="true"
-            android:gravity="center"
-            android:text="意见反馈"
-            android:textColor="@color/white"
-            android:textSize="20sp" />
+        <!--<TextView-->
+            <!--android:id="@+id/mTitle"-->
+            <!--android:layout_width="wrap_content"-->
+            <!--android:layout_height="wrap_content"-->
+            <!--android:layout_centerHorizontal="true"-->
+            <!--android:layout_centerVertical="true"-->
+            <!--android:gravity="center"-->
+            <!--android:text="意见反馈"-->
+            <!--android:textColor="@color/white"-->
+            <!--android:textSize="20sp" />-->
 
-        <ImageView
-            android:id="@+id/mBackImageBtn"
-            android:layout_width="25dp"
-            android:layout_height="35dp"
-            android:layout_centerVertical="true"
-            android:layout_marginStart="10dp"
-            android:layout_marginLeft="10dp"
-            android:padding="5dp"
-            android:scaleType="fitCenter"
-            android:src="@drawable/arrow_left_white" />
-    </RelativeLayout>
+        <!--<ImageView-->
+            <!--android:id="@+id/mBackImageBtn"-->
+            <!--android:layout_width="25dp"-->
+            <!--android:layout_height="35dp"-->
+            <!--android:layout_centerVertical="true"-->
+            <!--android:layout_marginStart="10dp"-->
+            <!--android:layout_marginLeft="10dp"-->
+            <!--android:padding="5dp"-->
+            <!--android:scaleType="fitCenter"-->
+            <!--android:src="@drawable/arrow_left_white" />-->
+    <!--</RelativeLayout>-->
 
     <TextView
         android:layout_width="wrap_content"

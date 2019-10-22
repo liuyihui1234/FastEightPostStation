@@ -2,13 +2,21 @@ package com.post.station;
 
 import androidx.appcompat.app.AppCompatActivity;
 
+import android.content.Context;
+import android.content.Intent;
 import android.os.Bundle;
 
-public class AssistanceActivity extends AppCompatActivity {
+import com.post.station.base.BaseActivity;
+
+public class AssistanceActivity extends BaseActivity {
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_assistance);
+        addContentView(R.layout.activity_assistance);
+        setContentTitle("帮助");
+    }
+    public static void start(Context context) {
+        context.startActivity(new Intent(context, AssistanceActivity.class));
     }
 }

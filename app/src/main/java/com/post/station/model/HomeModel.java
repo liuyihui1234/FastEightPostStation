@@ -105,7 +105,7 @@ public class HomeModel extends BaseModel {
         register(service.appLoginOut(token), onError, onResult);
     }
 
-    //获取验证码(忘记页面)
+    //获取验证码(忘记页面，注册)
     public void getForgetVerification(
             @NonNull String telephone, @NonNull Action1<Throwable> onError, @NonNull Action1<HttpResult<String>> onResult) {
         register(service.getForgetVerification(telephone), onError, onResult);
