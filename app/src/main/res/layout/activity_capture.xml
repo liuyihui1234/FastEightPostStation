@@ -2,24 +2,29 @@
 <RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
                 android:layout_width="match_parent"
                 android:layout_height="match_parent"
-                android:background="@android:color/transparent"
+                android:background="#030303"
                 android:orientation="vertical">
 
     <SurfaceView
         android:id="@+id/capture_preview"
+        android:layout_marginLeft="@dimen/dp_10"
+        android:layout_marginRight="@dimen/dp_10"
         android:layout_width="match_parent"
         android:layout_height="match_parent"/>
+
 
     <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
+        android:layout_marginLeft="@dimen/dp_10"
+        android:layout_marginRight="@dimen/dp_10"
         android:orientation="vertical">
 
         <RelativeLayout
             android:layout_width="match_parent"
             android:layout_height="45dp"
             android:visibility="gone"
-            android:background="#AD000000">
+            android:background="#030303">
 
             <ImageView
                 android:id="@+id/iv_back"
@@ -43,22 +48,50 @@
             android:layout_height="match_parent">
 
             <RelativeLayout
+
                 android:id="@+id/capture_container"
                 android:layout_width="match_parent"
-                android:layout_height="match_parent">
+                android:layout_height="match_parent"
+                >
 
                 <ImageView
                     android:id="@+id/iv_shadow_top"
                     android:layout_width="match_parent"
-                    android:layout_height="230dp"
+                    android:layout_height="100dp"
                     android:layout_alignParentTop="true"
-                    android:background="#4D000000"/>
+                    android:background="#030303"/>
+                <LinearLayout
+                    android:id="@+id/ll_state"
+                    android:layout_below="@id/iv_shadow_top"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:background="#030303"
+                    android:padding="@dimen/dp_10"
+                    android:orientation="horizontal">
+                    <ImageView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:src="@drawable/switchs"
+                        />
+                    <TextView
+                        android:layout_marginLeft="@dimen/dp_10"
+                        android:layout_width="0dp"
+                        android:layout_weight="1"
+                        android:layout_height="wrap_content"
+                        android:textColor="@color/white"
+                        android:text="极速模式"
+                        android:textSize="@dimen/dp_15"/>
+                    <ImageView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:src="@drawable/edits" />
+                </LinearLayout>
 
                 <RelativeLayout
                     android:id="@+id/capture_crop_view"
-                    android:layout_width="180dp"
-                    android:layout_height="180dp"
-                    android:layout_below="@id/iv_shadow_top"
+                    android:layout_width="match_parent"
+                    android:layout_height="300dp"
+                    android:layout_below="@id/ll_state"
                     android:layout_centerHorizontal="true">
 
                     <ImageView
@@ -69,6 +102,16 @@
                         android:layout_marginBottom="5dp"
                         android:layout_marginTop="5dp"
                         android:src="@drawable/ic_scan_line"/>
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="请将单号条码置于相机镜头下"
+                        android:textColor="@color/white"
+                        android:layout_centerHorizontal="true"
+                        android:layout_centerVertical="true"
+
+
+                        />
 
                     <ImageView
                         android:layout_width="wrap_content"
@@ -101,17 +144,17 @@
                     android:layout_height="wrap_content"
                     android:layout_alignParentBottom="true"
                     android:layout_below="@id/capture_crop_view"
-                    android:background="#4D000000"
+                    android:background="#030303"
                     android:orientation="vertical">
 
-                    <TextView
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
-                        android:layout_gravity="center_horizontal"
-                        android:layout_marginTop="20dp"
-                        android:text="将二维码/条码放入框内，即可自动扫描"
-                        android:textColor="@android:color/white"
-                        android:textSize="14sp"/>
+                    <!--<TextView-->
+                        <!--android:layout_width="wrap_content"-->
+                        <!--android:layout_height="wrap_content"-->
+                        <!--android:layout_gravity="center_horizontal"-->
+                        <!--android:layout_marginTop="20dp"-->
+                        <!--android:text="将二维码/条码放入框内，即可自动扫描"-->
+                        <!--android:textColor="@android:color/white"-->
+                        <!--android:textSize="14sp"/>-->
                 </LinearLayout>
 
                 <ImageView
@@ -122,7 +165,7 @@
                     android:layout_alignParentLeft="true"
                     android:layout_below="@id/iv_shadow_top"
                     android:layout_toLeftOf="@id/capture_crop_view"
-                    android:background="#4D000000"/>
+                    android:background="#030303"/>
 
                 <ImageView
                     android:id="@+id/iv_shadow_right"
@@ -133,72 +176,72 @@
                     android:layout_alignParentRight="true"
                     android:layout_below="@+id/iv_shadow_top"
                     android:layout_toRightOf="@id/capture_crop_view"
-                    android:background="#4D000000"/>
+                    android:background="#030303"/>
             </RelativeLayout>
 
         </RelativeLayout>
     </LinearLayout>
 
-    <LinearLayout
-        android:layout_width="match_parent"
-        android:layout_height="70dp"
-        android:layout_alignParentBottom="true"
-        android:layout_alignParentLeft="true"
-        android:layout_alignParentStart="true"
-        android:background="#8D000000"
-        android:orientation="horizontal">
+    <!--<LinearLayout-->
+        <!--android:layout_width="match_parent"-->
+        <!--android:layout_height="70dp"-->
+        <!--android:layout_alignParentBottom="true"-->
+        <!--android:layout_alignParentLeft="true"-->
+        <!--android:layout_alignParentStart="true"-->
+        <!--android:background="#8D000000"-->
+        <!--android:orientation="horizontal">-->
 
-        <LinearLayout
-            android:id="@+id/ll_album"
-            android:layout_width="wrap_content"
-            android:layout_height="match_parent"
-            android:layout_weight="1"
-            android:gravity="center"
-            android:orientation="vertical">
+        <!--<LinearLayout-->
+            <!--android:id="@+id/ll_album"-->
+            <!--android:layout_width="wrap_content"-->
+            <!--android:layout_height="match_parent"-->
+            <!--android:layout_weight="1"-->
+            <!--android:gravity="center"-->
+            <!--android:orientation="vertical">-->
 
-            <ImageView
-                android:id="@+id/iv_album"
-                android:layout_width="29dp"
-                android:layout_height="35dp"
-                android:layout_gravity="center"
-                android:src="@drawable/ic_scan_album" />
+            <!--<ImageView-->
+                <!--android:id="@+id/iv_album"-->
+                <!--android:layout_width="29dp"-->
+                <!--android:layout_height="35dp"-->
+                <!--android:layout_gravity="center"-->
+                <!--android:src="@drawable/ic_scan_album" />-->
 
-            <TextView
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_gravity="center"
-                android:layout_marginTop="5dp"
-                android:text="相册"
-                android:textColor="@android:color/white"
-                android:textSize="12sp"/>
-        </LinearLayout>
+            <!--<TextView-->
+                <!--android:layout_width="wrap_content"-->
+                <!--android:layout_height="wrap_content"-->
+                <!--android:layout_gravity="center"-->
+                <!--android:layout_marginTop="5dp"-->
+                <!--android:text="相册"-->
+                <!--android:textColor="@android:color/white"-->
+                <!--android:textSize="12sp"/>-->
+        <!--</LinearLayout>-->
 
-        <LinearLayout
-            android:id="@+id/ll_light"
-            android:layout_width="wrap_content"
-            android:layout_height="match_parent"
-            android:layout_weight="1"
-            android:gravity="center"
-            android:orientation="vertical">
+        <!--<LinearLayout-->
+            <!--android:id="@+id/ll_light"-->
+            <!--android:layout_width="wrap_content"-->
+            <!--android:layout_height="match_parent"-->
+            <!--android:layout_weight="1"-->
+            <!--android:gravity="center"-->
+            <!--android:orientation="vertical">-->
 
-            <ToggleButton
-                android:id="@+id/tb_light"
-                android:layout_width="35dp"
-                android:layout_height="35dp"
-                android:layout_gravity="center"
-                android:background="@drawable/selector_scan_light"
-                android:textOff=""
-                android:textOn=""/>
+            <!--<ToggleButton-->
+                <!--android:id="@+id/tb_light"-->
+                <!--android:layout_width="35dp"-->
+                <!--android:layout_height="35dp"-->
+                <!--android:layout_gravity="center"-->
+                <!--android:background="@drawable/selector_scan_light"-->
+                <!--android:textOff=""-->
+                <!--android:textOn=""/>-->
 
-            <TextView
-                android:id="@+id/tv_light"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_gravity="center"
-                android:layout_marginTop="5dp"
-                android:text="开灯"
-                android:textColor="@android:color/white"
-                android:textSize="12sp"/>
-        </LinearLayout>
-    </LinearLayout>
+            <!--<TextView-->
+                <!--android:id="@+id/tv_light"-->
+                <!--android:layout_width="wrap_content"-->
+                <!--android:layout_height="wrap_content"-->
+                <!--android:layout_gravity="center"-->
+                <!--android:layout_marginTop="5dp"-->
+                <!--android:text="开灯"-->
+                <!--android:textColor="@android:color/white"-->
+                <!--android:textSize="12sp"/>-->
+        <!--</LinearLayout>-->
+    <!--</LinearLayout>-->
 </RelativeLayout>

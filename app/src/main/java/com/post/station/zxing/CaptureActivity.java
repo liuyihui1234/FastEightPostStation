@@ -102,7 +102,7 @@ public class CaptureActivity extends BaseActivity implements SurfaceHolder.Callb
         window.addFlags(WindowManager.LayoutParams.FLAG_KEEP_SCREEN_ON);
 //        setContentView(R.layout.activity_capture);
         addContentView(R.layout.activity_capture);
-        setContentTitle("扫一扫");
+        setContentTitle("扫描出库");
         context = this;
         activity = this;
         findViewById(R.id.iv_back).setOnClickListener(new View.OnClickListener() {
@@ -116,31 +116,31 @@ public class CaptureActivity extends BaseActivity implements SurfaceHolder.Callb
     }
 
     private void init() {
-        tvLight = (TextView) findViewById(R.id.tv_light);
-        ivAlbum = (ImageView) findViewById(R.id.iv_album);
-        tbLight = (ToggleButton) findViewById(R.id.tb_light);
+//        tvLight = (TextView) findViewById(R.id.tv_light);
+//        ivAlbum = (ImageView) findViewById(R.id.iv_album);
+//        tbLight = (ToggleButton) findViewById(R.id.tb_light);
 
-        //闪光灯控制
-        tbLight.setOnCheckedChangeListener(new CompoundButton.OnCheckedChangeListener() {
-            @Override
-            public void onCheckedChanged(CompoundButton buttonView, boolean isChecked) {
-                if (isChecked) {
-                    tvLight.setText("关灯");
-                    openFlashlight();
-                } else {
-                    tvLight.setText("开灯");
-                    closeFlashlight();
-                }
-            }
-        });
+//        //闪光灯控制
+//        tbLight.setOnCheckedChangeListener(new CompoundButton.OnCheckedChangeListener() {
+//            @Override
+//            public void onCheckedChanged(CompoundButton buttonView, boolean isChecked) {
+//                if (isChecked) {
+//                    tvLight.setText("关灯");
+//                    openFlashlight();
+//                } else {
+//                    tvLight.setText("开灯");
+//                    closeFlashlight();
+//                }
+//            }
+//        });
 
-        //打开相册
-        findViewById(R.id.ll_album).setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-                getRuntimeRight();
-            }
-        });
+//        //打开相册
+//        findViewById(R.id.ll_album).setOnClickListener(new View.OnClickListener() {
+//            @Override
+//            public void onClick(View v) {
+//                getRuntimeRight();
+//            }
+//        });
     }
 
     /**

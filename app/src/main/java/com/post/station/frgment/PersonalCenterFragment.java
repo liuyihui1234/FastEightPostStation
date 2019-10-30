@@ -16,6 +16,7 @@ import android.widget.Toast;
 import androidx.annotation.Nullable;
 import androidx.fragment.app.Fragment;
 
+import com.post.station.PostExpressActivity;
 import com.post.station.R;
 import com.post.station.SetUpActivity;
 import com.post.station.model.HomeModel;
@@ -69,7 +70,7 @@ public class PersonalCenterFragment extends Fragment {
             }
         }
     }
-    @OnClick({R.id.ll_wallet, R.id.ll_TeamManagement,R.id.ll_feedback,R.id.ll_install,R.id.ll_customerManagement})
+    @OnClick({R.id.ll_wallet, R.id.ll_TeamManagement,R.id.ll_feedback,R.id.ll_install,R.id.ll_customerManagement,R.id.ll_Post_express})
     public void onViewClicked(View view) {
         switch (view.getId()) {
             case R.id.ll_wallet:
@@ -86,6 +87,9 @@ public class PersonalCenterFragment extends Fragment {
                 break;
             case R.id.ll_customerManagement:
                 AddCustomerActivity.start(getContext());
+                break;
+            case R.id.ll_Post_express:
+                PostExpressActivity.start(getContext());
                 break;
         }
     }

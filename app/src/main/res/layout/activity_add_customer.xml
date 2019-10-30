@@ -7,10 +7,7 @@
     android:background="@color/background_color"
     android:orientation="vertical"
     tools:context=".ui.mine.AddCustomerActivity">
-    <TextView
-        android:layout_width="match_parent"
-        android:layout_height="@dimen/dp_20"
-        android:background="@color/base_color"/>
+
     <!--<RelativeLayout-->
         <!--android:id="@+id/rl_appBar"-->
         <!--android:layout_width="match_parent"-->

@@ -6,6 +6,7 @@ import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.BaseAdapter;
+import android.widget.ImageView;
 import android.widget.LinearLayout;
 import android.widget.TextView;
 
@@ -73,8 +74,8 @@ public class BandAdapter extends BaseAdapter {
 
             convertView = LayoutInflater.from(mContext).inflate(R.layout.item_brand, null);
             diyHolder = new DiyHolder();
-
-            diyHolder.name = convertView.findViewById(R.id.tv_name);
+            diyHolder.iv_express = convertView.findViewById(R.id.iv_express);
+            diyHolder.tv_name = convertView.findViewById(R.id.tv_name);
             diyHolder.ll_brand = convertView.findViewById(R.id.ll_brand);
             convertView.setTag(diyHolder);
 
@@ -82,7 +83,8 @@ public class BandAdapter extends BaseAdapter {
             diyHolder = (DiyHolder) convertView.getTag();
         }
         BandBean bean = mInfo.get(position);
-        diyHolder.name.setText(bean.getName());
+        diyHolder.tv_name.setText(bean.getName());
+
       /*  if (poins == position) {
             if (diyHolder.ll_brand.getBackground().equals(R.mipmap.right_ic)){
                 diyHolder.ll_brand.setBackgroundColor(mContext.getResources().getColor(R.color.white));
@@ -95,14 +97,14 @@ public class BandAdapter extends BaseAdapter {
 
 
         if (a != -1 && position == a) {
-            if (list.size()==0){
+            if (list.size()>=0){
                 diyHolder.ll_brand.setBackgroundResource(R.mipmap.right_ic);
                 list.add(""+a);
             }else {
                 for (int n=0;n<list.size();n++){
                     if (list.get(n) .equals("" + a) ) {
                         Log.e("listview", list.get(n)+"getView: "+a );
-                        diyHolder.ll_brand.setBackgroundColor(mContext.getResources().getColor(R.color.white));
+                       diyHolder.ll_brand.setBackgroundColor(mContext.getResources().getColor(R.color.white));
                         list.remove(""+a);
                     }else {
                         Log.e("listview", "getView: " );
@@ -118,10 +120,11 @@ public class BandAdapter extends BaseAdapter {
     }
 
 
-    private class DiyHolder {
+    class DiyHolder {
 
         //用户名
-        TextView name;
+        TextView tv_name;
+        ImageView iv_express;
         LinearLayout ll_brand;
 
     }

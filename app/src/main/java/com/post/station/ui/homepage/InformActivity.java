@@ -10,6 +10,7 @@ import android.widget.SimpleAdapter;
 import androidx.appcompat.widget.SearchView;
 
 import com.post.station.R;
+import com.post.station.SmsRechargeActivity;
 import com.post.station.base.BaseActivity;
 
 import java.util.ArrayList;
@@ -66,9 +67,9 @@ public class InformActivity extends BaseActivity {
             }
         });
         LinearLayout ll_send_sms = findViewById(R.id.ll_send_sms);
-        LinearLayout ll_sms_recharge = findViewById(R.id.ll_sms_recharge);
+        LinearLayout ll_sms = findViewById(R.id.ll_sms);
         ll_send_sms.setOnClickListener(v -> SendSmsActivity.start(InformActivity.this));
-        ll_sms_recharge.setOnClickListener(v -> SmsRechargeActivity.start(InformActivity.this));
+        ll_sms.setOnClickListener(v -> SmsRechargeActivity.start(InformActivity.this));
     }
 
     public List<Map<String, Object>> getData() {

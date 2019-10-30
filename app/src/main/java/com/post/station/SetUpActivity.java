@@ -59,7 +59,6 @@ import butterknife.OnClick;
               LoginActivity.start(SetUpActivity.this);
               break;
             case R.id.ll_help:
-                finish();
                 AssistanceActivity.start(SetUpActivity.this);
                 break;
 

@@ -21,7 +21,11 @@ import com.post.station.R;
 import com.post.station.model.HomeModel;
 import com.post.station.ui.homepage.InformActivity;
 import com.post.station.ui.homepage.LinechartActivity;
+import com.post.station.ui.homepage.MessageActivity;
 import com.post.station.ui.homepage.OrderActivity;
+import com.post.station.ui.homepage.PaymentActivity;
+import com.post.station.widget.IntegralPopupWindow;
+import com.post.station.zxing.CaptureActivity;
 import com.youth.banner.Banner;
 import com.youth.banner.BannerConfig;
 import com.youth.banner.Transformer;
@@ -66,15 +70,34 @@ public class HomeFragment extends Fragment {
         ButterKnife.bind(this, view);
 
         initView(view);
+
         view.findViewById(R.id.ll_line).setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-
                 startActivity(new Intent(getActivity(), LinechartActivity.class));
             }
         });
         BannerView(view);
         return view;
+    }
+    @OnClick({R.id.iv_news,R.id.iv_scan})
+    public void onViewClicked(View view) {
+        switch (view.getId()) {
+            case R.id.iv_news:
+                startActivity(new Intent(getActivity(),MessageActivity.class));
+                break;
+            case R.id.iv_scan:
+                showIntegralPop();
+                break;
+        }}
+    private IntegralPopupWindow popupWindow;
+
+    private void showIntegralPop() {
+        if (popupWindow != null) {
+            popupWindow = null;
+        }
+        popupWindow = new IntegralPopupWindow(getActivity());
+        popupWindow.show();
     }
 
     private void initView(View view) {
@@ -91,6 +114,7 @@ public class HomeFragment extends Fragment {
         //新建适配器
         String[] from = {"image", "text"};
         int[] to = {R.id.image, R.id.text};
+
         sim_adapter = new SimpleAdapter(getActivity(), data_list, R.layout.item_home, from, to);
         //配置适配器
         gview.setAdapter(sim_adapter);
@@ -104,6 +128,7 @@ public class HomeFragment extends Fragment {
 
                 switch (i) {
                     case 0:
+                        startActivity(new Intent(getActivity(), CaptureActivity.class));
                         break;
                     case 1:
                         startActivity(new Intent(getActivity(), OrderActivity.class));
@@ -111,10 +136,39 @@ public class HomeFragment extends Fragment {
                     case 2:
                         startActivity(new Intent(getActivity(), InformActivity.class));
                         break;
+                    case 3:
+                        break;
+                }
+            }
+        });
+        gview1.setOnItemClickListener(new AdapterView.OnItemClickListener() {
+            @Override
+            public void onItemClick(AdapterView<?> adapterView, View view, int i, long l) {
+
+                switch (i) {
+                    case 0:
+                        break;
+                    case 1:
+                        break;
+                    case 2:
+                        break;
+                    case 3:
+                        break;
+                    case 4:
+                        break;
+                    case 5:
+                        break;
+                    case 6:
+                        startActivity(new Intent(getActivity(), PaymentActivity.class));
+                        break;
+
+
+
                 }
             }
         });
     }
+
 
     private void BannerView(View view) {
 

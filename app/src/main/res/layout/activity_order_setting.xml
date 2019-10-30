@@ -7,10 +7,7 @@
     android:background="@color/background_color"
     android:orientation="vertical"
     tools:context=".OrderSettingActivity">
-    <TextView
-        android:layout_width="match_parent"
-        android:layout_height="@dimen/dp_20"
-        android:background="@color/base_color"/>
+
     <!--<RelativeLayout-->
         <!--android:id="@+id/rl_appBar"-->
         <!--android:layout_width="match_parent"-->
@@ -146,6 +143,7 @@
                     android:textSize="15sp" />
 
                 <ImageView
+                    android:id="@+id/iv_close2"
                     android:layout_width="@dimen/dp_60"
                     android:layout_height="@dimen/dp_35"
                     android:padding="8dp"
@@ -230,6 +228,7 @@
                     android:textSize="15sp" />
 
                 <ImageView
+                    android:id="@+id/iv_open2"
                     android:layout_width="@dimen/dp_60"
                     android:layout_height="@dimen/dp_35"
                     android:padding="8dp"

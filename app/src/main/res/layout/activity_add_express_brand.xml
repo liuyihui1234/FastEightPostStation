@@ -44,13 +44,14 @@
             tools:ignore="OnClick" />
 
         <TextView
+            android:id="@+id/tv_determine"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_alignParentRight="true"
             android:layout_centerHorizontal="true"
             android:layout_centerVertical="true"
             android:layout_marginRight="@dimen/dp_10"
-            android:text="确定(0)"
+            android:text="确定"
             android:textColor="@color/white" />
     </RelativeLayout>
 
@@ -68,72 +69,6 @@
             android:text="使用入库功能前，请您先选择驿站代理的所有"
             android:textSize="@dimen/dp_10" />
     </RelativeLayout>
-
-
-
-
-    <ScrollView
-        android:layout_width="match_parent"
-        android:layout_height="match_parent"
-        android:visibility="gone">
-
-        <LinearLayout
-            android:layout_width="match_parent"
-            android:layout_height="match_parent"
-            android:orientation="vertical">
-
-            <LinearLayout
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:layout_marginTop="@dimen/dp_10"
-                android:orientation="horizontal">
-
-                <LinearLayout
-                    android:layout_width="0dp"
-                    android:layout_height="@dimen/dp_50"
-                    android:layout_marginLeft="@dimen/dp_10"
-                    android:layout_weight="1"
-                    android:background="@drawable/corner_5_white_drawable"
-                    android:gravity="center"
-                    android:orientation="horizontal">
-
-                    <ImageView
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
-                        android:src="@drawable/sto" />
-
-                    <TextView
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
-                        android:text="申通" />
-                </LinearLayout>
-
-                <LinearLayout
-                    android:layout_width="0dp"
-                    android:layout_height="@dimen/dp_50"
-                    android:layout_marginLeft="@dimen/dp_20"
-                    android:layout_marginRight="@dimen/dp_10"
-                    android:layout_weight="1"
-                    android:background="@drawable/corner_5_white_drawable"
-                    android:gravity="center"
-                    android:orientation="horizontal">
-
-                    <ImageView
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
-                        android:src="@drawable/sto" />
-
-                    <TextView
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
-                        android:text="中通" />
-                </LinearLayout>
-            </LinearLayout>
-
-        </LinearLayout>
-    </ScrollView>
-
->>>>>>> bb2fff83801e4e25615a3bd26ebfe8301da730e2
     <GridView
         android:id="@+id/gridview"
         android:layout_width="match_parent"

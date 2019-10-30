@@ -52,6 +52,11 @@
         android:layout_marginLeft="@dimen/dp_10"
         android:padding="@dimen/dp_10"
         android:text="共0个品牌" />
+    <ListView
+        android:id="@+id/lv_express"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+    </ListView>
 
 </LinearLayout>
     <Button

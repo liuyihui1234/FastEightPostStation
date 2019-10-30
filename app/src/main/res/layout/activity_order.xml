@@ -64,87 +64,13 @@
             android:background="@drawable/bg_white"
             android:orientation="horizontal"
             android:layout_marginTop="30dp">
-            <LinearLayout
-                android:id="@+id/ll_inhouse"
-                android:layout_width="0dp"
-                android:layout_height="match_parent"
-                android:layout_weight="1"
-                android:orientation="vertical"
-                android:gravity="center">
-
-                <ImageView
-                    android:layout_width="35dp"
-                    android:layout_height="35dp"
-                    android:src="@mipmap/createorder_ic"/>
-
-                <TextView
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:layout_marginTop="10dp"
-                    android:textSize="14dp"
-                    android:text="创建订单"
-                    android:textColor="@color/textcolor" />
-            </LinearLayout>
-            <LinearLayout
-                android:id="@+id/ll_outhouse"
-                android:layout_width="0dp"
-                android:layout_height="match_parent"
-                android:layout_weight="1"
-                android:orientation="vertical"
-                android:gravity="center">
-
-                <ImageView
-                    android:layout_width="35dp"
-                    android:layout_height="35dp"
-                    android:src="@mipmap/scanning_order_ic"/>
-                <TextView
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:layout_marginTop="10dp"
-                    android:textSize="14dp"
-                    android:text="扫描下单"
-                    android:textColor="@color/textcolor" />
-            </LinearLayout>
-            <LinearLayout
-                android:id="@+id/ll_savehouse"
-                android:layout_width="0dp"
-                android:layout_height="match_parent"
-                android:layout_weight="1"
-                android:orientation="vertical"
-                android:gravity="center">
-
-                <ImageView
-                    android:layout_width="35dp"
-                    android:layout_height="35dp"
-                    android:src="@mipmap/bulkorder_ic"/>
-                <TextView
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:layout_marginTop="10dp"
-                    android:text="批量下单"
-                    android:textSize="14dp"
-                    android:textColor="@color/textcolor" />
-            </LinearLayout>
-            <LinearLayout
-                android:id="@+id/ll_onhouse"
-                android:layout_width="0dp"
-                android:layout_height="match_parent"
-                android:layout_weight="1"
-                android:orientation="vertical"
-                android:gravity="center">
-
-                <ImageView
-                    android:layout_width="35dp"
-                    android:layout_height="35dp"
-                    android:src="@mipmap/inviteorder_ic"/>
-                <TextView
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:layout_marginTop="10dp"
-                    android:text="邀请下单"
-                    android:textSize="14dp"
-                    android:textColor="@color/textcolor" />
-            </LinearLayout>
+            <GridView
+                android:id="@+id/gridview"
+                android:layout_width="match_parent"
+                android:layout_height="80dp"
+                android:layout_marginTop="10dp"
+                android:gravity="center_horizontal"
+                android:numColumns="4"/>
 
         </LinearLayout>
     </LinearLayout>

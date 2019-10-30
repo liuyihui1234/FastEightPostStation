@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical"
+    android:background="#55000000"
+    android:gravity="center"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+    <LinearLayout
+        android:id="@+id/rlContent"
+        android:layout_width="@dimen/dp_250"
+        android:layout_height="wrap_content"
+        android:background="@drawable/corner_5_white_drawable"
+        android:padding="@dimen/dp_15"
+        android:orientation="vertical">
+        <TextView
+            android:id="@+id/tv_scan"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="10dp"
+            android:layout_marginRight="10dp"
+            android:drawableLeft="@drawable/creates"
+            android:drawablePadding="15dp"
+            android:gravity="center_vertical"
+            android:text="请创建收款二维码"
+            android:textSize="14dp" />
+
+    </LinearLayout>
+
+</LinearLayout>
