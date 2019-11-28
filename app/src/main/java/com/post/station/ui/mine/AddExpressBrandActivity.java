@@ -38,9 +38,9 @@ import butterknife.OnClick;
 
 public class AddExpressBrandActivity extends BaseActivity {
     private TextView textView;
+
+     ImageView mBackImageBtn;
     GridView gridview;
-    private List<Map<String, Object>> data_list;
-    private SimpleAdapter sim_adapter;
     List<BandBean> lists = new ArrayList();
 
 
@@ -55,6 +55,7 @@ public class AddExpressBrandActivity extends BaseActivity {
         setContentView(R.layout.activity_add_express_brand);
         gridview = findViewById(R.id.gridview);
         textView = findViewById(R.id.textView);
+        mBackImageBtn=findViewById(R.id.mBackImageBtn);
         SpannableString spanString = new SpannableString("快递品\n牌,切勿遗漏!  !  !");
         AbsoluteSizeSpan span = new AbsoluteSizeSpan(25);
         spanString.setSpan(span, 0, 15, Spannable.SPAN_EXCLUSIVE_EXCLUSIVE);
@@ -62,36 +63,28 @@ public class AddExpressBrandActivity extends BaseActivity {
         textView.append(spanString);
         ButterKnife.bind(this);
         initView();
+        if(minBean.listss!=null) {
+            minBean.listss.clear();
+        }
     }
-    @OnClick({R.id.tv_determine})
+    @OnClick({R.id.tv_determine,R.id.mBackImageBtn})
     public void onViewClicked(View view) {
         switch (view.getId()) {
             case R.id.tv_determine:
-                saveInfor();
+                finish();
+                break;
+            case R.id.mBackImageBtn:
+                finish();
                 break;
         }
     }
-
-
-
-    private void saveInfor() {
-        //  Log.e("寄件人地址填写","" +addressBean.toString());
-       /* bandBean.img =img ;
-        bandBean.name =name ;*/
-
-        //Log.e("品牌保存", "isNull:2 "+bandBean.toString() );
-        Intent intent = new Intent();
-        intent.putExtra("name",""+ lists);
-        setResult(200, intent);
-        finish();
-    }
-
     private void initView() {
 
         List<BandBean> list=new ArrayList<>();
         for (int n=0;n<10;n++){
             BandBean bean=new BandBean();
             bean.setName("1"+n);
+            bean.setImg("");
             list.add(bean);
         }
         BandAdapter adapter=new BandAdapter(AddExpressBrandActivity.this,list);
@@ -102,6 +95,7 @@ public class AddExpressBrandActivity extends BaseActivity {
                 //adapter.setonclick(position);
                 //adapter.notifyDataSetChanged();
                 BandBean bean=new BandBean();
+                minBean.listss.add(list.get(position));
                 bean.setName(list.get(position).getName());
                 bean.setImg(list.get(position).getImg());
                 lists.add(bean);

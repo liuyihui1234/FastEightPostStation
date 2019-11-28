@@ -26,13 +26,4 @@ public class SmsHelpActivity extends BaseActivity {
         ButterKnife.bind(this);
         setContentTitle("短信使用帮助");
     }
-    @OnClick({R.id.btn_autograph})
-    public void onViewClicked(View view) {
-        switch (view.getId()) {
-            case R.id.btn_autograph:
-                startActivity(new Intent(this, NewSignatureActivity.class));
-                break;
-
-        }
-    }
 }

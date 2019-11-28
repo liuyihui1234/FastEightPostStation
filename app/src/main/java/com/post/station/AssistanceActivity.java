@@ -13,7 +13,7 @@ public class AssistanceActivity extends BaseActivity {
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        addContentView(R.layout.activity_assistance);
+       addContentView(R.layout.activity_assistance);
         setContentTitle("帮助");
     }
     public static void start(Context context) {

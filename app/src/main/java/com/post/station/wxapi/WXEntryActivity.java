@@ -1,0 +1,7 @@
+package com.post.station.wxapi;
+
+import com.umeng.socialize.weixin.view.WXCallbackActivity;
+
+public class WXEntryActivity extends WXCallbackActivity {
+
+}

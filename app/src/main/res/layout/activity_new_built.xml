@@ -1,0 +1,82 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:background="#f0f0f0"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    tools:context=".NewBuiltActivity">
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="43dp"
+        android:background="@color/white"
+        android:gravity="center_vertical"
+        android:orientation="horizontal">
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="10dp"
+            android:text="名称"
+            android:padding="@dimen/dp_5"
+            android:textColor="#333333"
+            android:textSize="15sp" />
+        <EditText
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@null"
+            android:hint="请输入报价单名称"
+            android:textSize="@dimen/dp_10"
+            />
+    </LinearLayout>
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="1dp"
+        android:background="#e7e7e7" />
+    <LinearLayout
+        android:id="@+id/ll_brand"
+        android:layout_width="match_parent"
+        android:layout_height="43dp"
+        android:background="@color/white"
+        android:gravity="center_vertical"
+        android:orientation="horizontal">
+
+        <TextView
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="10dp"
+            android:layout_weight="1"
+            android:text="无品牌"
+            android:padding="@dimen/dp_5"
+            android:textColor="#333333"
+            android:textSize="15sp" />
+
+        <ImageView
+            android:layout_width="25dp"
+            android:layout_height="35dp"
+            android:padding="8dp"
+            android:src="@drawable/open" />
+    </LinearLayout>
+    <LinearLayout
+        android:id="@+id/ll_add_quote"
+       android:layout_marginLeft="@dimen/dp_10"
+        android:layout_marginRight="@dimen/dp_10"
+        android:layout_marginTop="@dimen/dp_30"
+        android:layout_width="match_parent"
+        android:background="@color/white"
+        android:orientation="horizontal"
+        android:gravity="center"
+        android:layout_height="@dimen/dp_150">
+        <ImageView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:src="@drawable/address"/>
+        <TextView
+            android:layout_marginLeft="@dimen/dp_10"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textSize="@dimen/dp_15"
+            android:textColor="@color/black1"
+            android:text="添加报价单"/>
+    </LinearLayout>
+</LinearLayout>

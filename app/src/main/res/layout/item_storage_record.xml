@@ -1,0 +1,169 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical"
+    android:background="#f0f0f0"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_margin="@dimen/dp_10"
+        android:background="@drawable/bg_white"
+        android:orientation="vertical">
+     <RelativeLayout
+         android:layout_width="match_parent"
+         android:layout_height="40dp"
+         android:orientation="horizontal">
+         <TextView
+             android:layout_marginLeft="@dimen/dp_10"
+             android:layout_centerVertical="true"
+             android:layout_width="wrap_content"
+             android:layout_height="wrap_content"
+             android:text="运单号："/>
+         <TextView
+             android:id="@+id/tv_tracking_number"
+             android:layout_centerVertical="true"
+             android:layout_marginLeft="@dimen/dp_60"
+             android:layout_width="wrap_content"
+             android:layout_height="wrap_content"
+             android:text="198350506575"/>
+         <ImageView
+             android:layout_centerVertical="true"
+             android:layout_marginLeft="@dimen/dp_150"
+             android:layout_width="15dp"
+             android:layout_height="15dp"
+             android:src="@drawable/copy"/>
+         <TextView
+             android:layout_alignParentRight="true"
+             android:layout_width="wrap_content"
+             android:layout_height="match_parent"
+             android:text="已签收"
+             android:padding="@dimen/dp_5"
+             android:gravity="center_vertical"
+             android:background="#9d9ba6"
+             android:textColor="@color/white" />
+     </RelativeLayout>
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/dp_1"
+            android:background="#d8d8d8" />
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:gravity="center_vertical"
+            android:orientation="horizontal">
+
+            <TextView
+                android:id="@+id/tv_from_city"
+                android:layout_width="0dp"
+                android:layout_weight="1"
+                android:layout_height="wrap_content"
+                android:gravity="center_horizontal"
+                android:text="武汉市"
+                android:textColor="@color/black1"
+                android:textSize="15sp" />
+            <ImageView
+                android:layout_width="50dp"
+                android:layout_height="30dp"
+                android:src="@drawable/arrow"/>
+
+            <TextView
+                android:id="@+id/tv_to_city"
+                android:layout_width="0dp"
+                android:layout_weight="1"
+                android:layout_height="wrap_content"
+                android:gravity="center_horizontal"
+                android:text="郑州市"
+                android:textColor="@color/black1"
+                android:textSize="15sp" />
+        </LinearLayout>
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:gravity="center_vertical"
+            android:orientation="horizontal">
+
+            <TextView
+                android:id="@+id/tv_sending_center"
+                android:layout_width="0dp"
+                android:layout_weight="1"
+                android:layout_height="wrap_content"
+                android:gravity="center_horizontal"
+                android:text="武汉配送中心"
+                android:textColor="#999999"
+                android:textSize="12sp" />
+
+            <TextView
+                android:id="@+id/tv_name"
+                android:layout_width="0dp"
+                android:layout_weight="1"
+                android:layout_height="wrap_content"
+                android:gravity="center_horizontal"
+                android:text="王小逗"
+                android:textColor="#999999"
+                android:textSize="12sp" />
+        </LinearLayout>
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:gravity="center_vertical"
+            android:layout_margin="@dimen/dp_10"
+            android:orientation="horizontal">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="已签收："
+                android:textColor="@color/black1"
+                android:textSize="15sp" />
+
+            <TextView
+                android:id="@+id/tv_consignee"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="代签收（百货商店），感谢使用快8，期待再次\n为您服务"
+                android:textColor="#999999"
+                android:textSize="12sp" />
+        </LinearLayout>
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:gravity="center_vertical"
+            android:layout_marginLeft="@dimen/dp_10"
+            android:layout_marginRight="@dimen/dp_10"
+            android:orientation="horizontal">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="签收时间："
+                android:textColor="@color/black1"
+                android:textSize="15sp" />
+
+            <TextView
+                android:id="@+id/tv_time"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="2019-06-29    15：45：00"
+                android:textColor="#999999"
+                android:textSize="12sp" />
+        </LinearLayout>
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="50dp"
+            android:background="@color/white">
+            <TextView
+                android:id="@+id/tv_close"
+                android:layout_width="@dimen/dp_80"
+                android:layout_height="40dp"
+                android:text="删除"
+                android:padding="@dimen/dp_5"
+                android:gravity="center"
+                android:background="@drawable/glary_drawable"
+                android:layout_marginRight="@dimen/dp_10"
+                android:layout_alignParentRight="true"/>
+        </RelativeLayout>
+
+    </LinearLayout>
+
+</LinearLayout>

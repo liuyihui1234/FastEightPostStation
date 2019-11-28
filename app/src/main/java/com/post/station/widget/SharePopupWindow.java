@@ -11,6 +11,7 @@ import android.widget.PopupWindow;
 import android.widget.Toast;
 
 import com.post.station.R;
+import com.post.station.frgment.PersonalCenterFragment;
 import com.post.station.utils.AppUtils;
 
 public class SharePopupWindow extends PopupWindow implements OnClickListener {
@@ -18,10 +19,10 @@ public class SharePopupWindow extends PopupWindow implements OnClickListener {
     private View conentView;
     private Context mActivity;
 
-    public SharePopupWindow(final Context mActivity, OnShareClickListener onShareClickListener) {
-        this.mActivity = mActivity;
+    public SharePopupWindow(final PersonalCenterFragment mActivity,OnShareClickListener onShareClickListener) {
+        this.mActivity = mActivity.getActivity();
         this.onShareClickListener = onShareClickListener;
-        LayoutInflater inflater = (LayoutInflater) mActivity.getSystemService(Context.LAYOUT_INFLATER_SERVICE);
+        LayoutInflater inflater = (LayoutInflater) mActivity.getActivity().getSystemService(Context.LAYOUT_INFLATER_SERVICE);
         conentView = inflater.inflate(R.layout.umeng_share_custom_board_v5, null);
         this.setContentView(conentView);
         this.setWidth(LayoutParams.MATCH_PARENT);

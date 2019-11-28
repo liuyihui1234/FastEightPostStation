@@ -31,7 +31,6 @@ import android.view.View;
 import android.view.Window;
 import android.view.WindowManager;
 import android.view.animation.LinearInterpolator;
-import android.widget.CompoundButton;
 import android.widget.ImageView;
 import android.widget.RelativeLayout;
 import android.widget.TextView;
@@ -60,6 +59,8 @@ import java.io.UnsupportedEncodingException;
 import java.lang.reflect.Field;
 import java.nio.charset.Charset;
 import java.util.Hashtable;
+
+import butterknife.OnClick;
 
 public class CaptureActivity extends BaseActivity implements SurfaceHolder.Callback {
 
@@ -100,19 +101,21 @@ public class CaptureActivity extends BaseActivity implements SurfaceHolder.Callb
 
         Window window = getWindow();
         window.addFlags(WindowManager.LayoutParams.FLAG_KEEP_SCREEN_ON);
-//        setContentView(R.layout.activity_capture);
+        setContentView(R.layout.activity_photo_gallery);
         addContentView(R.layout.activity_capture);
-        setContentTitle("扫描出库");
+
         context = this;
         activity = this;
-        findViewById(R.id.iv_back).setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-                finish();
-            }
-        });
         init();
         initScan();
+    }
+    @OnClick({R.id.mBackImageBtn})
+    public void onViewClicked(View view) {
+        switch (view.getId()) {
+            case R.id.mBackImageBtn:
+                finish();
+                break;
+        }
     }
 
     private void init() {

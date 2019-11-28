@@ -17,7 +17,9 @@ import android.widget.Toast;
 import androidx.fragment.app.Fragment;
 
 import com.bumptech.glide.Glide;
+import com.post.station.MakeCollectionsActivity;
 import com.post.station.R;
+import com.post.station.WarehousingActivity;
 import com.post.station.model.HomeModel;
 import com.post.station.ui.homepage.InformActivity;
 import com.post.station.ui.homepage.LinechartActivity;
@@ -87,7 +89,7 @@ public class HomeFragment extends Fragment {
                 startActivity(new Intent(getActivity(),MessageActivity.class));
                 break;
             case R.id.iv_scan:
-                showIntegralPop();
+                startActivity(new Intent(getActivity(),CaptureActivity.class));
                 break;
         }}
     private IntegralPopupWindow popupWindow;
@@ -137,6 +139,7 @@ public class HomeFragment extends Fragment {
                         startActivity(new Intent(getActivity(), InformActivity.class));
                         break;
                     case 3:
+                        startActivity(new Intent(getActivity(), WarehousingActivity.class));
                         break;
                 }
             }
@@ -151,15 +154,17 @@ public class HomeFragment extends Fragment {
                     case 1:
                         break;
                     case 2:
+                        startActivity(new Intent(getActivity(), CaptureActivity.class));
                         break;
                     case 3:
+                        startActivity(new Intent(getActivity(), CaptureActivity.class));
                         break;
                     case 4:
                         break;
                     case 5:
                         break;
                     case 6:
-                        startActivity(new Intent(getActivity(), PaymentActivity.class));
+                        showIntegralPop();
                         break;
 
 

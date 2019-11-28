@@ -17,7 +17,6 @@ import butterknife.BindView;
 import butterknife.ButterKnife;
 
 public class WaitCheckOutAdapter extends CommonItemAdapter<WaitCheckOutBean,
-
         WaitCheckOutAdapter.WaitCheckOutHolderView> {
 
     @Override

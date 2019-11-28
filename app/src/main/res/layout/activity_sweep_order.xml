@@ -7,10 +7,7 @@
     android:orientation="vertical"
     android:background="@color/background_color"
     tools:context=".SweepOrderActivity">
-    <View
-        android:layout_width="match_parent"
-        android:layout_height="@dimen/dp_23"
-        android:background="@color/base_color" />
+
     <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="wrap_content"

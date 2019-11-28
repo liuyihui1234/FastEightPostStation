@@ -27,7 +27,7 @@ public class ConstantUtil {
     public static final String QQ_APP_KEY = "OlRLAzuBN9Y7xG4O";
 
     //微信
-    public static final String WX_APP_ID = "wx735df445bde17744";
-    public static final String WX_APP_KEY = "14d066fb824c8d0faff4829b9885e119";
+    public static final String WX_APP_ID = "wx495992cc5d28ad8e";
+    public static final String WX_APP_KEY = "8f87988add6b34785c5768afdd2e6327";
 
 }

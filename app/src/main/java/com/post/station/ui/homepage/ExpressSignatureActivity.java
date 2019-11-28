@@ -16,6 +16,7 @@ import androidx.fragment.app.FragmentTransaction;
 import androidx.recyclerview.widget.LinearLayoutManager;
 import androidx.recyclerview.widget.RecyclerView;
 
+import com.post.station.NewSignatureActivity;
 import com.post.station.R;
 import com.post.station.adapter.CYBChangeCityGridViewAdapter;
 import com.post.station.adapter.ContactAdapter;
@@ -44,6 +45,8 @@ public class ExpressSignatureActivity extends BaseActivity {
     TextView tv_express_sign;
     @BindView(R.id.tv_custom)
     TextView tv_custom;
+    @BindView(R.id.add)
+    TextView add;
 
     public static void start(Context context) {
         context.startActivity(new Intent(context, ExpressSignatureActivity.class));
@@ -60,7 +63,7 @@ public class ExpressSignatureActivity extends BaseActivity {
 
     private boolean isExpressSign = true;
 
-    @OnClick({R.id.tv_express_sign, R.id.tv_custom})
+    @OnClick({R.id.tv_express_sign, R.id.tv_custom,R.id.add})
     public void onViewClicked(View view) {
         switch (view.getId()) {
             case R.id.tv_express_sign:
@@ -72,6 +75,7 @@ public class ExpressSignatureActivity extends BaseActivity {
                 tv_express_sign.setText("快递签名");
                 tv_custom.setText("自定义");
                 addFragment(new ExpressSignatureFragment());
+                add.setVisibility(View.GONE);
                 break;
             case R.id.tv_custom:
                 isExpressSign = !isExpressSign;
@@ -82,6 +86,10 @@ public class ExpressSignatureActivity extends BaseActivity {
                 tv_express_sign.setText("快递签名");
                 tv_custom.setText("自定义");
                 addFragment(new CustomFragment());
+                add.setVisibility(View.VISIBLE);
+                break;
+            case R.id.add:
+                NewSignatureActivity.start(this);
                 break;
         }
     }

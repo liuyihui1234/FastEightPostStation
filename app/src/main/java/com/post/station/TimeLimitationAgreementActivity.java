@@ -13,7 +13,9 @@ import android.text.style.ForegroundColorSpan;
 import android.text.style.StyleSpan;
 import android.widget.TextView;
 
-public class TimeLimitationAgreementActivity extends AppCompatActivity {
+import com.post.station.base.BaseActivity;
+
+public class TimeLimitationAgreementActivity extends BaseActivity {
 
 private TextView textView;
     @Override

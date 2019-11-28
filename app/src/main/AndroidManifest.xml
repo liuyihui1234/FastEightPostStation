@@ -4,6 +4,15 @@
 
     <uses-permission android:name="android.permission.INTERNET" />
     <uses-permission android:name="android.permission.VIBRATE" />
+    <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" />
+    <uses-permission android:name="android.permission.ACCESS_WIFI_STATE" />
+    <uses-permission android:name="android.permission.READ_PHONE_STATE" />
+    <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE" />
+    <uses-permission android:name="android.permission.READ_EXTERNAL_STORAGE" />
+    <uses-permission android:name="android.permission.ACCESS_FINE_LOCATION" />
+    <uses-permission android:name="android.permission.ACCESS_COARSE_LOCATION" />
+    <uses-permission android:name="android.permission.ACCESS_LOCATION_EXTRA_COMMANDS" />
+    <uses-permission android:name="android.permission.CAMERA" />
 
     <application
         android:name=".PostStationApplication"
@@ -14,7 +23,19 @@
         android:supportsRtl="true"
         android:theme="@style/AppTheme"
         android:usesCleartextTraffic="true">
-        <activity android:name=".SmsRechargeActivity"></activity>
+        <activity android:name=".SiteInformationActivity" />
+        <activity android:name=".DetentionTimeActivity" />
+        <activity android:name=".VoiceReminderActivity" />
+        <activity android:name=".CustomerResearchActivity" />
+        <activity android:name=".BusinessCardActivity" />
+        <activity android:name=".AddRegionalQuoteActivity" />
+        <activity android:name=".NewBuiltActivity" />
+        <activity android:name=".AddQuoteActivity" />
+        <activity android:name=".StorageRecordActivity" />
+        <activity android:name=".CouponActivity" />
+        <activity android:name=".TemplateActivity" />
+        <activity android:name=".WarehousingActivity" />
+        <activity android:name=".SmsRechargeActivity" />
         <activity android:name=".SweepOrderActivity" />
         <activity android:name=".CapitalDetailActivity" />
         <activity android:name=".ui.homepage.MessageActivity" />
@@ -33,8 +54,10 @@
         <activity android:name=".QuotationActivity" />
         <activity android:name=".AssistanceActivity" />
         <activity android:name=".OrderSettingActivity" />
+        <activity android:name=".NoticeActivity" />
         <activity android:name=".CreateOrderActivity" />
-        <activity android:name=".ui.mine.BrandManagementaActivity" />
+        <activity android:name=".ui.mine.BrandManagementActivity" />
+        <activity android:name=".InvitationOrderActivity" />
         <activity android:name=".ui.login.LoginActivity">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
@@ -42,6 +65,17 @@
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
+
+        <meta-data
+            android:name="UMENG_APPKEY"
+            android:value="5d36acfb3fc1956dc50009dd" />
+
+        <activity
+            android:name=".wxapi.WXEntryActivity"
+            android:configChanges="keyboardHidden|orientation|screenSize"
+            android:exported="true"
+            android:screenOrientation="portrait"
+            android:theme="@android:style/Theme.Translucent.NoTitleBar" />
 
         <provider
             android:name="androidx.core.content.FileProvider"

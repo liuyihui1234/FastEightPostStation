@@ -9,10 +9,14 @@ import android.widget.AdapterView;
 import android.widget.GridView;
 import android.widget.SimpleAdapter;
 
+import com.post.station.AddQuoteActivity;
 import com.post.station.BatchOrderActivity;
+import com.post.station.CouponActivity;
 import com.post.station.CreateOrderActivity;
+import com.post.station.InvitationOrderActivity;
 import com.post.station.OrderSettingActivity;
 import com.post.station.R;
+import com.post.station.StorageRecordActivity;
 import com.post.station.SweepOrderActivity;
 import com.post.station.base.BaseActivity;
 import com.post.station.zxing.CaptureActivity;
@@ -71,6 +75,7 @@ public class OrderActivity extends BaseActivity {
                         BatchOrderActivity.start(OrderActivity.this);
                         break;
                     case 3:
+                        InvitationOrderActivity.start(OrderActivity.this);
                         break;
                 }
             }
@@ -92,10 +97,13 @@ public class OrderActivity extends BaseActivity {
                     case 2:
                         break;
                     case 3:
+                        StorageRecordActivity.start(OrderActivity.this);
                         break;
                     case 4:
+                        CouponActivity.start(OrderActivity.this);
                         break;
                     case 5:
+                        AddQuoteActivity.start(OrderActivity.this);
                         break;
 
                 }

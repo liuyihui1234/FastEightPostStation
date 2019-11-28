@@ -13,11 +13,15 @@ import android.provider.MediaStore;
 import android.util.Base64;
 import android.util.Log;
 
+import com.post.station.response.UserInfo;
+
+import java.io.ByteArrayInputStream;
 import java.io.ByteArrayOutputStream;
 import java.io.File;
 import java.io.FileOutputStream;
 import java.io.IOException;
 import java.io.InputStream;
+import java.io.ObjectInputStream;
 import java.util.zip.ZipEntry;
 import java.util.zip.ZipFile;
 
@@ -276,18 +280,18 @@ public class FileUtil {
 //    }
 //
 //
-//    public static UserInfo getUser(Context context) {
-//        SharedPreferences sharedPreferences = context.getSharedPreferences("userInfor", context.MODE_PRIVATE);
-//        String temp = sharedPreferences.getString("user_info_id", "");
-//        ByteArrayInputStream bais = new ByteArrayInputStream(Base64.decode(temp.getBytes(), Base64.DEFAULT));
-//        UserInfo user = null;
-//        try {
-//            ObjectInputStream ois = new ObjectInputStream(bais);
-//            user = (UserInfo) ois.readObject();
-//        } catch (Exception e) {
-//            e.printStackTrace();
-//            Log.e("error", "FileUtil - getUser = " +e.getMessage());
-//        }
-//        return user;
-//    }
+    public static UserInfo getUser(Context context) {
+        SharedPreferences sharedPreferences = context.getSharedPreferences("userInfor", context.MODE_PRIVATE);
+        String temp = sharedPreferences.getString("user_info_id", "");
+        ByteArrayInputStream bais = new ByteArrayInputStream(Base64.decode(temp.getBytes(), Base64.DEFAULT));
+        UserInfo user = null;
+        try {
+            ObjectInputStream ois = new ObjectInputStream(bais);
+            user = (UserInfo) ois.readObject();
+        } catch (Exception e) {
+            e.printStackTrace();
+            Log.e("error", "FileUtil - getUser = " +e.getMessage());
+        }
+        return user;
+    }
 }

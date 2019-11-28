@@ -11,6 +11,7 @@ import android.widget.LinearLayout;
 import androidx.annotation.Nullable;
 
 import com.post.station.base.BaseActivity;
+import com.post.station.ui.login.FoundPasswordActivity;
 import com.post.station.ui.login.LoginActivity;
 
 import butterknife.BindView;
@@ -24,20 +25,10 @@ import butterknife.OnClick;
  *  作者：wpx
  *  描述：btn_logout
  */public class SetUpActivity extends BaseActivity {
-    @BindView(R.id.ll_scanning)
-    LinearLayout iv_homepage;
-    @BindView(R.id.ll_detentionTime)
-    LinearLayout ll_detentionTime;
-    @BindView(R.id.ll_voiceReminder)
-    LinearLayout ll_voiceReminder;
-    @BindView(R.id.ll_webVersion)
-    LinearLayout ll_webVersion;
-    @BindView(R.id.ll_contactUs)
-    LinearLayout ll_contactUs;
+    @BindView(R.id.ll_voice_reminder)
+    LinearLayout ll_voice_reminder;
     @BindView(R.id.ll_help)
     LinearLayout ll_help;
-    @BindView(R.id.ll_changePassword)
-    LinearLayout ll_changePassword;
     @BindView(R.id.btn_logout)
     Button btn_logout;
     @Override
@@ -51,17 +42,22 @@ import butterknife.OnClick;
     public static void start(Context context) {
         context.startActivity(new Intent(context, SetUpActivity.class));
     }
-    @OnClick({R.id.btn_logout,R.id.ll_help})
+    @OnClick({R.id.btn_logout,R.id.tv_change_password,R.id.ll_voice_reminder,R.id.ll_detention_time})
     public void onViewClicked(View view) {
         switch (view.getId()) {
             case R.id.btn_logout:
                finish();
               LoginActivity.start(SetUpActivity.this);
               break;
-            case R.id.ll_help:
-                AssistanceActivity.start(SetUpActivity.this);
+            case R.id.tv_change_password:
+                FoundPasswordActivity.start(SetUpActivity.this);
                 break;
-
+            case R.id.ll_voice_reminder:
+                VoiceReminderActivity.start(SetUpActivity.this);
+                break;
+            case R.id.ll_detention_time:
+                DetentionTimeActivity.start(SetUpActivity.this);
+                break;
 
 
         }

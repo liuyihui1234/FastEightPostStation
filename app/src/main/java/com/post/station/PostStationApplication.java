@@ -8,6 +8,9 @@ import android.os.Vibrator;
 import com.lzy.imagepicker.ImagePicker;
 import com.lzy.imagepicker.view.CropImageView;
 import com.post.station.glide.GlideImageLoader;
+import com.post.station.utils.ConstantUtil;
+import com.umeng.commonsdk.UMConfigure;
+import com.umeng.socialize.PlatformConfig;
 
 import java.lang.ref.WeakReference;
 
@@ -17,6 +20,14 @@ public class PostStationApplication extends Application {
         super.onCreate();
         reference = new WeakReference<>(this);
         initImagePicker();
+        UMConfigure.setLogEnabled(true);
+        //微信
+        PlatformConfig.setWeixin(ConstantUtil.WX_APP_ID, ConstantUtil.WX_APP_KEY);
+        //新浪微博(第三个参数为回调地址)
+//        PlatformConfig.setSinaWeibo("3111100954", "04b48b094faeb16683c32111124ebdad",
+//                "http://sns.whalecloud.com/sina2/callback");
+        //qq开放平台  APP ID  APP KEY
+        PlatformConfig.setQQZone(ConstantUtil.QQ_APP_ID, ConstantUtil.QQ_APP_KEY);
     }
 
     private static WeakReference<Context> reference = null;
@@ -40,4 +51,5 @@ public class PostStationApplication extends Application {
         imagePicker.setOutPutX(1000);                         //保存文件的宽度。单位像素
         imagePicker.setOutPutY(1000);                         //保存文件的高度。单位像素
     }
+
 }

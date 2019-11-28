@@ -11,6 +11,7 @@ import android.widget.ImageView;
 import android.widget.LinearLayout;
 import android.widget.TextView;
 
+import com.post.station.AssistanceActivity;
 import com.post.station.CapitalDetailActivity;
 import com.post.station.CapitalDetailsActivity;
 import com.post.station.R;
@@ -42,7 +43,7 @@ ImageView mBackImageBtn;
 //        showAppBar(false);
         ButterKnife.bind(this);
     }
-    @OnClick({R.id.mBackImageBtn,R.id.tv_capitalDetails})
+    @OnClick({R.id.mBackImageBtn,R.id.tv_capitalDetails,R.id.ll_help})
     public void onViewClicked(View view) {
         switch (view.getId()) {
             case R.id.mBackImageBtn:
@@ -50,6 +51,9 @@ ImageView mBackImageBtn;
                 break;
             case R.id.tv_capitalDetails:
                 startActivity(new Intent(this, CapitalDetailActivity.class));
+                break;
+            case R.id.ll_help:
+                startActivity(new Intent(this, AssistanceActivity.class));
                 break;
         }
     }

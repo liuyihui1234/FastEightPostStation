@@ -10,14 +10,16 @@ import android.view.ViewGroup;
 import android.widget.Button;
 import android.widget.LinearLayout;
 import android.widget.PopupWindow;
+import android.widget.TextView;
 
+import com.post.station.MakeCollectionsActivity;
 import com.post.station.R;
 
 public class IntegralPopupWindow extends PopupWindow{
-
+private TextView tv_scan;
     private View mPopView;
     private LinearLayout llTop;
-//    private OnItemClickListener mListener;
+    private OnItemClickListener mListener;
 
     public IntegralPopupWindow(Activity context) {
         super(context);        // TODO Auto-generated constructor stub
@@ -33,6 +35,7 @@ public class IntegralPopupWindow extends PopupWindow{
     private void init(Context context) {        // TODO Auto-generated method stub
         LayoutInflater inflater = LayoutInflater.from(context);        //绑定布局
         mPopView = inflater.inflate(R.layout.item_create_code, null);
+        tv_scan=mPopView.findViewById(R.id.tv_scan);
     }
 
     /**
@@ -47,6 +50,9 @@ public class IntegralPopupWindow extends PopupWindow{
 //        this.setAnimationStyle(R.style.mypopwindow_anim_style);// 设置动画
         this.setBackgroundDrawable(new ColorDrawable(0x00000000));// 设置背景透明
         this.setOutsideTouchable(true);
+        tv_scan.setOnClickListener(view -> {
+            MakeCollectionsActivity.start(context);
+        });
 
     }
 
@@ -57,18 +63,17 @@ public class IntegralPopupWindow extends PopupWindow{
 //    /**
 //     * 定义一个接口，公布出去 在Activity中操作按钮的单击事件
 //     */
-//    public interface OnItemClickListener {
-//        void setOnItemClick(View v);
-//    }
-//
-//    public void setOnItemClickListener(OnItemClickListener listener) {
-//        this.mListener = listener;
-//    }
-//
-//    @Override
-//    public void onClick(View v) {        // TODO Auto-generated method stub
-//        if (mListener != null) {
-//            mListener.setOnItemClick(v);
-//        }
-//    }
+    public interface OnItemClickListener {
+        void setOnItemClick(View v);
+    }
+
+    public void setOnItemClickListener(OnItemClickListener listener) {
+        this.mListener = listener;
+    }
+
+    public void onClick(View v) {        // TODO Auto-generated method stub
+        if (mListener != null) {
+            mListener.setOnItemClick(v);
+        }
+    }
 }

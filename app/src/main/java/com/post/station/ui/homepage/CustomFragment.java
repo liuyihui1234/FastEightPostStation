@@ -4,6 +4,7 @@ import android.os.Bundle;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
+import android.widget.TextView;
 
 import androidx.annotation.NonNull;
 import androidx.annotation.Nullable;
@@ -11,6 +12,7 @@ import androidx.fragment.app.Fragment;
 import androidx.viewpager.widget.ViewPager;
 
 import com.google.android.material.tabs.TabLayout;
+import com.post.station.NewSignatureActivity;
 import com.post.station.R;
 import com.post.station.adapter.TabDetectionAdapter;
 import com.post.station.ui.manage.CheckOutFragment;
@@ -23,6 +25,7 @@ import com.post.station.ui.notication_record.ThirdPartyFragment;
 
 import butterknife.BindView;
 import butterknife.ButterKnife;
+import butterknife.OnClick;
 
 public class CustomFragment extends Fragment {
 
@@ -42,6 +45,12 @@ public class CustomFragment extends Fragment {
         ButterKnife.bind(this, view);
         return view;
     }
+
+    @Override
+    public void onCreate(@Nullable Bundle savedInstanceState) {
+        super.onCreate(savedInstanceState);
+    }
+
 
     @Override
     public void onViewCreated(@NonNull View view, @Nullable Bundle savedInstanceState) {
