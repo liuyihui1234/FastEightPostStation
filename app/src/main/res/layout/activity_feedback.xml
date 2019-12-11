@@ -51,23 +51,27 @@
         android:layout_marginTop="@dimen/dp_10"
         android:layout_marginRight="@dimen/dp_10"
         android:background="@drawable/corner_5_white_drawable"
-        android:orientation="horizontal">
+        android:orientation="vertical">
 
         <EditText
-            android:id="@+id/tv_feedback"
-            android:layout_width="wrap_content"
+            android:id="@+id/et_written_words"
+            android:layout_width="match_parent"
             android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:gravity="start"
             android:background="@null"
             android:hint="请输入反馈内容"
             android:padding="@dimen/dp_8"
+            android:maxLength="300"
             android:textSize="16dp" />
 
         <TextView
-            android:layout_width="wrap_content"
+            android:id="@+id/tv_word_number"
+            android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_gravity="bottom"
-            android:layout_marginLeft="@dimen/dp_100"
-            android:gravity="end"
+            android:gravity="right|bottom"
+            android:layout_marginRight="@dimen/dp_10"
             android:text="您还能输入300个字" />
     </LinearLayout>
 

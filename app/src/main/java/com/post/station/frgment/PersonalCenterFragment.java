@@ -41,6 +41,7 @@ import com.post.station.model.HomeModel;
 import com.post.station.response.UserInfo;
 import com.post.station.response.VersionBean;
 import com.post.station.service.DownloadIntentService;
+import com.post.station.ui.homepage.LinechartActivity;
 import com.post.station.ui.mine.BrandManagementActivity;
 import com.post.station.ui.mine.FeedBackActivity;
 import com.post.station.ui.mine.MyWalletActivity;
@@ -121,11 +122,14 @@ public class PersonalCenterFragment extends Fragment {
 
 
     @OnClick({R.id.ll_wallet,R.id.ll_TeamManagement,R.id.ll_feedback,R.id.ll_install,R.id.ll_customerManagement,R.id.ll_Post_express,R.id.iv_business_card
-    ,R.id.iv_portrait,R.id.ll_my_dispatch})
+    ,R.id.iv_portrait,R.id.ll_my_dispatch,R.id.ll_Statistics})
     public void onViewClicked(View view) {
         switch (view.getId()) {
             case R.id.ll_my_dispatch:
                 SiteInformationActivity.start(getContext());
+                break;
+            case R.id.ll_Statistics:
+                LinechartActivity.start(getContext());
                 break;
             case R.id.ll_wallet:
                 MyWalletActivity.start(getContext());

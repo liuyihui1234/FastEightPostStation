@@ -9,10 +9,13 @@ import android.net.Uri;
 import android.os.Build;
 import android.os.Bundle;
 import android.provider.MediaStore;
+import android.text.Editable;
 import android.text.TextUtils;
+import android.text.TextWatcher;
 import android.util.Log;
 import android.view.View;
 import android.widget.ImageView;
+import android.widget.TextView;
 import android.widget.Toast;
 
 import androidx.annotation.NonNull;
@@ -44,9 +47,16 @@ import butterknife.OnClick;
  *  作者：wpx
  *  描述：
  */public class FeedBackActivity extends BaseActivity {
+
     @BindView(R.id.iv_addPictures)
     ImageView iv_addPictures;
+    @BindView(R.id.tv_word_number)
+    TextView tv_word_number;
+    @BindView(R.id.et_written_words)
+    TextView et_written_words;
     private String identityfontpath;
+    int MAX_LENGTH = 300;					//最大输入字符数500
+    int Rest_Length = MAX_LENGTH;
     private String[] permisions = {Manifest.permission.WRITE_EXTERNAL_STORAGE, Manifest.permission.CAMERA};
 
     public static void start(Context context) {
@@ -60,6 +70,27 @@ import butterknife.OnClick;
         setContentTitle("意见反馈");
         ButterKnife.bind(this);
         GlideUtils.showImageView(this, R.drawable.mywallet_feedback, "", iv_addPictures);
+        et_written_words.addTextChangedListener(new TextWatcher() {
+
+            @Override
+            public void onTextChanged(CharSequence s, int start, int before, int count) {
+                // TODO Auto-generated method stub
+                if(Rest_Length > 0){
+                    Rest_Length = MAX_LENGTH - et_written_words.getText().length();
+                }
+            }
+            @Override
+            public void beforeTextChanged(CharSequence s, int start, int count,
+                                          int after) {
+                // TODO Auto-generated method stub
+                tv_word_number.setText("您还可以输入"+Rest_Length+"字");
+            }
+
+            @Override
+            public void afterTextChanged(Editable s) {
+                // TODO Auto-generated method stub
+                tv_word_number.setText("您还可以输入"+Rest_Length+"字");            }
+        });
 
 //        showAppBar(false);
     }

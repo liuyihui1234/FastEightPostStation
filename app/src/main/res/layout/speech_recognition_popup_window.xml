@@ -1,0 +1,60 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#55000000"
+    android:gravity="center"
+    android:orientation="vertical">
+
+    <LinearLayout
+        android:id="@+id/rlContent"
+        android:layout_width="@dimen/dp_300"
+        android:layout_height="@dimen/dp_240"
+        android:background="@color/white"
+        android:gravity="center"
+        android:orientation="vertical">
+
+        <TextView
+            android:id="@+id/ed_sign_infor"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:gravity="center"
+            android:text="语音识别"
+            android:textColor="@color/black"
+            android:textSize="17sp" />
+
+        <com.fast.express.view.WaveView
+            android:id="@+id/wave_view"
+            android:layout_width="match_parent"
+            android:layout_height="60dp"
+            android:layout_marginLeft="40dp"
+            android:layout_marginTop="10dp"
+            android:layout_marginRight="40dp"
+            android:visibility="visible"
+            app:baselineColor="#0000"
+            app:space="10dp"
+            app:waveColor="#d0021b"
+            app:waveStokeWidth="4dp" />
+
+        <TextView
+            android:id="@+id/tv_scan"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="20dp"
+            android:layout_marginTop="10dp"
+            android:layout_marginRight="20dp"
+            android:text="请说出你的名字、电话和详细地址,如：张三18018441904安徽省合肥市包河区某某大厦1001号"
+            android:textSize="14sp" />
+
+        <TextView
+            android:id="@+id/tv_send_order"
+            android:layout_width="150dp"
+            android:layout_height="@dimen/dp_35"
+            android:layout_marginTop="10dp"
+            android:background="@drawable/corner_20_login_drawable"
+            android:gravity="center"
+            android:text="说完了"
+            android:textColor="@color/white" />
+    </LinearLayout>
+</LinearLayout>

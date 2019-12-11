@@ -29,16 +29,13 @@
             android:textSize="18dp" />
         <ImageView
             android:id="@+id/mBackImageBtn"
-            android:layout_width="35dp"
+            android:layout_width="25dp"
             android:layout_height="35dp"
             android:layout_centerVertical="true"
             android:layout_marginStart="10dp"
-            android:layout_marginLeft="10dp"
-            android:onClick="onBack"
-            android:padding="10dp"
+            android:padding="5dp"
             android:scaleType="fitCenter"
-            android:src="@drawable/arrow_left_white"
-            tools:ignore="OnClick" />
+            android:src="@drawable/arrow_left_white" />
     </RelativeLayout>
 
     <LinearLayout

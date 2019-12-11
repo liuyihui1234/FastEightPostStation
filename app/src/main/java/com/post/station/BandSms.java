@@ -6,10 +6,10 @@ package com.post.station;
  *  创建时间：2019/10/3014:14
  *  作者：wpx
  *  描述：
- */public class BandSms {
-     public String number;
-     public String univalent;
-     public String price;
+ */ class BandSms {
+     private String number;
+     private String univalent;
+     private String price;
 
     public String getNumber() {
         return number;
